@@ -154,11 +154,17 @@ def process_list(url, processed_urls=None):
                         new_domain_parts.append(dp)
 
                 if modified:
-                    # 확장된 도메인들을 파이프(|)로 묶어서 하나의 규칙으로 생성
-                    new_domain_string = '|'.join(new_domain_parts)
-                    new_line = line.replace(f"domain={domain_string}", f"domain={new_domain_string}")
-                    result.append(new_line)
-                    continue
+    unique_domains = list(set(new_domain_parts))
+
+    if len(unique_domains) > MAX_DOMAINS_PER_RULE:
+        result.append(f"! [domain 확장 초과로 제외] {line}")
+        continue
+
+    for d in unique_domains:
+        new_line = line.replace(f"domain={domain_string}", f"domain={d}")
+        result.append(new_line)
+
+    continue
 
         # 정규식 치환이 필요 없는 일반 규칙
         result.append(line)
