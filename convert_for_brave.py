@@ -1,5 +1,41 @@
 import urllib.request
 import urllib.parse
+import re
+
+def expand_domain_regex(pattern):
+    """
+    정규식(예: /tvwiki[0-9]+\.net/)을 입력받아 
+    tvwiki0.net 부터 tvwiki200.net 까지의 목록으로 확장합니다.
+    """
+    if pattern.startswith('/'):
+        pattern = pattern[1:]
+    if pattern.endswith('/'):
+        pattern = pattern[:-1]
+        
+    pattern = pattern.replace('^', '').replace('$', '').replace('\\.', '.')
+    
+    domains = []
+    for part in pattern.split('|'):
+        part = part.strip()
+        if '[0-9]+' in part:
+            try:
+                prefix, suffix = part.split('[0-9]+', 1)
+                # 0번부터 200번 사이트까지 모두 생성 (tvwiki14 등 모두 포함됨)
+                for i in range(0, 201):
+                    domains.append(f"{prefix}{i}{suffix}")
+            except ValueError:
+                domains.append(part)
+        elif '[0-9]' in part:
+            try:
+                prefix, suffix = part.split('[0-9]', 1)
+                for i in range(0, 10):
+                    domains.append(f"{prefix}{i}{suffix}")
+            except ValueError:
+                domains.append(part)
+        else:
+            domains.append(part.replace('\\', ''))
+            
+    return domains
 
 def process_list(url, processed_urls=None):
     if processed_urls is None:
@@ -24,23 +60,36 @@ def process_list(url, processed_urls=None):
         if not line:
             continue
 
-        # 1. 외부 파일 합치기
+        # 1. !#include 구문 병합
         if line.startswith('!#include '):
             include_url = line.split(' ', 1)[1].strip()
             if not include_url.startswith('http'):
                 include_url = urllib.parse.urljoin(url, include_url)
                 
-            result.append(f"! --- Start: {include_url} ---")
+            result.append(f"! --- Start of included list: {include_url} ---")
             result.extend(process_list(include_url, processed_urls))
-            result.append(f"! --- End: {include_url} ---")
+            result.append(f"! --- End of included list: {include_url} ---")
             continue
 
-        # 2. Brave가 못 읽는 정규식 포함 규칙 무효화 (유튜브/치지직 오류 방지 및 용량 최적화)
-        if 'domain=' in line:
-            domain_part = line.split('domain=')[1]
-            if '/' in domain_part or '[' in domain_part:
-                result.append(f"! [Brave 비호환 규칙 무효화] {line}")
-                continue
+        # 2. 이미지/배너 숨김 규칙(##) 도메인 확장 (예: /^tvwiki[0-9]+\.net$/##.banner)
+        if ('##' in line or '#?#' in line) and line.startswith('/'):
+            sep = '##' if '##' in line else '#?#'
+            domain_part, rule_part = line.split(sep, 1)
+            
+            if domain_part.startswith('/') and domain_part.endswith('/'):
+                domains = expand_domain_regex(domain_part)
+                expanded_domains_str = ",".join(domains) # Brave는 , 로 구분
+                line = f"{expanded_domains_str}{sep}{rule_part}"
+
+        # 3. 네트워크 차단 규칙의 $domain= 확장 (예: ...$domain=/tvwiki[0-9]+\.net/)
+        elif 'domain=' in line:
+            match = re.search(r'domain=(/[^/]+/)', line)
+            if match:
+                regex_str = match.group(1)
+                if '[0-9]' in regex_str:
+                    domains = expand_domain_regex(regex_str)
+                    expanded_domains_str = "domain=" + "|".join(domains) # Brave는 | 로 구분
+                    line = line.replace("domain=" + regex_str, expanded_domains_str)
 
         result.append(line)
 
@@ -53,4 +102,4 @@ if __name__ == "__main__":
     output_filename = 'brave_list-kr.txt'
     with open(output_filename, 'w', encoding='utf-8') as f:
         f.write('\n'.join(final_lines))
-    print("변환 완료!")
+    print(f"\n변환 완료! '{output_filename}' 파일이 생성되었습니다.")
