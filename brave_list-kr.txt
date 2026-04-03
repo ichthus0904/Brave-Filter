@@ -1413,24 +1413,24 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 !
 ! DOMAIN-REFRESHER: START
 !
-/^https:\/\/cdn\.xtoon[0-9]+\.com\/collaboration\//
-/^https:\/\/funbe[0-9]+\.com\/images\//
-||mingk*.net/data/file/passfree/
-/^https:\/\/(www\.)?yako[0-9]+\.com\/upload\/banner\//
-/lover[0-9]\.net\/file\/tohotv\/.*\.gif
-/lover[0-9]\.net\/file\/1bet\/.*\.gif
-/lover[0-9]\.net\/file\/eve\/.*\.png
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/cdn\.xtoon[0-9]+\.com\/collaboration\//$domain=/xtoon[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/funbe[0-9]+\.com\/images\//$domain=/funbe[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] ||mingk*.net/data/file/passfree/$domain=/mingky[0-9]+\.net/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/(www\.)?yako[0-9]+\.com\/upload\/banner\//$domain=/yako[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /lover[0-9]\.net\/file\/tohotv\/.*\.gif$domain=/lover[0-9]\.net/
+! [Brave 비호환으로 인한 규칙 무효화] /lover[0-9]\.net\/file\/1bet\/.*\.gif$domain=/lover[0-9]\.net/
+! [Brave 비호환으로 인한 규칙 무효화] /lover[0-9]\.net\/file\/eve\/.*\.png$domain=/lover[0-9]\.net/
 ||cokcok.stream/public/vast.php
-/^https:\/\/tvwiki[0-9]+\.net\/data\/banner\//
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/tvwiki[0-9]+\.net\/data\/banner\//$domain=/tvwiki[0-9]+\.net/
 ||wdwd*.com/data/banner/
 ||static.tzstatic.top/z/*.gif
 ||ddal.xyz/project/mc/js/nuevo.min.js
-*$image
-/^https:\/\/tv[0-9]+\.wiki\/wp-content\/uploads\/[0-9]+\/[0-9]+\/.+\.gif/
+! [Brave 비호환으로 인한 규칙 무효화] *$image,domain=/tvwiki[0-9]+\.tv/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/tv[0-9]+\.wiki\/wp-content\/uploads\/[0-9]+\/[0-9]+\/.+\.gif/$domain=/^tv[0-9]+\.wiki/
 ||img.mingk.xyz/data/file/passfree/
-||mingk*.net/theme/BS4-Basic/js/pf-loader.js
+! [Brave 비호환으로 인한 규칙 무효화] ||mingk*.net/theme/BS4-Basic/js/pf-loader.js$domain=/^mingky[0-9]+\.net/
 ||yasyadong.*/?_Action=adv&_Method$domain=yasyadong.*
-/https:\/\/tvwiki[0-9]+\.com\/data\/banner\//
+! [Brave 비호환으로 인한 규칙 무효화] /https:\/\/tvwiki[0-9]+\.com\/data\/banner\//$domain=/tvwiki[0-9]+\.com/
 /^https:\/\/(www\.)?aniya24\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[a-z]+[0-9]+x[0-9]+\./$domain=aniya24.com
 ||aniya24.com/wp-content/uploads/*.gif
 ||sutom.org/wp-content/uploads/*.webp
@@ -1446,19 +1446,19 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ||cdn.ksportscdn.com/data/popup/
 ||tvwiki*.com/AD
 ||media.cokcok.vip/assets/images/
-/https:\/\/tvwiki[0-9]+\.com\/AD\//
+! [Brave 비호환으로 인한 규칙 무효화] /https:\/\/tvwiki[0-9]+\.com\/AD\//$domain=/tvwiki[0-9]+\.com/
 ||rj.filesbest.xyz/r/
-/^https:\/\/torrentrj[0-9]+\.com\/uploadfile\/up[0-9a-z]+\.gif/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/torrentrj[0-9]+\.com\/uploadfile\/up[0-9a-z]+\.gif/$domain=/^torrentrj[0-9]+\.com/
 ||moeni.net/img/a/ad
 ||sptv-sportscdn.com/data/popup/
 ||images.request-support.com/br/
 /^https:\/\/cdn-[a-z]+-[0-9]+\.hasha\.in\/[a-zA-Z_0-9-]+\./$domain=hasha.in
 ||anilife.live/assets/banner/
 ||moeni.net/img/a/lula.gif
-/theme/basic/img/banner/*
-||torrentpi*.com/data/file/ad/
-/^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9-%A-Z]+x[0-9]+/
-/^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9]+-[0-9]+-[0-9]+\./
+! [Brave 비호환으로 인한 규칙 무효화] /theme/basic/img/banner/*$domain=/nunu[0-9]+\.tv/
+! [Brave 비호환으로 인한 규칙 무효화] ||torrentpi*.com/data/file/ad/$domain=/torrentpi[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9-%A-Z]+x[0-9]+/$domain=/^avpink[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9]+-[0-9]+-[0-9]+\./$domain=/^avpink[0-9]+\.com/
 ||cdn.ksportscdn.com/data/editor/
 ||xn--h10b90b998c.site/img/
 /^https:\/\/v[0-9]+\.dasibogo\.net\/wp-content\/uploads\/sites\/[0-9]+\/[0-9]+\/[0-9]+\/[a-z0-9]+\./$domain=dasibogo.net
@@ -1469,13 +1469,13 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ||anilife.*/assets/images/banner/$domain=anilife.*
 ||tvzone.*/data/banner/$domain=tvzone.*
 ||xvideos-kr.com/img/banner/
-||telegra.ph/file/
+! [Brave 비호환으로 인한 규칙 무효화] ||telegra.ph/file/$domain=/^avguri[0-9]+\.com/
 ||ohli365.*/data/apms/$domain=ohli365.*
 ||bbongtv.*/img/*.gif$domain=bbongtv.*
-/^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/banner\//
-/^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/popup\//
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/banner\//$domain=/ygy[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/popup\//$domain=/ygy[0-9]+\.com/
 /^https:\/\/linkssakda\.com\/upload\/images\/[0-9]+\./$domain=linkssakda.com
-||i.imgur.com^
+! [Brave 비호환으로 인한 규칙 무효화] ||i.imgur.com^$domain=/avguri[0-9]+\.com/
 ||moeni.net/img/a/*x
 ||cdnbuzz.buzz//banner/
 /^https:\/\/avjoa[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/.+\.gif$/
@@ -1484,8 +1484,8 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ||ohli24.com/img/
 ||nanatv.*/resource/images/$domain=nanatv.*
 ||xn--cm2by8iw5h6xm8pc.*/data/banner/$domain=xn--cm2by8iw5h6xm8pc.*
-||imgbox.com/*.gif
-/^https:\/\/tor[0-9]+\.com\/data\/file\/test\//
+! [Brave 비호환으로 인한 규칙 무효화] ||imgbox.com/*.gif$domain=/^bontv[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/tor[0-9]+\.com\/data\/file\/test\//$domain=/tvzota[0-9]+\.com/
 ||agitwebtoon.*/upload/$domain=agitwebtoon.*
 /^https:\/\/18moa[0-9]+\.com\/data\/file\/main_top_banner\/thumb-/
 ||topgirl.co/project/bm/js/nuevo.min.js
@@ -1493,17 +1493,17 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /^https:\/\/opss[0-9]+\.com\/img\/[A-z]+\.gif(\?v=[0-9]+)?$/
 /thumb/kh/bn/*$domain=1004past.com
 /^https:\/\/jiok[0-9]+\.net\/img\//
-/data/apms/background/*
-/data/editor/*
-/data/file/primium/*
-/^https:\/\/yt[0-9]+\.org\/files\/attach\/banner_images\/[0-9]+\/([\d-]+(x|X)[0-9]+|(%[A-Z0-9]+)+)\./
+! [Brave 비호환으로 인한 규칙 무효화] /data/apms/background/*$domain=/^opworlds[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /data/editor/*$domain=/^opworlds[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /data/file/primium/*$domain=/^opworlds[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/yt[0-9]+\.org\/files\/attach\/banner_images\/[0-9]+\/([\d-]+(x|X)[0-9]+|(%[A-Z0-9]+)+)\./$domain=/yt[0-9]+\.org/
 ^https:\/\/bookmoa[0-9]+\.com\/data\/apms\/background\//
 ||kormovie.com/img/*.gif|
 /^https:\/\/jusoyo[0-9]+\.(net|com)\/data\/apms\/background\//
 /^https:\/\/jusoyo[0-9]+\.(net|com)\/.+\.webp$/
 /^https:\/\/yadong[0-9]+\.net\/Uploads\/images\/\d{4}-\d{2}-\d{2}/
 ||i.imgur.com^$domain=yasyadong.*
-/^https:\/\/iabn[0-9]+\.net\//
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/iabn[0-9]+\.net\//$domain=/^fxfx[0-9]+\.com/
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z]+[0-9]+x[0-9]+\//
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z0-9_-]+\.gif$/
 ||agitnovel.*/data/file/novel/banner/$domain=agitnovel.*
@@ -1518,27 +1518,27 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /^https:\/\/www\.torrentreel[0-9]+\.site\/ad\//
 /^https:\/\/tvchak[0-9]+\.com\/img\/bbnn/
 /^https:\/\/agit[0-9]+\.com\/upload\/[0-9]+\/[0-9]+\/[0-9]+\./
-||hoohootv*.*/static/bnner/
-/^https:\/\/tv[0-9]+\.avsee\.[a-z]+\/imgs\//$domain=/avsee.*/
+! [Brave 비호환으로 인한 규칙 무효화] ||hoohootv*.*/static/bnner/$domain=/hoohootv[0-9]+\.xyz/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/tv[0-9]+\.avsee\.[a-z]+\/imgs\//$domain=/avsee.*/
 ||tvhot.cc/b/
 /^https:\/\/sonagitv\.[a-z]+\/images\/banner\/(?!webtoon_)/$domain=sonagitv.*
 ||i.imgur.com^$domain=sonagitv.*
 ||xn--h10b90b998c.*/img/$domain=xn--h10b90b998c.*
 ||i.imgur.com^$domain=newtoki.*
 ||newtoki.*/banner*/$domain=newtoki.*
-||i.imgur.com^
+! [Brave 비호환으로 인한 규칙 무효화] ||i.imgur.com^$domain=/^torrentqq[0-9]+.com/
 ||cdn.jjun.live/BANNER/*.gif
 ||tvmon.*/img/ba
 ||tvmon.*/AD/
-||filesbest.xyz/uploadfile/images/*.gif
+! [Brave 비호환으로 인한 규칙 무효화] ||filesbest.xyz/uploadfile/images/*.gif$domain=/^torrenttip[0-9]+\.com/
 /^https:\/\/(www\.)?bobaelink[0-9]+\.xyz\/images\/ad\//
 ||i.uuoobe.com/images/250x250-6005.jpg
 /\/data\/zzapstream\/[0-9]+_[A-z0-9]+\.gif/$domain=zzzz.lol
 ||i.uuoobe.com//ad/
 /^https:\/\/(www\.)?filetender\.com\/images\/(?!logo).+\.(jpg|png)$/$domain=filetender.com
 /^https:\/\/m[0-9]+\.kotbc\.com\/img\/[a-z0-9_\/]+\.gif$/
-||i.imgur.com^
-||imgbox.com^
+! [Brave 비호환으로 인한 규칙 무효화] ||i.imgur.com^$domain=/^torrentwhy[0-9]+\.xyz/
+! [Brave 비호환으로 인한 규칙 무효화] ||imgbox.com^$domain=/^tvzota[0-9]+\.com/
 /^https:\/\/(www\.)?ruru\.tv\/uploads\/[0-9]+\/(?!16682220461360)[0-9]+/$domain=ruru.tv
 ||ruru.tv/uploads/
 /^https:\/\/torrentsee[0-9]+\.com\/uploadfile\/up[a-z0-9]+\.gif/
@@ -1559,14 +1559,14 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /^https:\/\/jgmoa[0-9]+\.com\/upload_files\/popup\//
 /^https:\/\/newtoki[0-9]+\.com\/tokinbtoki\/[0-9]+/
 /^https:\/\/manatoki[0-9]+\.net\/tokinbtoki\//
-||imgsuperpower.com^
-||blogger.googleusercontent.com/img/
-||static.springbuilder.site/fs/userFiles-v2/
+! [Brave 비호환으로 인한 규칙 무효화] ||imgsuperpower.com^$domain=/^tkr[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] ||blogger.googleusercontent.com/img/$domain=/^tkr[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] ||static.springbuilder.site/fs/userFiles-v2/$domain=/^tkr[0-9]+\.com/
 /^https:\/\/static\.tzstatic\.top\/t\/[a-z0-9]+\.gif$/
 /^https:\/\/image\.yaburi[0-9]+\.com\/image-storage\/banners\//
-/^https:\/\/w[0-9]+\.torrentnx[0-9]+\.com\/data\/file\/notice\//
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/w[0-9]+\.torrentnx[0-9]+\.com\/data\/file\/notice\//$domain=/^torrentnx[0-9]+\.com/
 ||i.imgur.com^$domain=etorrentro.net
-/^https:\/\/imgcloud[0-9]+\.net\//
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/imgcloud[0-9]+\.net\//$domain=/^wftoon[0-9]+\.com/
 /^https:\/\/torrentten[0-9]+\.com\/thema\/Basic\/assets\/img\/.+\.gif$/
 /^https:\/\/linkrand[0-9]+\.com\/thema\/Miso-Basic\d\/assets\/img\/banne/
 /^https:\/\/linkrand[0-9]+\.com\/data\/file\/(left|right)_sero\//
@@ -1602,14 +1602,14 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /^https:\/\/manamoa[0-9]+\.com\/data\/apms\/background\//
 /^https:\/\/namedtoon[0-9]+\.com\/Uploads\/images\/\d{4}-\d{2}-\d{2}\/[a-z0-9]{13}/
 /^https:\/\/(www\.)?race[0-9]+\.xyz\/images\/spon\//
-/^https:\/\/imgcloud[0-9]+\.net\//
-||i.imgur.com^
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/imgcloud[0-9]+\.net\//$domain=/wtwt[0-9]+.com/
+! [Brave 비호환으로 인한 규칙 무효화] ||i.imgur.com^$domain=/^torrentgram[0-9]+\.com/
 /^https:\/\/dc\.filesbest\.xyz\/uploadfile\/images\/[a-z0-9]+\.gif$/
 /^https:\/\/torrentwiz[0-9]+\.com\/data\/editor\/\d{4}\//
 /^https:\/\/torrentbot[0-9]+\.[a-z]+\/uploadfile\/up[a-z0-9]+\.gif$/
-||imgbox.com^
-||static.filesbest.xyz^
-||i.imgur.com^
+! [Brave 비호환으로 인한 규칙 무효화] ||imgbox.com^$domain=/^ktxtorrent[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] ||static.filesbest.xyz^$domain=/^ktxtorrent[0-9]+\.com/
+! [Brave 비호환으로 인한 규칙 무효화] ||i.imgur.com^$domain=/^bobaelink[0-9]+\.xyz/
 ||filetender.com/mobon.html|
 /^https:\/\/(www\.)?filetender\.com\/images\/\d{3,}(X|x)\d{3,}-\d{4}/
 ||filetender.com/images/*.gif
@@ -1624,9 +1624,9 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /^https?:\/\/manaboza[0-9]+\.com\/static\/image\/header\//
 /^https:\/\/newtoon[0-9]+\.com\/banner\//
 /^https:\/\/bam[0-9]+co\.com\/_book\/_Contents\/banner\//
-||imgsuperpower.com^
-||blogger.googleusercontent.com^
-/^https:\/\/iabn[0-9]+\.net\//
+! [Brave 비호환으로 인한 규칙 무효화] ||imgsuperpower.com^$domain=/^hdhd[0-9]+\.net/
+! [Brave 비호환으로 인한 규칙 무효화] ||blogger.googleusercontent.com^$domain=/^hdhd[0-9]+\.net/
+! [Brave 비호환으로 인한 규칙 무효화] /^https:\/\/iabn[0-9]+\.net\//$domain=/wfwf[0-9]+\.net/
 /^https:\/\/blacktoon[0-9]+\.com\/poster_js\/[0-9]+\.js/
 ||toonkor*.com/images/*.gif
 ||wwwimageup.angle777899.com/other/atoona/
@@ -3025,57 +3025,57 @@ kio.ac##main > div:has(> div > div > a > img)
 !
 ! DOMAIN-REFRESHER: START
 !
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/xtoon[0-9]+\.com/]##.container > div.row > div > a[target="_blank"] > picture
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/funbe[0-9]+\.com/]##.mobile-banner > div[class^="main_top_bann"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/funbe[0-9]+\.com/]##.mobile-banner div.banner_m
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/funbe[0-9]+\.com/]###bo_list div[class^="bancol"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/mingky[0-9]+\.net/]##.contents_wrap.column div[style="display: flex; flex-direction: column; align-items: center;"]
 nightofpeace.com,ilovebees.io##.e-con-full.e-flex.e-con:has(a[target="_blank"] img)
 nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_blank"] img)
-[
-[
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/lover[0-9]\.net/]##.div-over
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentqq[0-9]+.com/]##.at-banner
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/torrentpi[0-9]+\.com/]##.basic-post-gallery
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/tvwiki[0-9]+\.tv/]##a:has(> img[src^="https://static.wixstatic.com/media/"])
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/torrentzota[0-9]+\.com/]##a[href^="/adver-"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tv[0-9]+\.wiki/]###cpb-popup-banners
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tv[0-9]+\.wiki/]##.custom_banner_wrap
 aniya24.com##.popup-container
 sutom.org##div[data-id="9429d5d"]
 sutom.org###sutom-pro
 blacktoon1.info##div[data-mesh-id="comp-m8jy31rninlineContent"]
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tkor[0-9]+\.com/]##*[class*="top_bann"]
 toonkor.wiki##.banner
 yako.gg##.banner_grid
 v119.com##.zone-right > *:has(~ .no-pd):not(:has(> .tabbox))
 v119.com##.at-boxed .zone-center > .widget-box ~ *
 ! aglint-disable-next-line
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^newtoki[0-9]+\.com/]##img[title="소울_뉴토끼_이벤트_배너"]
 itrulli.com##div.elementor-widget-shortcode
 avjoa69.com##img[onclick]
 avjoa69.com##.happy-header
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^jusokorea[0-9]+\.com/]##div[class*="-ad-banner"]
 ntnt4.tv##a[data-testid="linkElement"][href^="http"][target="_blank"]:has(> wow-image)
 aniwolf.*##.banner-area
 anilife.*##div[class] > a[class][href^="http"][target="_blank"]
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvwiki[0-9]+\.com/]##div[id] > ul:has(a[href] > img[src^="/AD/"])
 hoduhodu.com##.w-full > a[target="_blank"] > img
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^kktv[0-9]+\.com/]##.modal_contents
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvmon[0-9]+\.org/]##.row-banner
 tvroom5.org##div.banners_area
 tvroom5.org##div.banner_l
 tvroom5.org##.pop-up.iziModal
 tvroom5.org##.iziModal-overlay
-[
-[
-[
-[
-[
-[
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentnx[0-9]+\.com/]##a[href*="/bbs/link.php"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^cokcoktv[0-9]+\.com/]###cpb-popup-banners
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^cokcoktv[0-9]+\.com/]###custom_banner_wrap
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^cokcoktv[0-9]+\.com/]##.custom_banner_wrap
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvwiki[0-9]+\.com/]##ul[class^="banner"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^sptv[0-9]+\.com/]##.modal_contents
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentpi[0-9]+\.com/]##style ~ .basic-post-gallery
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^avguri[0-9]+\.com/]##div[id$="_bn"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^avpink[0-9]+\.com/]###foogallery_widget-3
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^avpink[0-9]+\.com/]###foogallery_widget-12
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^avpink[0-9]+\.com/]###foogallery_widget-13
 tv25.co##.code-block
 xn--vv4b11c.com##.mp4-banner-view
 xn--vv4b11c.com###xcontent-goodsite
@@ -3083,113 +3083,113 @@ anilife.*##.MainBnnWrap
 anilife.*##div[data-page] > div[class]:has(a[target="_blank"])
 tvzone.*##.main_banner
 xvideos-kr.com##.thumb-ad
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentnx[0-9]+\.com/]##a[href*="/bbs/link.php"]
 coktv.*##.custom_banner_wrap
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^avguri[0-9]+\.com/]###hd_pop
 bbongtv.*##img[src^="/img/"][src*=".gif"]
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^ygy[0-9]+\.com/]##.popup_wrap
 moeni.net##img[src^="/img/sp/"]
 av19.gg###page ~ div[style^="min-height:"]#content.row
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^nolgoga[0-9]+\.com/]###hd_pop
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^bontv[0-9]+\.com/]##div[class$="_ban"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^bontv[0-9]+\.com/]##div[class^="popup_"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvzota[0-9]+\.com/]##div[class$="_ban"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvzota[0-9]+\.com/]##div[class^="popup_"]
 agitwebtoon.*##.advx
 newtoki.*##.banner2
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^opworlds1[0-9]+\.com/]##.basic-banner-gallery
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^jusoyo1[0-9]+\.net/]##.hd_pops
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^jusoyo1[0-9]+\.net/]##.basic-banner-gallery
 agitnovel.*##.banner
 spochak.com##.list-webzine .list-item
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentdin[0-9]+\.com/]###hd_pop
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentdin[0-9]+\.com/]##div[class*="at-"] > .widget-box
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvchak[0-9]+\.com/]##div[style].border-shadow
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvchak[0-9]+\.com/]##.banner-box
 cokcok.*##.custom_banner_item
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^agit[0-9]+\.com/]##.banner
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentqq[0-9]+\.com/]##.at-banner
 tvhot.*##div[id*="-banner-"]
 tvhot.*###body_wrap > div[class][style^="margin:"]
 sonagitv.*##a[href][target="_blank"] > img[src^="/images/banner/"]:not([src^="/images/banner/webtoon_"])
 newtoki.*##.ba_test
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentqq[0-9]+\.com/]##.row-banner
 sonagitv.*##.popup_warp
 kr.bb-tv.co##.banner
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrenttip[0-9]+\.com/]##a[href*="/ad/"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrenttt[0-9]+\.com/]##a[href*="/ad/"][target="_blank"]
 zzzz.lol##a[href*="/bbs/link.php?bo_table=partner&"]
 zzzz.lol##.ent_wrapper.slide-vertical-effect .ent_navigation
 zzzz.lol##a[href*="?bo_table=partner"]
 zzzz.lol###hd_pop
 hasha.in##div[style^="min-height:"][class^="bg-hasha-"] > div[style] + .max-w-full
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvzota[0-9]+\.com/]##div[class^="popup_"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvzota[0-9]+\.com/]##.wid
 yako.red,yadongwang.org,yadongkorea.red,yadongtube.net,yatv.net###banner
 save-1.net##div[id^="float"]
 save-1.net##div[class^="header-banner-"]
 save-1.net##.at-main > .widget-box
 save-1.net##.w-banner
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^jgmoa[0-9]+\.com/]##.popup
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrenttop[0-9]+\.com/]##a[href^="/adver-"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^yaburi[0-9]+\.com/]###popups
 etorrentro.net##div[id^="banner"]
 1004girl.com##.page-content > .row.no-gap.no-space > .col-33
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^linkrand[0-9]+\.com/]##.is-hover a[href^="http"][target="_blank"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^linkrand[0-9]+\.com/]##div[id][class*=" "][data-interval] div[style*="/data/apms/background"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^tvbox[0-9]+\.xyz/]##div[class*="-banner"] div[class*=" "][style=" "]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^ydbox[0-9]+\.com/]##div[class*="-banner"] div[class*=" "][style=" "]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^linkeye[0-9]+\.com/]##div[class*="banner-"]
 img.imimggggg87878.com##div[class$="-banner"]
 linkkf.app###banner
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^booktoki[0-9]+\.com/]##div[id*="-banner-"] > div[class*=" "] > div[class*=" "][style*=" "]
 hellven.net##a[href^="http"][target="_blank"].thumbnail
 dajunbi.com##div[class^="banner_"]
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^spotv[0-9]+\.com/]##div[id$="-banner"]
 qooqootv.fun##div[class^="banner_"]
 !#if !adguard_ext_android_cb
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^lover[0-9]+\.net/]##.xe_content span ~ div[style]
 !#endif
 theqoo.net##tr.notice:not([data-document_srl])
-[
-[
-[
-[
-[
-[
-[
-[
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^yagong[0-9]+\.com/]##div[x-data="popups()"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^redsun[0-9]+\.me/]##div[id*="ads"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manamoa[0-9]+\.com/]##div[class*="banner"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentgram[0-9]+\.com/]##.panel-default ~ .row > .col-sm-6
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentgram[0-9]+\.com/]##.npia-board-gallery
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentgram[0-9]+\.com/]###body_text > .at-main.at-col[style]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentbam[0-9]+\.com/]##a[href*="/ad/"][target="_blank"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentbot[0-9]+\.[a-z]+/]##a[href^="/go/"][target="_blank"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentbot[0-9]+\.[a-z]+/]##div[id^="ad_"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^ktxtorrent[0-9]+\.com/]##img[src*=".imgbox.com/"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentsome[0-9]+\.com/]##a[href^="/go/"][target="_blank"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^torrentrj[0-9]+\.com/]##a[href^="/go/"][target="_blank"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^bobaelink[0-9]+\.xyz/]##a[href^="/ad-"]
 uuoobe.com##td[valign="top"] ~ td[width][valign][bgcolor][align] table[width][height][border][cellpadding]
 uuoobe.com##table[width][cellspacing] td[valign="top"] table[width][border="0"] td[height="100"]
 filetender.com###banner
 filetender.com##iframe[src="https://filetender.com/mobon.html"]
 moviepang.net##.sidebar[style] > aside[id^="text-"][class] ~ aside[id^="text-"][class]
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^frtoon[0-9]+\.com/]##.ad-form > .row > div[class^="col-md-"]
 toon123.com##main > section[style]:not([class])
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manaboza[0-9]+\.com/]##.payment_fullbnr
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manaboza[0-9]+\.com/]##.comic_bot_bnr
 torrentmode.com##a[href^="https://torrentmode.com/bbs/bannerhit.php"]
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^newtoon[0-9]+\.com/]##.ad-form > .row > div[class^="col-md-"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^blacktoon[0-9]+\.com/]##.banner.container > .row > .col-6
 ! aglint-disable-next-line
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^newtoki[0-9]+\.com/]###hd_pop
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manatoki[0-9]+\.net/]###hd_pop
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^booktoki[0-9]+\.com/]###hd_pop
 ! aglint-disable-next-line
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^newtoki[0-9]+\.com/]##div.col-15.col-md-9
 ! aglint-disable-next-line
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^newtoki[0-9]+\.com/]##.board-tail-banner
 ! aglint-disable-next-line
-[
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^newtoki[0-9]+\.com/]##.basic-banner
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^booktoki[0-9]+\.com/]##img[src^="/tokinbtoki/"]
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manatoki[0-9]+\.net/]##[style="margin-bottom: 20px;"].row.row-15
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manatoki[0-9]+\.net/]##.basic-banner.row.row-10
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^manatoki[0-9]+\.net/]##.board-tail-banner
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 !
@@ -3382,10 +3382,10 @@ spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table="][target="_blank"])
 ! aglint-disable-next-line
-[
-[
-[
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/booktoki[0-9]+\.com/]#?#ul[class] > li:has(> a[href*="tokkiweb.com"])
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/manatoki[0-9]+\.com/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/newtoki[0-9]+\.com/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^yagong[0-9]+\.com$/]##div[class*="border"]:has(> a[href][target*="_blank"])
 !
 ! DOMAIN-REFRESHER: END
 chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
@@ -3987,9 +3987,9 @@ www.erdcloud.com#$#.erd-container { width: 100% !important; }
 ! DOMAIN-REFRESHER: START
 !
 ! aglint-disable-next-line
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/^spotv[0-9]+\.com$/]##header { top: 0px !important; }
 ! aglint-disable-next-line
-[
+! [Brave 비호환으로 인한 규칙 무효화] [$domain=/newtoki[0-9]+\.com/]#$#body { overflow: auto !important; }
 !
 ! DOMAIN-REFRESHER: END
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/2130#issuecomment-1621684566
