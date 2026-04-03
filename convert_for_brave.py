@@ -1,6 +1,5 @@
 import urllib.request
 import urllib.parse
-import re
 
 def process_list(url, processed_urls=None):
     if processed_urls is None:
@@ -25,6 +24,7 @@ def process_list(url, processed_urls=None):
         if not line:
             continue
 
+        # 1. !#include 구문 처리
         if line.startswith('!#include '):
             include_url = line.split(' ', 1)[1].strip()
             if not include_url.startswith('http'):
@@ -35,11 +35,14 @@ def process_list(url, processed_urls=None):
             result.append(f"! --- End of included list: {include_url} ---")
             continue
 
-        if 'domain=' in line and '[0-9]' in line:
-            if re.search(r'domain=[^,]*\[0-9\]', line):
-                line = re.sub(r'\$domain=[^,]+$', '', line)
-                line = re.sub(r',domain=[^,]+', '', line)
-                line = re.sub(r'\$domain=[^,]+,', '$', line)
+        # 2. $domain= 부분에 정규식(/ 또는 [ 등)이 포함된 경우 안전하게 처리
+        if 'domain=' in line:
+            domain_part = line.split('domain=')[1]
+            # 도메인에 Brave가 지원하지 않는 정규식 기호가 있다면
+            if '/' in domain_part or '[' in domain_part:
+                # 도메인을 지우지 않고, 해당 줄 자체를 무효화(주석 처리)하여 다른 사이트에 피해가 가지 않도록 함
+                result.append(f"! [Brave 비호환으로 인한 규칙 무효화] {line}")
+                continue
 
         result.append(line)
 
