@@ -1,0 +1,32 @@
+name: Update Brave Filter List
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # 매 12시간마다 자동 실행 (한국시간 기준 오전 9시, 오후 9시)
+  workflow_dispatch: # 수동 실행 버튼 만들기
+
+permissions:
+  contents: write # 봇이 파일을 쓸 수 있는 권한 부여
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Run converter script
+      run: python convert_for_brave.py
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add brave_list-kr.txt
+        git commit -m "Auto-update Brave filter list" || echo "No changes to commit"
+        git push
