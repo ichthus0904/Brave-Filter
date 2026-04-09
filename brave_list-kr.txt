@@ -1,15 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave Shields
-! Description: List-KR Unified 필터를 Brave Shields에 최적화 (Regex → Wildcard 변환)
-! Version: 20260410_0013
+! Description: List-KR Unified을 Brave Shields에 최적화한 버전 (Regex → Wildcard 변환)
+! Version: 20260410_0017
 ! Expires: 12 hours
-! Updated: 2026-04-10 00:13 KST
+! Updated: 2026-04-10 00:17 KST
 ! Source: https://github.com/ichthus0904/Brave-Filter
+! Recommended: Use with Aggressive mode
 
-! Title: List-KR unified filters list (uBlock Origin)
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
-! Version: 2026.20552.0
-! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/List-KR/List-KR
 ! Licence: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !#if ext_ublock
@@ -1400,24 +1398,24 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 ||ssl.pstatic.net/tveta/libs/
 ||vclock.kr/inf0/hot.php^
 ||aproxy-vast.wavve.com/*/v/*_AD_*/req/$xmlhttprequest
-/^https:\/\/cdn\.xtoon[0-9]+\.com\/collaboration\//$domain=xtoon*.com*
-/^https:\/\/funbe[0-9]+\.com\/images\//$domain=funbe*.com*
-||mingk*.net/data/file/passfree/$domain=mingky*.net*
-/^https:\/\/(www\.)?yako[0-9]+\.com\/upload\/banner\//$domain=yako*.com*
-/lover[0-9]\.net\/file\/tohotv\/.*\.gif$domain=lover*.net*
-/lover[0-9]\.net\/file\/1bet\/.*\.gif$domain=lover*.net*
-/lover[0-9]\.net\/file\/eve\/.*\.png$domain=lover*.net*
+/^https:\/\/cdn\.xtoon[0-9]+\.com\/collaboration\//$domain=/xtoon[0-9]+\.com/
+/^https:\/\/funbe[0-9]+\.com\/images\//$domain=/funbe[0-9]+\.com/
+||mingk*.net/data/file/passfree/$domain=/mingky[0-9]+\.net/
+/^https:\/\/(www\.)?yako[0-9]+\.com\/upload\/banner\//$domain=/yako[0-9]+\.com/
+/lover[0-9]\.net\/file\/tohotv\/.*\.gif$domain=/lover[0-9]\.net/
+/lover[0-9]\.net\/file\/1bet\/.*\.gif$domain=/lover[0-9]\.net/
+/lover[0-9]\.net\/file\/eve\/.*\.png$domain=/lover[0-9]\.net/
 ||cokcok.stream/public/vast.php
-/^https:\/\/tvwiki[0-9]+\.net\/data\/banner\//$domain=tvwiki*.net*
+/^https:\/\/tvwiki[0-9]+\.net\/data\/banner\//$domain=/tvwiki[0-9]+\.net/
 ||wdwd*.com/data/banner/
 ||static.tzstatic.top/z/*.gif
 ||ddal.xyz/project/mc/js/nuevo.min.js
-*$image,domain=tvwiki*.tv*
-/^https:\/\/tv[0-9]+\.wiki\/wp-content\/uploads\/[0-9]+\/[0-9]+\/.+\.gif/$domain=tv*.wiki*
+*$image,domain=/tvwiki[0-9]+\.tv/
+/^https:\/\/tv[0-9]+\.wiki\/wp-content\/uploads\/[0-9]+\/[0-9]+\/.+\.gif/$domain=/^tv[0-9]+\.wiki/
 ||img.mingk.xyz/data/file/passfree/
-||mingk*.net/theme/BS4-Basic/js/pf-loader.js$domain=mingky*.net*
+||mingk*.net/theme/BS4-Basic/js/pf-loader.js$domain=/^mingky[0-9]+\.net/
 ||yasyadong.*/?_Action=adv&_Method$domain=yasyadong.*
-/https:\/\/tvwiki[0-9]+\.com\/data\/banner\//$domain=tvwiki*.com*
+/https:\/\/tvwiki[0-9]+\.com\/data\/banner\//$domain=/tvwiki[0-9]+\.com/
 /^https:\/\/(www\.)?aniya24\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[a-z]+[0-9]+x[0-9]+\./$domain=aniya24.com
 ||aniya24.com/wp-content/uploads/*.gif
 ||sutom.org/wp-content/uploads/*.webp
@@ -1433,19 +1431,19 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 ||cdn.ksportscdn.com/data/popup/
 ||tvwiki*.com/AD
 ||media.cokcok.vip/assets/images/
-/https:\/\/tvwiki[0-9]+\.com\/AD\//$domain=tvwiki*.com*
+/https:\/\/tvwiki[0-9]+\.com\/AD\//$domain=/tvwiki[0-9]+\.com/
 ||rj.filesbest.xyz/r/
-/^https:\/\/torrentrj[0-9]+\.com\/uploadfile\/up[0-9a-z]+\.gif/$domain=torrentrj*.com*
+/^https:\/\/torrentrj[0-9]+\.com\/uploadfile\/up[0-9a-z]+\.gif/$domain=/^torrentrj[0-9]+\.com/
 ||moeni.net/img/a/ad
 ||sptv-sportscdn.com/data/popup/
 ||images.request-support.com/br/
 /^https:\/\/cdn-[a-z]+-[0-9]+\.hasha\.in\/[a-zA-Z_0-9-]+\./$domain=hasha.in
 ||anilife.live/assets/banner/
 ||moeni.net/img/a/lula.gif
-/theme/basic/img/banner/*$domain=nunu*.tv*
-||torrentpi*.com/data/file/ad/$domain=torrentpi*.com*
-/^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9-%A-Z]+x[0-9]+/$domain=avpink*.com*
-/^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9]+-[0-9]+-[0-9]+\./$domain=avpink*.com*
+/theme/basic/img/banner/*$domain=/nunu[0-9]+\.tv/
+||torrentpi*.com/data/file/ad/$domain=/torrentpi[0-9]+\.com/
+/^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9-%A-Z]+x[0-9]+/$domain=/^avpink[0-9]+\.com/
+/^https:\/\/avpink[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[0-9]+-[0-9]+-[0-9]+\./$domain=/^avpink[0-9]+\.com/
 ||cdn.ksportscdn.com/data/editor/
 ||xn--h10b90b998c.site/img/
 /^https:\/\/v[0-9]+\.dasibogo\.net\/wp-content\/uploads\/sites\/[0-9]+\/[0-9]+\/[0-9]+\/[a-z0-9]+\./$domain=dasibogo.net
@@ -1456,13 +1454,13 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 ||anilife.*/assets/images/banner/$domain=anilife.*
 ||tvzone.*/data/banner/$domain=tvzone.*
 ||xvideos-kr.com/img/banner/
-||telegra.ph/file/$domain=avguri*.com*
+||telegra.ph/file/$domain=/^avguri[0-9]+\.com/
 ||ohli365.*/data/apms/$domain=ohli365.*
 ||bbongtv.*/img/*.gif$domain=bbongtv.*
-/^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/banner\//$domain=ygy*.com*
-/^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/popup\//$domain=ygy*.com*
+/^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/banner\//$domain=/ygy[0-9]+\.com/
+/^https:\/\/www\.ygy[0-9]+\.com\/upload_files\/popup\//$domain=/ygy[0-9]+\.com/
 /^https:\/\/linkssakda\.com\/upload\/images\/[0-9]+\./$domain=linkssakda.com
-||i.imgur.com^$domain=avguri*.com*
+||i.imgur.com^$domain=/avguri[0-9]+\.com/
 ||moeni.net/img/a/*x
 ||cdnbuzz.buzz//banner/
 /^https:\/\/avjoa[0-9]+\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/.+\.gif$/
@@ -1471,8 +1469,8 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 ||ohli24.com/img/
 ||nanatv.*/resource/images/$domain=nanatv.*
 ||xn--cm2by8iw5h6xm8pc.*/data/banner/$domain=xn--cm2by8iw5h6xm8pc.*
-||imgbox.com/*.gif$domain=bontv*.com*
-/^https:\/\/tor[0-9]+\.com\/data\/file\/test\//$domain=tvzota*.com*
+||imgbox.com/*.gif$domain=/^bontv[0-9]+\.com/
+/^https:\/\/tor[0-9]+\.com\/data\/file\/test\//$domain=/tvzota[0-9]+\.com/
 ||agitwebtoon.*/upload/$domain=agitwebtoon.*
 /^https:\/\/18moa[0-9]+\.com\/data\/file\/main_top_banner\/thumb-/
 ||topgirl.co/project/bm/js/nuevo.min.js
@@ -1480,17 +1478,17 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 /^https:\/\/opss[0-9]+\.com\/img\/[A-z]+\.gif(\?v=[0-9]+)?$/
 /thumb/kh/bn/*$domain=1004past.com
 /^https:\/\/jiok[0-9]+\.net\/img\//
-/data/apms/background/*$domain=opworlds*.com*
-/data/editor/*$domain=opworlds*.com*
-/data/file/primium/*$domain=opworlds*.com*
-/^https:\/\/yt[0-9]+\.org\/files\/attach\/banner_images\/[0-9]+\/([\d-]+(x|X)[0-9]+|(%[A-Z0-9]+)+)\./$domain=yt*.org*
+/data/apms/background/*$domain=/^opworlds[0-9]+\.com/
+/data/editor/*$domain=/^opworlds[0-9]+\.com/
+/data/file/primium/*$domain=/^opworlds[0-9]+\.com/
+/^https:\/\/yt[0-9]+\.org\/files\/attach\/banner_images\/[0-9]+\/([\d-]+(x|X)[0-9]+|(%[A-Z0-9]+)+)\./$domain=/yt[0-9]+\.org/
 ^https:\/\/bookmoa[0-9]+\.com\/data\/apms\/background\//
 ||kormovie.com/img/*.gif|
 /^https:\/\/jusoyo[0-9]+\.(net|com)\/data\/apms\/background\//
 /^https:\/\/jusoyo[0-9]+\.(net|com)\/.+\.webp$/
 /^https:\/\/yadong[0-9]+\.net\/Uploads\/images\/\d{4}-\d{2}-\d{2}/
 ||i.imgur.com^$domain=yasyadong.*
-/^https:\/\/iabn[0-9]+\.net\//$domain=fxfx*.com*
+/^https:\/\/iabn[0-9]+\.net\//$domain=/^fxfx[0-9]+\.com/
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z]+[0-9]+x[0-9]+\//
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z0-9_-]+\.gif$/
 ||agitnovel.*/data/file/novel/banner/$domain=agitnovel.*
@@ -1505,27 +1503,27 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 /^https:\/\/www\.torrentreel[0-9]+\.site\/ad\//
 /^https:\/\/tvchak[0-9]+\.com\/img\/bbnn/
 /^https:\/\/agit[0-9]+\.com\/upload\/[0-9]+\/[0-9]+\/[0-9]+\./
-||hoohootv*.*/static/bnner/$domain=hoohootv*.xyz*
-/^https:\/\/tv[0-9]+\.avsee\.[a-z]+\/imgs\//$domain=avsee.*
+||hoohootv*.*/static/bnner/$domain=/hoohootv[0-9]+\.xyz/
+/^https:\/\/tv[0-9]+\.avsee\.[a-z]+\/imgs\//$domain=/avsee.*/
 ||tvhot.cc/b/
 /^https:\/\/sonagitv\.[a-z]+\/images\/banner\/(?!webtoon_)/$domain=sonagitv.*
 ||i.imgur.com^$domain=sonagitv.*
 ||xn--h10b90b998c.*/img/$domain=xn--h10b90b998c.*
 ||i.imgur.com^$domain=newtoki.*
 ||newtoki.*/banner*/$domain=newtoki.*
-||i.imgur.com^$domain=torrentqq*.com*
+||i.imgur.com^$domain=/^torrentqq[0-9]+.com/
 ||cdn.jjun.live/BANNER/*.gif
 ||tvmon.*/img/ba
 ||tvmon.*/AD/
-||filesbest.xyz/uploadfile/images/*.gif$domain=torrenttip*.com*
+||filesbest.xyz/uploadfile/images/*.gif$domain=/^torrenttip[0-9]+\.com/
 /^https:\/\/(www\.)?bobaelink[0-9]+\.xyz\/images\/ad\//
 ||i.uuoobe.com/images/250x250-6005.jpg
 /\/data\/zzapstream\/[0-9]+_[A-z0-9]+\.gif/$domain=zzzz.lol
 ||i.uuoobe.com//ad/
 /^https:\/\/(www\.)?filetender\.com\/images\/(?!logo).+\.(jpg|png)$/$domain=filetender.com
 /^https:\/\/m[0-9]+\.kotbc\.com\/img\/[a-z0-9_\/]+\.gif$/
-||i.imgur.com^$domain=torrentwhy*.xyz*
-||imgbox.com^$domain=tvzota*.com*
+||i.imgur.com^$domain=/^torrentwhy[0-9]+\.xyz/
+||imgbox.com^$domain=/^tvzota[0-9]+\.com/
 /^https:\/\/(www\.)?ruru\.tv\/uploads\/[0-9]+\/(?!16682220461360)[0-9]+/$domain=ruru.tv
 ||ruru.tv/uploads/
 /^https:\/\/torrentsee[0-9]+\.com\/uploadfile\/up[a-z0-9]+\.gif/
@@ -1546,14 +1544,14 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 /^https:\/\/jgmoa[0-9]+\.com\/upload_files\/popup\//
 /^https:\/\/newtoki[0-9]+\.com\/tokinbtoki\/[0-9]+/
 /^https:\/\/manatoki[0-9]+\.net\/tokinbtoki\//
-||imgsuperpower.com^$domain=tkr*.com*
-||blogger.googleusercontent.com/img/$domain=tkr*.com*
-||static.springbuilder.site/fs/userFiles-v2/$domain=tkr*.com*
+||imgsuperpower.com^$domain=/^tkr[0-9]+\.com/
+||blogger.googleusercontent.com/img/$domain=/^tkr[0-9]+\.com/
+||static.springbuilder.site/fs/userFiles-v2/$domain=/^tkr[0-9]+\.com/
 /^https:\/\/static\.tzstatic\.top\/t\/[a-z0-9]+\.gif$/
 /^https:\/\/image\.yaburi[0-9]+\.com\/image-storage\/banners\//
-/^https:\/\/w[0-9]+\.torrentnx[0-9]+\.com\/data\/file\/notice\//$domain=torrentnx*.com*
+/^https:\/\/w[0-9]+\.torrentnx[0-9]+\.com\/data\/file\/notice\//$domain=/^torrentnx[0-9]+\.com/
 ||i.imgur.com^$domain=etorrentro.net
-/^https:\/\/imgcloud[0-9]+\.net\//$domain=wftoon*.com*
+/^https:\/\/imgcloud[0-9]+\.net\//$domain=/^wftoon[0-9]+\.com/
 /^https:\/\/torrentten[0-9]+\.com\/thema\/Basic\/assets\/img\/.+\.gif$/
 /^https:\/\/linkrand[0-9]+\.com\/thema\/Miso-Basic\d\/assets\/img\/banne/
 /^https:\/\/linkrand[0-9]+\.com\/data\/file\/(left|right)_sero\//
@@ -1589,14 +1587,14 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 /^https:\/\/manamoa[0-9]+\.com\/data\/apms\/background\//
 /^https:\/\/namedtoon[0-9]+\.com\/Uploads\/images\/\d{4}-\d{2}-\d{2}\/[a-z0-9]{13}/
 /^https:\/\/(www\.)?race[0-9]+\.xyz\/images\/spon\//
-/^https:\/\/imgcloud[0-9]+\.net\//$domain=wtwt*.com*
-||i.imgur.com^$domain=torrentgram*.com*
+/^https:\/\/imgcloud[0-9]+\.net\//$domain=/wtwt[0-9]+.com/
+||i.imgur.com^$domain=/^torrentgram[0-9]+\.com/
 /^https:\/\/dc\.filesbest\.xyz\/uploadfile\/images\/[a-z0-9]+\.gif$/
 /^https:\/\/torrentwiz[0-9]+\.com\/data\/editor\/\d{4}\//
 /^https:\/\/torrentbot[0-9]+\.[a-z]+\/uploadfile\/up[a-z0-9]+\.gif$/
-||imgbox.com^$domain=ktxtorrent*.com*
-||static.filesbest.xyz^$domain=ktxtorrent*.com*
-||i.imgur.com^$domain=bobaelink*.xyz*
+||imgbox.com^$domain=/^ktxtorrent[0-9]+\.com/
+||static.filesbest.xyz^$domain=/^ktxtorrent[0-9]+\.com/
+||i.imgur.com^$domain=/^bobaelink[0-9]+\.xyz/
 ||filetender.com/mobon.html|
 /^https:\/\/(www\.)?filetender\.com\/images\/\d{3,}(X|x)\d{3,}-\d{4}/
 ||filetender.com/images/*.gif
@@ -1611,9 +1609,9 @@ torrentsee*.com*##.container > div[style^="z-index:999; "]
 /^https?:\/\/manaboza[0-9]+\.com\/static\/image\/header\//
 /^https:\/\/newtoon[0-9]+\.com\/banner\//
 /^https:\/\/bam[0-9]+co\.com\/_book\/_Contents\/banner\//
-||imgsuperpower.com^$domain=hdhd*.net*
-||blogger.googleusercontent.com^$domain=hdhd*.net*
-/^https:\/\/iabn[0-9]+\.net\//$domain=wfwf*.net*
+||imgsuperpower.com^$domain=/^hdhd[0-9]+\.net/
+||blogger.googleusercontent.com^$domain=/^hdhd[0-9]+\.net/
+/^https:\/\/iabn[0-9]+\.net\//$domain=/wfwf[0-9]+\.net/
 /^https:\/\/blacktoon[0-9]+\.com\/poster_js\/[0-9]+\.js/
 ||toonkor*.com/images/*.gif
 ||wwwimageup.angle777899.com/other/atoona/
@@ -3006,57 +3004,57 @@ etoland.co.kr##div#super_store_skin_v1
 etoland.co.kr##div.my_880_100_wrap
 koreaminecraft.net##tr.notice:not(:has(.wst_member_title))
 kio.ac##main > div:has(> div > div > a > img)
-[$domain=xtoon*.com*]##.container > div.row > div > a[target="_blank"] > picture
-[$domain=funbe*.com*]##.mobile-banner > div[class^="main_top_bann"]
-[$domain=funbe*.com*]##.mobile-banner div.banner_m
-[$domain=funbe*.com*]###bo_list div[class^="bancol"]
-[$domain=mingky*.net*]##.contents_wrap.column div[style="display: flex; flex-direction: column; align-items: center;"]
+domain=xtoon*.com*##.container > div.row > div > a[target="_blank"] > picture
+domain=funbe*.com*##.mobile-banner > div[class^="main_top_bann"]
+domain=funbe*.com*##.mobile-banner div.banner_m
+domain=funbe*.com*###bo_list div[class^="bancol"]
+domain=mingky*.net*##.contents_wrap.column div[style="display: flex; flex-direction: column; align-items: center;"]
 nightofpeace.com,ilovebees.io##.e-con-full.e-flex.e-con:has(a[target="_blank"] img)
 nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_blank"] img)
-[$domain=lover*.net*]##.div-over
-[$domain=torrentqq*.com*]##.at-banner
-[$domain=torrentpi*.com*]##.basic-post-gallery
-[$domain=tvwiki*.tv*]##a:has(> img[src^="https://static.wixstatic.com/media/"])
-[$domain=torrentzota*.com*]##a[href^="/adver-"]
-[$domain=tv*.wiki*]###cpb-popup-banners
-[$domain=tv*.wiki*]##.custom_banner_wrap
+domain=lover*.net*##.div-over
+domain=torrentqq*.com*##.at-banner
+domain=torrentpi*.com*##.basic-post-gallery
+domain=tvwiki*.tv*##a:has(> img[src^="https://static.wixstatic.com/media/"])
+domain=torrentzota*.com*##a[href^="/adver-"]
+domain=tv*.wiki*###cpb-popup-banners
+domain=tv*.wiki*##.custom_banner_wrap
 aniya24.com##.popup-container
 sutom.org##div[data-id="9429d5d"]
 sutom.org###sutom-pro
 blacktoon1.info##div[data-mesh-id="comp-m8jy31rninlineContent"]
-[$domain=tkor*.com*]##*[class*="top_bann"]
+domain=tkor*.com*##*[class*="top_bann"]
 toonkor.wiki##.banner
 yako.gg##.banner_grid
 v119.com##.zone-right > *:has(~ .no-pd):not(:has(> .tabbox))
 v119.com##.at-boxed .zone-center > .widget-box ~ *
 ! aglint-disable-next-line
-[$domain=newtoki*.com*]##img[title="소울_뉴토끼_이벤트_배너"]
+domain=newtoki*.com*##img[title="소울_뉴토끼_이벤트_배너"]
 itrulli.com##div.elementor-widget-shortcode
 avjoa69.com##img[onclick]
 avjoa69.com##.happy-header
-[$domain=jusokorea*.com*]##div[class*="-ad-banner"]
+domain=jusokorea*.com*##div[class*="-ad-banner"]
 ntnt4.tv##a[data-testid="linkElement"][href^="http"][target="_blank"]:has(> wow-image)
 aniwolf.*##.banner-area
 anilife.*##div[class] > a[class][href^="http"][target="_blank"]
-[$domain=tvwiki*.com*]##div[id] > ul:has(a[href] > img[src^="/AD/"])
+domain=tvwiki*.com*##div[id] > ul:has(a[href] > img[src^="/AD/"])
 hoduhodu.com##.w-full > a[target="_blank"] > img
-[$domain=kktv*.com*]##.modal_contents
-[$domain=tvmon*.org*]##.row-banner
+domain=kktv*.com*##.modal_contents
+domain=tvmon*.org*##.row-banner
 tvroom5.org##div.banners_area
 tvroom5.org##div.banner_l
 tvroom5.org##.pop-up.iziModal
 tvroom5.org##.iziModal-overlay
-[$domain=torrentnx*.com*]##a[href*="/bbs/link.php"]
-[$domain=cokcoktv*.com*]###cpb-popup-banners
-[$domain=cokcoktv*.com*]###custom_banner_wrap
-[$domain=cokcoktv*.com*]##.custom_banner_wrap
-[$domain=tvwiki*.com*]##ul[class^="banner"]
-[$domain=sptv*.com*]##.modal_contents
-[$domain=torrentpi*.com*]##style ~ .basic-post-gallery
-[$domain=avguri*.com*]##div[id$="_bn"]
-[$domain=avpink*.com*]###foogallery_widget-3
-[$domain=avpink*.com*]###foogallery_widget-12
-[$domain=avpink*.com*]###foogallery_widget-13
+domain=torrentnx*.com*##a[href*="/bbs/link.php"]
+domain=cokcoktv*.com*###cpb-popup-banners
+domain=cokcoktv*.com*###custom_banner_wrap
+domain=cokcoktv*.com*##.custom_banner_wrap
+domain=tvwiki*.com*##ul[class^="banner"]
+domain=sptv*.com*##.modal_contents
+domain=torrentpi*.com*##style ~ .basic-post-gallery
+domain=avguri*.com*##div[id$="_bn"]
+domain=avpink*.com*###foogallery_widget-3
+domain=avpink*.com*###foogallery_widget-12
+domain=avpink*.com*###foogallery_widget-13
 tv25.co##.code-block
 xn--vv4b11c.com##.mp4-banner-view
 xn--vv4b11c.com###xcontent-goodsite
@@ -3065,103 +3063,103 @@ anilife.*##div[data-page] > div[class]:has(a[target="_blank"])
 tvzone.*##.main_banner
 xvideos-kr.com##.thumb-ad
 coktv.*##.custom_banner_wrap
-[$domain=avguri*.com*]###hd_pop
+domain=avguri*.com*###hd_pop
 bbongtv.*##img[src^="/img/"][src*=".gif"]
-[$domain=ygy*.com*]##.popup_wrap
+domain=ygy*.com*##.popup_wrap
 moeni.net##img[src^="/img/sp/"]
 av19.gg###page ~ div[style^="min-height:"]#content.row
-[$domain=nolgoga*.com*]###hd_pop
-[$domain=bontv*.com*]##div[class$="_ban"]
-[$domain=bontv*.com*]##div[class^="popup_"]
-[$domain=tvzota*.com*]##div[class$="_ban"]
-[$domain=tvzota*.com*]##div[class^="popup_"]
+domain=nolgoga*.com*###hd_pop
+domain=bontv*.com*##div[class$="_ban"]
+domain=bontv*.com*##div[class^="popup_"]
+domain=tvzota*.com*##div[class$="_ban"]
+domain=tvzota*.com*##div[class^="popup_"]
 agitwebtoon.*##.advx
 newtoki.*##.banner2
-[$domain=opworlds1*.com*]##.basic-banner-gallery
-[$domain=jusoyo1*.net*]##.hd_pops
-[$domain=jusoyo1*.net*]##.basic-banner-gallery
+domain=opworlds1*.com*##.basic-banner-gallery
+domain=jusoyo1*.net*##.hd_pops
+domain=jusoyo1*.net*##.basic-banner-gallery
 agitnovel.*##.banner
 spochak.com##.list-webzine .list-item
-[$domain=torrentdin*.com*]###hd_pop
-[$domain=torrentdin*.com*]##div[class*="at-"] > .widget-box
-[$domain=tvchak*.com*]##div[style].border-shadow
-[$domain=tvchak*.com*]##.banner-box
+domain=torrentdin*.com*###hd_pop
+domain=torrentdin*.com*##div[class*="at-"] > .widget-box
+domain=tvchak*.com*##div[style].border-shadow
+domain=tvchak*.com*##.banner-box
 cokcok.*##.custom_banner_item
-[$domain=agit*.com*]##.banner
+domain=agit*.com*##.banner
 tvhot.*##div[id*="-banner-"]
 tvhot.*###body_wrap > div[class][style^="margin:"]
 sonagitv.*##a[href][target="_blank"] > img[src^="/images/banner/"]:not([src^="/images/banner/webtoon_"])
 newtoki.*##.ba_test
-[$domain=torrentqq*.com*]##.row-banner
+domain=torrentqq*.com*##.row-banner
 sonagitv.*##.popup_warp
 kr.bb-tv.co##.banner
-[$domain=torrenttip*.com*]##a[href*="/ad/"]
-[$domain=torrenttt*.com*]##a[href*="/ad/"][target="_blank"]
+domain=torrenttip*.com*##a[href*="/ad/"]
+domain=torrenttt*.com*##a[href*="/ad/"][target="_blank"]
 zzzz.lol##a[href*="/bbs/link.php?bo_table=partner&"]
 zzzz.lol##.ent_wrapper.slide-vertical-effect .ent_navigation
 zzzz.lol##a[href*="?bo_table=partner"]
 zzzz.lol###hd_pop
 hasha.in##div[style^="min-height:"][class^="bg-hasha-"] > div[style] + .max-w-full
-[$domain=tvzota*.com*]##.wid
+domain=tvzota*.com*##.wid
 yako.red,yadongwang.org,yadongkorea.red,yadongtube.net,yatv.net###banner
 save-1.net##div[id^="float"]
 save-1.net##div[class^="header-banner-"]
 save-1.net##.at-main > .widget-box
 save-1.net##.w-banner
-[$domain=jgmoa*.com*]##.popup
-[$domain=torrenttop*.com*]##a[href^="/adver-"]
-[$domain=yaburi*.com*]###popups
+domain=jgmoa*.com*##.popup
+domain=torrenttop*.com*##a[href^="/adver-"]
+domain=yaburi*.com*###popups
 etorrentro.net##div[id^="banner"]
 1004girl.com##.page-content > .row.no-gap.no-space > .col-33
-[$domain=linkrand*.com*]##.is-hover a[href^="http"][target="_blank"]
-[$domain=linkrand*.com*]##div[id][class*=" "][data-interval] div[style*="/data/apms/background"]
-[$domain=tvbox*.xyz*]##div[class*="-banner"] div[class*=" "][style=" "]
-[$domain=ydbox*.com*]##div[class*="-banner"] div[class*=" "][style=" "]
-[$domain=linkeye*.com*]##div[class*="banner-"]
+domain=linkrand*.com*##.is-hover a[href^="http"][target="_blank"]
+domain=linkrand*.com*##div[id][class*=" "][data-interval] div[style*="/data/apms/background"]
+domain=tvbox*.xyz*##div[class*="-banner"] div[class*=" "][style=" "]
+domain=ydbox*.com*##div[class*="-banner"] div[class*=" "][style=" "]
+domain=linkeye*.com*##div[class*="banner-"]
 img.imimggggg87878.com##div[class$="-banner"]
 linkkf.app###banner
-[$domain=booktoki*.com*]##div[id*="-banner-"] > div[class*=" "] > div[class*=" "][style*=" "]
+domain=booktoki*.com*##div[id*="-banner-"] > div[class*=" "] > div[class*=" "][style*=" "]
 hellven.net##a[href^="http"][target="_blank"].thumbnail
 dajunbi.com##div[class^="banner_"]
-[$domain=spotv*.com*]##div[id$="-banner"]
+domain=spotv*.com*##div[id$="-banner"]
 qooqootv.fun##div[class^="banner_"]
-[$domain=lover*.net*]##.xe_content span ~ div[style]
+domain=lover*.net*##.xe_content span ~ div[style]
 theqoo.net##tr.notice:not([data-document_srl])
-[$domain=yagong*.com*]##div[x-data="popups()"]
-[$domain=redsun*.me*]##div[id*="ads"]
-[$domain=manamoa*.com*]##div[class*="banner"]
-[$domain=torrentgram*.com*]##.panel-default ~ .row > .col-sm-6
-[$domain=torrentgram*.com*]##.npia-board-gallery
-[$domain=torrentgram*.com*]###body_text > .at-main.at-col[style]
-[$domain=torrentbam*.com*]##a[href*="/ad/"][target="_blank"]
-[$domain=torrentbot*.a-z+*]##a[href^="/go/"][target="_blank"]
-[$domain=torrentbot*.a-z+*]##div[id^="ad_"]
-[$domain=ktxtorrent*.com*]##img[src*=".imgbox.com/"]
-[$domain=torrentsome*.com*]##a[href^="/go/"][target="_blank"]
-[$domain=torrentrj*.com*]##a[href^="/go/"][target="_blank"]
-[$domain=bobaelink*.xyz*]##a[href^="/ad-"]
+domain=yagong*.com*##div[x-data="popups()"]
+domain=redsun*.me*##div[id*="ads"]
+domain=manamoa*.com*##div[class*="banner"]
+domain=torrentgram*.com*##.panel-default ~ .row > .col-sm-6
+domain=torrentgram*.com*##.npia-board-gallery
+domain=torrentgram*.com*###body_text > .at-main.at-col[style]
+domain=torrentbam*.com*##a[href*="/ad/"][target="_blank"]
+domain=torrentbot*.a-z+*##a[href^="/go/"][target="_blank"]
+domain=torrentbot*.a-z+*##div[id^="ad_"]
+domain=ktxtorrent*.com*##img[src*=".imgbox.com/"]
+domain=torrentsome*.com*##a[href^="/go/"][target="_blank"]
+domain=torrentrj*.com*##a[href^="/go/"][target="_blank"]
+domain=bobaelink*.xyz*##a[href^="/ad-"]
 uuoobe.com##td[valign="top"] ~ td[width][valign][bgcolor][align] table[width][height][border][cellpadding]
 uuoobe.com##table[width][cellspacing] td[valign="top"] table[width][border="0"] td[height="100"]
 filetender.com###banner
 filetender.com##iframe[src="https://filetender.com/mobon.html"]
 moviepang.net##.sidebar[style] > aside[id^="text-"][class] ~ aside[id^="text-"][class]
-[$domain=frtoon*.com*]##.ad-form > .row > div[class^="col-md-"]
+domain=frtoon*.com*##.ad-form > .row > div[class^="col-md-"]
 toon123.com##main > section[style]:not([class])
-[$domain=manaboza*.com*]##.payment_fullbnr
-[$domain=manaboza*.com*]##.comic_bot_bnr
+domain=manaboza*.com*##.payment_fullbnr
+domain=manaboza*.com*##.comic_bot_bnr
 torrentmode.com##a[href^="https://torrentmode.com/bbs/bannerhit.php"]
-[$domain=newtoon*.com*]##.ad-form > .row > div[class^="col-md-"]
-[$domain=blacktoon*.com*]##.banner.container > .row > .col-6
-[$domain=newtoki*.com*]###hd_pop
-[$domain=manatoki*.net*]###hd_pop
-[$domain=booktoki*.com*]###hd_pop
-[$domain=newtoki*.com*]##div.col-15.col-md-9
-[$domain=newtoki*.com*]##.board-tail-banner
-[$domain=newtoki*.com*]##.basic-banner
-[$domain=booktoki*.com*]##img[src^="/tokinbtoki/"]
-[$domain=manatoki*.net*]##[style="margin-bottom: 20px;"].row.row-15
-[$domain=manatoki*.net*]##.basic-banner.row.row-10
-[$domain=manatoki*.net*]##.board-tail-banner
+domain=newtoon*.com*##.ad-form > .row > div[class^="col-md-"]
+domain=blacktoon*.com*##.banner.container > .row > .col-6
+domain=newtoki*.com*###hd_pop
+domain=manatoki*.net*###hd_pop
+domain=booktoki*.com*###hd_pop
+domain=newtoki*.com*##div.col-15.col-md-9
+domain=newtoki*.com*##.board-tail-banner
+domain=newtoki*.com*##.basic-banner
+domain=booktoki*.com*##img[src^="/tokinbtoki/"]
+domain=manatoki*.net*##[style="margin-bottom: 20px;"].row.row-15
+domain=manatoki*.net*##.basic-banner.row.row-10
+domain=manatoki*.net*##.board-tail-banner
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
@@ -3343,10 +3341,10 @@ opworlds18.com,opworlds19.com,opworlds20.com,opworlds21.com,opworlds22.com,opwor
 spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table="][target="_blank"])
-[$domain=booktoki*.com*]#?#ul[class] > li:has(> a[href*="tokkiweb.com"])
-[$domain=manatoki*.com*]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
-[$domain=newtoki*.com*]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
-[$domain=yagong*.com*]##div[class*="border"]:has(> a[href][target*="_blank"])
+domain=booktoki*.com*#?#ul[class] > li:has(> a[href*="tokkiweb.com"])
+domain=manatoki*.com*#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+domain=newtoki*.com*#?#ul[class] > li:has(> a[href^="/guarantee.php"])
+domain=yagong*.com*##div[class*="border"]:has(> a[href][target*="_blank"])
 chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
 m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
@@ -3358,15 +3356,15 @@ m.fmkorea.com#$?#body div:is(.bd, .hd) div[style] > *[class*=" "]:matches-css(pa
 m.mt.co.kr#$?#ul[class^="ad"] { remove: true; }
 news.daum.net#$?#.main-content > .content-article:not(:has(+ .content-aside > div[data-tiara-layer][class="box_side"])) { width: 100% !important; }
 coolenjoy.net#$?#.na-col > div[id^="carousel_"].carousel-fade .carousel-item:has(a[href]:not([href*="//coolenjoy.net/"])[target="_self"]) { remove: true; }
-aladin.co.kr#$?##welcomeMainBanner_welcomeMain div[id*="_containerWrap_"]:has(img[src$="Banner/ad.jpg"]) { remove: true; }
-m.danawa.com#$?##mdnw-main-recommend-realCuration-swipeContainer > div[id*="-ad-"] { remove: true; }
+aladin.co.kr#?##welcomeMainBanner_welcomeMain div[id*="_containerWrap_"]:has(img[src$="Banner/ad.jpg"]) { remove: true; }
+m.danawa.com#?##mdnw-main-recommend-realCuration-swipeContainer > div[id*="-ad-"] { remove: true; }
 programmers.co.kr#$?#div[class*="Banner"] div[data-swiper-slide-index].swiper-slide:has(a[href^="/banners/"]) { remove: true; }
 kyobobook.co.kr#$?#.banner_control_inner li[data-target="#75"].banner_group_item { remove: true; }
 kyobobook.co.kr#$?#.welcome_banner_inner li.swiper-slide:has(img[src*="image.kyobobook.co.kr/newimages/adcenter/"]) { remove: true; }
 enuri.com#$?#.trendpickup__container > .trendtab-cont:has(p.badge--ad) { remove: true; }
 enuri.com#$?#.trendtabs__list > li[data-adv_yn="Y"] { remove: true; }
-search.shopping.naver.com#$?##content div[class^="basicList_list_"] div:has(div[class^="adProduct_item_"]):has(~ div) { height: 1px !important; visibility: hidden !important; }
-bbs.ruliweb.com#$?##board_top > div > .top_best.best_list:has(+ .col div[id^="ad_"]) { width: 100% !important; }
+search.shopping.naver.com#?##content div[class^="basicList_list_"] div:has(div[class^="adProduct_item_"]):has(~ div) { height: 1px !important; visibility: hidden !important; }
+bbs.ruliweb.com#?##board_top > div > .top_best.best_list:has(+ .col div[id^="ad_"]) { width: 100% !important; }
 browse.auction.co.kr#$?#div[module-design-id] ~ div > .component:has(div:has(.text--smiledelivery_slogan)) .section--component_title { margin-top: 0px !important; }
 koreatimes.net#$?#.container:has(~ div[style]#toTop) article.content { margin-top: 100px !important; }
 koreatimes.net#$?#.headding-news:has(~ div:not([style])#toTop) .col-md-8 { margin-left: calc(50% - 384px) !important; }
@@ -3630,7 +3628,7 @@ tabriz.kr#@##ad-lead
 tabriz.kr#@##homead
 ! [Brave skipped] namechart.kr,eftlibrary.com##+js(no-fetch-if, www3.doubleclick.net)
 ! [Brave skipped] dinfo.3dpchip.com##+js(set, linkPass, true)
-boardlife.co.kr#$##top-sponsor { height: 60px !important; top: -60px !important; position: absolute !important; visibility: hidden !important; }
+boardlife.co.kr###top-sponsor { height: 60px !important; top: -60px !important; position: absolute !important; visibility: hidden !important; }
 ! [Brave skipped] klauncher.kr##+js(aeld, load, _0x)
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
 ! [Brave skipped] hub.weirdhost.xyz##+js(no-fetch-if, adblockanalytics.com)
@@ -3712,42 +3710,42 @@ dundam.xyz#$#.today-grade { width: 100% !important; }
 start.klauncher.kr#$#.main-content { width: calc(100vw - 220px) !important; }
 m.naver.com#$#.wrap.id_search .comp_container { margin-top: 0px !important; }
 lol.ps#$#div[class*="w-full min-w-[280px] pt-10"] > .p-4.pb-0 div[class*="max-w-[480px]"] { width: 100% !important; max-width: none !important; }
-lol.ps#$##summoner-name-header-container { width: 100% !important; }
+lol.ps###summoner-name-header-container { width: 100% !important; }
 2798731938.zigcou.com#$#.relative > .z-0 { display: none !important; }
 2798731938.zigcou.com#$#.relative .post-contents > div[style] { height: auto !important; }
 lawtimes.co.kr#$#div[class*=" "]:has( + div[class*=" "] > div > a[target="_blank"][href^="https://"]) { width: 100% !important; }
-www.naver.com#$##shortcutArea { height: auto !important; padding-left: 14px !important; }
+www.naver.com###shortcutArea { height: auto !important; padding-left: 14px !important; }
 search.shopping.naver.com#$#.seller_filter_area ~ div[class*="_list_"] div[class^="adProduct_item"] { visibility: hidden !important; height: 1px !important; padding: 0 !important; }
 academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) { display: none !important; }
 academy.prompie.com#$#body.modal-open:has(> #academyMainModal a[href^="https://academy.prompie.com/banners/"]) { overflow: auto !important; }
 academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) ~ .modal-backdrop { display: none !important; }
-www.naver.com#$##shortcutArea { padding-left: 64px !important; }
+www.naver.com###shortcutArea { padding-left: 64px !important; }
 ggulzam.zal.kr#$#.partners-inside { display: none !important; }
 ggulzam.zal.kr#$#.inside-content-background-gradient { display: none !important; }
-ggulzam.zal.kr#$##inner-content-body.hided { max-height: fit-content !important; }
-economist.co.kr#$##content-container { padding-top: 10px !important; }
-tftps.gg#$##top-area > div[class*=" "] > div[class*=" "]:has( div:not([class]) ~ button) { width: 100% !important; }
+ggulzam.zal.kr###inner-content-body.hided { max-height: fit-content !important; }
+economist.co.kr###content-container { padding-top: 10px !important; }
+tftps.gg###top-area > div[class*=" "] > div[class*=" "]:has( div:not([class]) ~ button) { width: 100% !important; }
 fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) { width: 100% !important; }
 fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) .news_top { width: revert-layer !important; }
 fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) .news_box { width: revert-layer !important; }
 tvroom5.org##ul.menu:has(> li > a[class^="banner_"])
-bbs.ruliweb.com#$##board_top .best_list { width: 100% !important; }
+bbs.ruliweb.com###board_top .best_list { width: 100% !important; }
 3277532532.reviewtoday.net#$#div[class^="Post_continue_coupang__"] { display: none !important; }
 3277532532.reviewtoday.net#$#.post-contents > div[style] { height: 100% !important; }
 maple.gg#$#.container-content > section[class*=" "] ~ main[class*=" "] { margin-top: 50px !important; }
-courtauctionmap.com#$##map_area { height: 100% !important; }
+courtauctionmap.com###map_area { height: 100% !important; }
 jovelys.ulog.kr,coolfun.zal.kr#$#.inner-body.hided .inside-content-background-gradient { display: none !important; }
 jovelys.ulog.kr,coolfun.zal.kr#$#.inner-body.hided .partners-inside { display: none !important; }
 jovelys.ulog.kr,coolfun.zal.kr#$#.inner-body.hided { overflow-y: auto !important; max-height: none !important; }
-etoland.co.kr#$##mw_mobile > .mw_icon_box { margin-top: 25px !important; }
+etoland.co.kr###mw_mobile > .mw_icon_box { margin-top: 25px !important; }
 m.hub.zum.com#$#.banner_slot_top + #container .article_cover { top: 100px !important; }
 mlbpark.donga.com#$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { padding-top: 0px !important; border-bottom: none !important; }
 enterdiary.com,hotplacehunter.co.kr,mystylezip.com,carandmore.co.kr,maxmovieen.com,tenbizt.com,mobilitytv.co.kr,thehousemagazine.kr,tminews.co.kr,capress.kr,youtu.co,dfast.kr,mememedia.co.kr,newautopost.co.kr#$#.news-view-wrap { padding-top: 0px !important; }
-gall.dcinside.com#$##zzbang_img { display: block !important; }
-m.sports.chosun.com,m.sportschosun.com#$##wrap > div[style*="height:"][style^="position:"] + header { margin-top: 0px !important; }
+gall.dcinside.com###zzbang_img { display: block !important; }
+m.sports.chosun.com,m.sportschosun.com###wrap > div[style*="height:"][style^="position:"] + header { margin-top: 0px !important; }
 atlantachosun.com#$#article > div[class^="sc-"] > aside[class*=" "] { display: none !important; }
 atlantachosun.com#$#article > div[class^="sc-"] { grid-template-columns: none !important; }
-atlantachosun.com#$##popup-root { display: none !important; }
+atlantachosun.com###popup-root { display: none !important; }
 atlantachosun.com#$#body[style] { overflow: auto !important; }
 issueclick.kr#$#html[style] { overflow: auto !important; }
 curiosityblog.co.kr,issueclick.kr#$#.hideBtn { display: none !important; }
@@ -3755,39 +3753,39 @@ curiosityblog.co.kr,issueclick.kr#$#.bodyHide { height: auto !important; }
 m.shop.interpark.com#$#.topBannerWrapper * { height: 1px !important; }
 shopping.interpark.com#$#.depthContentsWrap .productListWrap .searchList { margin-top: 0px !important; }
 ygosunews.com#$#body { padding-top: 0px !important; }
-www.auction.co.kr#$##allKillItemList > .item_list_wrap { width: 100% !important; }
-yes24.com#$##ySContent .loginCont { margin-left: 200px !important; }
+www.auction.co.kr###allKillItemList > .item_list_wrap { width: 100% !important; }
+yes24.com###ySContent .loginCont { margin-left: 200px !important; }
 yes24.com#$#.mContRT .mbnZone { left: 94.5px !important; }
-m.ytn.co.kr#$##entFlick { height: auto !important; }
-yes24.com#$##yHeader .yesSearch .key_latest .lastest_word { width: 100% !important; }
-yes24.com#$##yWelMid .yWelNowBook { width: 100% !important; }
-yes24.com#$##yWelMid .yWelNowBook ul { margin-left: calc(50% - 436px) !important; }
-yes24.com#$##yWelTopMid .yWelTodayBook { width: calc(100% - 240px) !important; }
-yes24.com#$##yWelTopMid .yWelTodayBook .tBCont .tBInfo .tb_readCon { width: calc(100% - 30px) !important; }
-yes24.com#$##mbnRoll_yNow > .mbnRollUnit > .pagen_1 { width: 363px !important; }
-yes24.com#$##mbnRoll_yNow > .mbnRollUnit > .pagen_2 { width: 363px !important; left: 363px !important; }
-yes24.com#$##mbnRoll_yNow > .mbnRollUnit > .pagen_3 { width: 363px !important; left: 726px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_1 { width: 239px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_2 { width: 239px !important; left: 239px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_3 { width: 239px !important; left: 478px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_4 { width: 240px !important; left: 717px !important; }
+m.ytn.co.kr###entFlick { height: auto !important; }
+yes24.com###yHeader .yesSearch .key_latest .lastest_word { width: 100% !important; }
+yes24.com###yWelMid .yWelNowBook { width: 100% !important; }
+yes24.com###yWelMid .yWelNowBook ul { margin-left: calc(50% - 436px) !important; }
+yes24.com###yWelTopMid .yWelTodayBook { width: calc(100% - 240px) !important; }
+yes24.com###yWelTopMid .yWelTodayBook .tBCont .tBInfo .tb_readCon { width: calc(100% - 30px) !important; }
+yes24.com###mbnRoll_yNow > .mbnRollUnit > .pagen_1 { width: 363px !important; }
+yes24.com###mbnRoll_yNow > .mbnRollUnit > .pagen_2 { width: 363px !important; left: 363px !important; }
+yes24.com###mbnRoll_yNow > .mbnRollUnit > .pagen_3 { width: 363px !important; left: 726px !important; }
+yes24.com###mbnRoll_001 > .mbnRollUnit > .pagen_1 { width: 239px !important; }
+yes24.com###mbnRoll_001 > .mbnRollUnit > .pagen_2 { width: 239px !important; left: 239px !important; }
+yes24.com###mbnRoll_001 > .mbnRollUnit > .pagen_3 { width: 239px !important; left: 478px !important; }
+yes24.com###mbnRoll_001 > .mbnRollUnit > .pagen_4 { width: 240px !important; left: 717px !important; }
 www.naver.com#$#div[class^="Layout-module_"] #newsstand { margin-top: 0px !important; }
 ktestone.com#$#.article-adCover-div { height: 100% !important; }
 etoland.co.kr#$#.main-top-banner + .box { margin-top: 0px !important; }
-semoi.kr#$##bo_ad { display: none !important; }
+semoi.kr###bo_ad { display: none !important; }
 chchclub.com#$#.content.partners-wrap { max-height: 100% !important; }
 chchclub.com#$#.partners-wrap #partners { display: none !important; }
 thepumpkin.io#$#.bottomPop { display: none !important; }
 thepumpkin.io#$#.social-after-title { height: auto !important; }
-withcast.co.kr#$##SirenDiv { display: block !important; }
-withcast.co.kr#$##no_pages.bg_w { display: none !important; }
+withcast.co.kr###SirenDiv { display: block !important; }
+withcast.co.kr###no_pages.bg_w { display: none !important; }
 3.37.104.109#$#.body.mwcphide { height: 100% !important; }
 3.37.104.109#$#.mwcphideBtn { display: none !important; }
-donthellgo.com#$##contentBody.bodyHide { height: 100% !important; }
+donthellgo.com###contentBody.bodyHide { height: 100% !important; }
 marupost.mycafe24.com#$#.content-preview { display: none !important; }
 marupost.mycafe24.com#$#.content-full { height: auto !important; }
 ktestone.com,dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com#$#div[class^="article-adCover-div-"] { display: none !important; }
-dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com#$##adNotice { display: none !important; }
+dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com###adNotice { display: none !important; }
 lottoen.com#$#.content_body > div[class^="lotto_"] { filter: none !important; -webkit-filter: none !important; }
 lottoen.com#$#.content_body > div[class$="_coupang_wrap"] { display: none !important; }
 lottoen.com#$#.content_more_div > .cmd_block_layer { display: none !important; }
@@ -3796,12 +3794,12 @@ simcong.com#$#.waiting_coupang_wrap { display: none !important; }
 simcong.com#$#.result_wrap { display: block !important; }
 simcong.com#$#.quiz_list:not([style]) ~  .result_wrap .restart { display: none !important; }
 gorani.kr#$#.column_content { margin-top: 50px !important; }
-www.naver.com#$##topSearchWrap { padding-bottom: 50px !important; }
-dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com#$##content .ad_parent { height: 100% !important; overflow: auto !important; }
-marupost.mycafe24.com#$##welcome-ad { display: none !important; }
+www.naver.com###topSearchWrap { padding-bottom: 50px !important; }
+dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com###content .ad_parent { height: 100% !important; overflow: auto !important; }
+marupost.mycafe24.com###welcome-ad { display: none !important; }
 bloter.net#$#.respons-edit > div[style].float-left { width: 100% !important; }
 news.unn.net#$#header > .header-body { width: 100% !important; }
-www.donga.com#$##journalist_card li { width: 100% !important; }
+www.donga.com###journalist_card li { width: 100% !important; }
 heraldpop.com#$#.article_area .article_left { width: 100% !important; }
 chaoscube.co.kr#$#.container .contents > .subcontents:nth-child(1) { margin-top: 0px !important; }
 chaoscube.co.kr#$#html:not([data-n-head]) .contents > .headline { margin-top: 0px !important; height: 70px !important; }
@@ -3815,10 +3813,10 @@ blockchainhub.kr#$#.bch-main-wrapper > .right-cont { margin-right: calc(50% - 18
 ppss.kr#$#.content { width: 100% !important; }
 wowtv.co.kr#$#.article-ad ~ p[style][class^="title"] { margin-top: 100px !important; }
 kidkids.net#$#div[class^="main"]#middle_area .academy.fleft:not(.iyua) { margin-left: calc(11.5%) !important; }
-kidkids.net#$##id_my_menu_area ~ #main_sky_banner_area { margin-left: 685px !important; }
+kidkids.net###id_my_menu_area ~ #main_sky_banner_area { margin-left: 685px !important; }
 m.ruliweb.com#$#.go_top.go_button { width: 100% !important; }
 lotteon.com#$#.productDetailWrap > .contentsWrap { padding-bottom: 0px !important; }
-evape.kr#$##hotPlace.myBox { margin-left: calc(50% - 65px) !important; }
+evape.kr###hotPlace.myBox { margin-left: calc(50% - 65px) !important; }
 fomos.kr#$#.board_view .related_area { height: 300px !important; }
 focus.daum.net#$#div[data-tiara-layer]:not([id]) { margin-top: 0px !important; position: relative !important; }
 ygosunews.com,autopostkorea.com#$#.td-pb-span8 { width: 100% !important; }
@@ -3832,18 +3830,18 @@ auction.co.kr#$#.modrow-top > div[class$="_banner"][id$="Banner"] { display: non
 orbi.kr#$#.layout-main .panel.no-margin { padding-top: 50px !important; }
 orbi.kr#$#.layout-main .main-menu { top: 0px !important; }
 orbi.kr#$#div[class*="-banner-"] { display: none !important; }
-web.humoruniv.com#$##wrap_cnts td[valign="top"] #wrap_ctgr_new { width: 100% !important; }
-web.humoruniv.com#$##wrap_cnts td[valign="top"] #wrap_ctgr_new > div[id] { width: 100% !important; }
+web.humoruniv.com###wrap_cnts td[valign="top"] #wrap_ctgr_new { width: 100% !important; }
+web.humoruniv.com###wrap_cnts td[valign="top"] #wrap_ctgr_new > div[id] { width: 100% !important; }
 haninvegas.com#$#body[data-elementor-device-mode="desktop"] div[itemprop="mainContentOfPage"] { width: 100% !important; }
 news.jtbc.co.kr#$#.news_doc #footer { position: static !important; }
 sundaynewsusa.com#$#.td-is-sticky > .wpb_wrapper { top: 0px !important; }
 donthellgo.com,instructivehumility.com,news.oasisfeed.com#$#.hideBtn { display: none !important; }
-instructivehumility.com,news.oasisfeed.com#$##newsBody { height: auto !important; }
+instructivehumility.com,news.oasisfeed.com###newsBody { height: auto !important; }
 ydailynewsis.blogspot.com#$#a[href*="//link.coupang.com/"][type] { display: none !important; }
-ydailynewsis.blogspot.com#$##hidden1 { display: block !important; }
-aladin.co.kr#$##popupBody #nonmember_all .button_login2 { width: 100% !important; }
-aladin.co.kr#$##popupBody #nonmember_all .left1 { width: 100% !important; }
-aladin.co.kr#$##welcomeMainBanner_welcome_tab { left: calc(50% - 186px) !important; }
+ydailynewsis.blogspot.com###hidden1 { display: block !important; }
+aladin.co.kr###popupBody #nonmember_all .button_login2 { width: 100% !important; }
+aladin.co.kr###popupBody #nonmember_all .left1 { width: 100% !important; }
+aladin.co.kr###welcomeMainBanner_welcome_tab { left: calc(50% - 186px) !important; }
 kharn.kr#$#div[class*="inner"].column > div { width: 100% !important; }
 v.daum.net#$#.inner-main [data-cloud*="_ad_"] + div { margin-top: 0px !important; }
 lawtalk.co.kr#$#div[class^="premium-lawyer"] ~ a.goto-all-lawyers { margin-top: 40px !important; }
@@ -3865,16 +3863,16 @@ shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res [class*="prod_type2"] { widt
 diningcode.com#$#.MapMain > #map { width: 100% !important; }
 ypbooks.co.kr#$#form[name="loginForm"][action*="login.yp"] > table { margin-left: calc(25% - 27px) !important; }
 pushoong.com#$#html { overflow: auto !important; }
-pushoong.com#$##fullscreen-overlay { display: none !important; }
-serieamania.com#$##index > div[id^="index_box"][class]:not(.index_row_full) { margin-left: calc(50% - 145.5px) !important; }
-jobkorea.co.kr#$##loginFormWrite { margin-left: 25% !important; }
+pushoong.com###fullscreen-overlay { display: none !important; }
+serieamania.com###index > div[id^="index_box"][class]:not(.index_row_full) { margin-left: calc(50% - 145.5px) !important; }
+jobkorea.co.kr###loginFormWrite { margin-left: 25% !important; }
 jobkorea.co.kr#$#.byWd .matchingContWrap { margin-top: 0px !important; }
 ~m.joynews24.com,joynews24.com,~m.inews24.com,inews24.com#$#header ~ header { margin-top: 50px !important; }
 newsis.com#$#.articleView + .aside .smallbox + .smallbox { border-top: none !important; }
 unsin.co.kr#$#.content_area .todayBox { width: 100% !important; }
 fnnews.com#$#.inner_contents { margin-bottom: 0px !important; }
 ppomppu.co.kr#$#div[class^="ppom_newSub"] .top_newSub .left_wt { width: 100% !important; }
-all-mice.co.kr#$##main_sec { margin-top: 100px !important; }
+all-mice.co.kr###main_sec { margin-top: 100px !important; }
 cgv.co.kr#$#.wrap-login > .sect-login { margin-left: calc(50% - 270px) !important; }
 cgv.co.kr#$#.sect-movie-chart > ol:nth-child(2) > li { margin-left: 130px !important; }
 paxnet.co.kr#$#html[class*="pc-size"] .m-contents > .side-area > div:nth-child(-n+4) { top: auto !important; left: auto !important; }
@@ -3886,26 +3884,26 @@ modoodoc.com#$#div[class~="hospital-images-box"] ~ .row > .col-8 { max-width: 10
 noteforum.co.kr#$#table[style][width][cellspacing][cellpadding] tr[valign] > td[style] > div[style] { width: 100% !important; }
 miraetv.net#$#.gdl-page-item { width: 100% !important; }
 sports.chosun.com#$#div[style].row.no-gutters > .col-6 { max-width: 75% !important; flex-basis: 75% !important; }
-funnyissue.com,googlewph.com,gyeomipang.co.kr#$##primary { width: 100% !important }
+funnyissue.com,googlewph.com,gyeomipang.co.kr###primary { width: 100% !important }
 www.ebs.co.kr#$#.ebs_item .inner > div[class] { width: 50% !important; }
 megabox.co.kr#$#header.main-header { top: 0px !important; }
 quasarzone.com#$#.bot-content-area .mid-util-wrap > div { width: calc(50% - 5px) !important; }
 edit.incruit.com#$#.errorlay .new-login-warp { padding-top: 20px !important; margin-left: calc(50% - 232.5px) !important; }
-m.nocutnews.co.kr#$##pnlContainer .con_b > .reply_b { margin: 0px auto !important; }
+m.nocutnews.co.kr###pnlContainer .con_b > .reply_b { margin: 0px auto !important; }
 kin.naver.com#$#.wrap_home .section_spot { width: 100% !important; }
 kin.naver.com#$#.wrap_home .section_spot .best_qna_wrap { width: 100% !important; }
-te31.com#$##contentmemo ~ .adsbygoogle > div[style^="font-size:"] { width: 100% !important; }
-news.naver.com#$##section_body { border-top: none !important; }
+te31.com###contentmemo ~ .adsbygoogle > div[style^="font-size:"] { width: 100% !important; }
+news.naver.com###section_body { border-top: none !important; }
 sso.pping.kr#$#.content_join { margin-left: calc(50% - 200px) !important; }
-edufindkorea.com#$##body_wrap > #body_main > div[style]:nth-child(1), #body_wrap > #body_main > div[style]:nth-child(3) { width: calc(50% - 5px) !important; }
-bbs.ruliweb.com#$##board_read .board_main_top .member_reward_wrapper { margin-top: 20px !important; float: right !important; margin-right: 20px !important; }
+edufindkorea.com###body_wrap > #body_main > div[style]:nth-child(1), #body_wrap > #body_main > div[style]:nth-child(3) { width: calc(50% - 5px) !important; }
+bbs.ruliweb.com###board_read .board_main_top .member_reward_wrapper { margin-top: 20px !important; float: right !important; margin-right: 20px !important; }
 www.nate.com#$#.area_ranking { top: 400px !important; }
-www.nate.com#$##header { margin-bottom: 0px !important; }
+www.nate.com###header { margin-bottom: 0px !important; }
 sign.dcinside.com#$#.login_inputbox { float: none !important; }
 sign.dcinside.com#$#.login_inputbox .inner { width: calc(100% - 115px) !important; }
-compuzone.co.kr#$##searchArea .viewType_L .product_list li .prd_info { width: 700px !important; }
+compuzone.co.kr###searchArea .viewType_L .product_list li .prd_info { width: 700px !important; }
 compuzone.co.kr#$#.wrap_list .standard { width: 100% !important; }
-compuzone.co.kr#$##searchArea .title_wrap { width: calc(100% - 50px) !important; }
+compuzone.co.kr###searchArea .title_wrap { width: calc(100% - 50px) !important; }
 toomics.com#$#.banner-open .contents { padding-top: 68px !important; }
 marupost.mycafe24.com#$#body { overflow-x: auto !important; overflow-y: auto !important; }
 news.unn.net#$#.grid-body.g-body { width: 100% !important; }
@@ -3919,8 +3917,8 @@ ruliweb.com#$#.user_view { width: 100% !important; }
 ppomppu.co.kr#$#.top-keyword { width: 100% !important; }
 orbi.kr#$#.global-top { top: 0px !important; }
 www.erdcloud.com#$#.erd-container { width: 100% !important; }
-[$domain=spotv*.com*]##header { top: 0px !important; }
-[$domain=newtoki*.com*]#$#body { overflow: auto !important; }
+domain=spotv*.com*##header { top: 0px !important; }
+domain=newtoki*.com*#$#body { overflow: auto !important; }
 apycsports.com#$#.copas_btn { display: none !important; }
 !#if !env_firefox
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
