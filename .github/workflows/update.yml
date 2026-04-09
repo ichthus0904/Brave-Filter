@@ -2,7 +2,7 @@ name: Update Brave Filter List
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # 매 6시간마다 자동 실행 (한국시간 기준 오전 9시, 오후 9시)
+    - cron: '0 */12 * * *' # 매 6시간마다 자동 실행 (한국시간 기준 오전 9시, 오후 9시)
   workflow_dispatch: # 수동 실행 버튼 만들기
 
 permissions:
