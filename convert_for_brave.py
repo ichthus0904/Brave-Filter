@@ -1,6 +1,8 @@
 import urllib.request
 import urllib.parse
 import re
+# 👇 (추가됨) 시간을 생성하기 위한 모듈 추가
+from datetime import datetime, timezone, timedelta
 
 MAX_RANGE = 50
 MAX_DOMAINS_PER_RULE = 300  # Actions 안정성 고려 (500 → 300 권장)
@@ -189,10 +191,30 @@ if __name__ == "__main__":
 
     final_lines = process_list(main_url)
 
-    # 중복 제거 (순서 유지)
-    final_lines = list(dict.fromkeys(final_lines))
+    # 1. 기존 리스트에 이미 존재하는 버전/헤더/만료일 태그 제거 (중복 방지)
+    clean_lines = []
+    for line in final_lines:
+        if line.startswith("[Adblock Plus 2.0]") or line.startswith("! Version:") or line.startswith("! Expires:"):
+            continue
+        clean_lines.append(line)
 
+    # 2. 중복 제거 (순서 유지)
+    clean_lines = list(dict.fromkeys(clean_lines))
+
+    # 👇 (추가됨) 한국 시간(KST) 기준으로 현재 시간 생성 (버전용)
+    kst = timezone(timedelta(hours=9))
+    current_time = datetime.now(kst).strftime('%Y%m%d%H%M')
+
+    # 👇 (추가됨) 파일 작성 시 헤더를 맨 위에 먼저 쓰도록 수정
     with open("brave_list-kr.txt", "w", encoding="utf-8") as f:
-        f.write("\n".join(final_lines))
+        # 브레이브 자동 업데이트를 위한 필수 헤더 작성
+        f.write("[Adblock Plus 2.0]\n")
+        f.write("! Title: List-KR for Brave\n")
+        f.write(f"! Version: {current_time}\n")  # 파이썬 실행 시각이 버전이 됨
+        f.write("! Expires: 12 hours\n")       # 12시간 간격으로 업데이트 지시
+        f.write("\n")                          # 헤더와 본문 사이 한 줄 띄우기
+        
+        # 실제 필터 내용 작성
+        f.write("\n".join(clean_lines))
 
     print("완료: brave_list-kr.txt")
