@@ -1,14 +1,19 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave Shields
-! Description: List-KR Unified을 Brave Shields에 최적화한 버전 (Regex → Wildcard 변환)
-! Version: 20260412_2310
+! Description: List-KR Unified을 Brave Shields에 최적화한 버전
+! Brave Version: 20260413_0205
 ! Expires: 12 hours
-! Updated: 2026-04-12 23:10 KST
+! Updated: 2026-04-13 02:05 KST
 ! Source: https://github.com/ichthus0904/Brave-Filter
-! Recommended: Use with Aggressive mode
 
+! ================== Original List-KR Information ==================
+! Title: List-KR unified filters list (uBlock Origin)
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
+! Version: 2026.20555.0
+! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/List-KR/List-KR
+! =================================================================
+
 ! Licence: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !#if ext_ublock
 ||barohere.xyz^
