@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave Shields
 ! Description: List-KR Unified을 Brave Shields에 최적화한 버전 (Regex → Wildcard 변환)
-! Version: 20260412_1509
+! Version: 20260412_2310
 ! Expires: 12 hours
-! Updated: 2026-04-12 15:09 KST
+! Updated: 2026-04-12 23:10 KST
 ! Source: https://github.com/ichthus0904/Brave-Filter
 ! Recommended: Use with Aggressive mode
 
@@ -2659,7 +2659,6 @@ www.inven.co.kr###commonpart_invenpc
 inven.co.kr##.section_market_line
 inven.co.kr###inven_reservation_box
 inven.co.kr##.commu-content div[style].sh-wrap
-inven.co.kr##aside div[style]:not([class])
 hunnek.tistory.com##a[href^="https://www.panel.co.kr/user/join/etcpath/"]
 m.eye.seoul.co.kr,m.seoul.co.kr,m.nownews.seoul.co.kr###contentsBodyDiv > table[width]
 soccerline.kr##div[class$="Bann"]
