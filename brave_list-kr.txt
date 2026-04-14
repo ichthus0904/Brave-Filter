@@ -1,14 +1,14 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave Shields
 ! Description: List-KR Unified을 Brave Shields에 최적화한 버전
-! Brave Version: 20260414_0121
+! Brave Version: 20260414_1518
 ! Expires: 12 hours
-! Converted: 2026-04-14 01:21 KST
+! Converted: 2026-04-14 15:18 KST
 ! Source: https://github.com/ichthus0904/Brave-Filter
 
 ! ================== Original List-KR Information ==================
 ! Title: List-KR unified filters list (uBlock Origin)
-! Version: 2026.20556.0
+! Version: 2026.20556.1
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
 ! Homepage: https://github.com/List-KR/List-KR
 ! =================================================================
@@ -1642,6 +1642,7 @@ lol.ps##div[class*="ad-"]
 jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
+instiz.net##body > div[style^="min-height:"]
 damoang.net##.damoang-banner
 damoang.net##div[data-position="side-image-text-banner"]
 damoang.net##.md\:rounded-lg.divide-y > div[style^="contain: "]
