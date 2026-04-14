@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave Shields
 ! Description: List-KR Unified을 Brave Shields에 최적화한 버전
-! Brave Version: 20260414_1518
+! Brave Version: 20260415_0056
 ! Expires: 12 hours
-! Converted: 2026-04-14 15:18 KST
+! Converted: 2026-04-15 00:56 KST
 ! Source: https://github.com/ichthus0904/Brave-Filter
 
 ! ================== Original List-KR Information ==================
