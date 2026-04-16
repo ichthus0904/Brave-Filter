@@ -3,206 +3,147 @@
 
 import urllib.request
 import re
-import os
 from datetime import datetime, timezone, timedelta
 
-# ==========================================
-# 1. Brave 정규식 → 와일드카드 변환 (안정 + 호환 통합)
-# ==========================================
-def to_brave_wildcard(pattern):
+MAIN_URL = "https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-unified.txt"
+
+def fetch(url):
+    req = urllib.request.Request(url, headers={'User-Agent': 'Brave-Filter-Builder'})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return r.read().decode('utf-8', errors='ignore')
+
+def extract_version(lines):
+    for line in lines:
+        if line.startswith("! Version:"):
+            return line.replace("! ", "").strip()
+    return "Version: unknown"
+
+def is_supported(line):
+    # 제안하신 대로 미지원 축소 (Brave 엔진이 자체적으로 무시하거나 향후 지원할 문법은 남겨둠)
+    unsupported = [
+        "##+js",
+        "scriptlet"
+    ]
+    return not any(u in line for u in unsupported)
+
+def safe_wildcard(pattern):
     if not pattern:
-        return pattern
-
-    p = str(pattern).strip()
-    is_negated = False
-
-    if p.startswith('~'):
-        is_negated = True
-        p = p[1:]
-
-    p = p.strip(' /^$')
-
-    # 이스케이프 복구
-    p = p.replace('\\/', '/').replace('\\.', '.').replace('\\', '')
-
-    # 정규식 → 와일드카드
-    p = re.sub(r'\[0-9\]\+?|\d\+\+?|\[a-zA-Z0-9\]\+?', '*', p)
-    p = re.sub(r'\[\^.\]\*?', '*', p)
-    p = re.sub(r'\.\*|\.\+', '*', p)
-    p = re.sub(r'\([^)]+\)', '*', p)
-    p = re.sub(r'[\[\]\(\)\^$]', '', p)
-    p = re.sub(r'\*+', '*', p)
-
-    if '*' in p and not p.endswith('*'):
-        p = p.rstrip('*.') + '*'
-
-    if is_negated:
-        p = '~' + p
-
+        return None
+    p = pattern.strip('/^$')
+    
+    # 숫자 패턴만 안전하게 와일드카드로 변환
+    if '[0-9]' in p or '\\d' in p:
+        p = re.sub(r'\[0-9\]\+?', '*', p)
+        p = re.sub(r'\\d\+?', '*', p)
+    else:
+        return None  # 복잡한 정규식은 변환 거부
+        
+    # 여전히 위험/복잡한 정규식 기호가 남아있다면 중단
+    if any(x in p for x in ['(', ')', '|']):
+        return None
+        
+    p = p.replace('\\.', '.').replace('\\', '')
+    p = re.sub(r'[\[\]\^$]', '', p)
     return p.strip()
 
+def process_line(line):
+    if not line or line.isspace():
+        return None
+    line = line.strip()
 
-# ==========================================
-# 2. domain 변환 (정확도 + 호환성 균형)
-# ==========================================
-def convert_domain_option(line):
-    if not re.search(r'[,\$\[]domain=', line):
+    # 주석 및 메타데이터 처리
+    if line.startswith('!'):
+        if line.startswith('!#if') or line.startswith('!#endif') or line.startswith('!#else'):
+            return None # uBO 전용 전처리 지시자만 깔끔하게 제거
+        if any(x in line for x in["! Title:", "! Version:", "! Expires:", "! Last updated:", "! Homepage:", "! Licence:"]):
+            return None
         return line
 
-    def replace_domain(match):
-        prefix = match.group(1)
-        value = match.group(2)
+    if not is_supported(line):
+        return f"! [Brave Unsupported Syntax] {line}"
 
-        new_values = []
-        for part in value.split('|'):
-            part = part.strip()
-            if not part:
-                continue
+    # Brave 미지원 속성 치환
+    if ':remove()' in line:
+        line = line.replace(':remove()', '')
 
-            clean_part = part[1:] if part.startswith('~') else part
-
-            # ✔ 핵심 전략
-            # 1. /regex/ → 반드시 변환
-            # 2. 명확한 정규식 문자만 허용
-            # 3. 일반 도메인은 절대 유지
-
-            if (clean_part.startswith('/') and clean_part.endswith('/')) or \
-               any(c in clean_part for c in ['[', '^', '$', '\\']):
-                new_values.append(to_brave_wildcard(part))
+    # 1. 네트워크 필터 ($domain=regex 처리)
+    if 'domain=/' in line or 'domain=~/' in line:
+        def domain_replace(match):
+            prefix = match.group(1) # 'domain=' 또는 'domain=~'
+            original = match.group(2) # 정규식 내용
+            converted = safe_wildcard(original)
+            if converted:
+                return f"{prefix}{converted}"
             else:
-                new_values.append(part)
+                return "FAIL_MARKER"
 
-        return prefix + '|'.join(new_values)
+        # 정규식 도메인 매칭 치환 (예: domain=/regex/ 또는 domain=~/regex/)
+        new_line = re.sub(r'(domain=~?)/(.+?)/', domain_replace, line)
+        
+        # ⭐️ 제안하신 부분: 변환 실패 시 글로벌 도메인으로 풀지 않고 규칙 자체를 비활성화
+        if "FAIL_MARKER" in new_line:
+            return f"! [Brave removed domain regex] {line}"
+        line = new_line
 
-    return re.sub(r'([,\$\[]domain=)([^,\s\]]+)', replace_domain, line)
-
-
-# ==========================================
-# 3. 메인 처리
-# ==========================================
-def process_list():
-    url = "https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-unified.txt"
-
-    try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=20) as response:
-            content = response.read().decode('utf-8', errors='ignore')
-    except Exception as e:
-        print(f"다운로드 실패: {e}")
-        return [], {}
-
-    headers = {}
-    brave_lines = []
-    skipped_scriptlets = 0
-
-    for raw in content.splitlines():
-        line = raw.strip()
-
-        if not line:
-            brave_lines.append(line)
-            continue
-
-        # Adblock 헤더 제거
-        if line == "[Adblock Plus 2.0]":
-            continue
-
-        # ==========================================
-        # ✔ 헤더 처리 (엄격 + 유연 hybrid)
-        # ==========================================
-        if line.startswith('! '):
-            normalized = line.replace(" ", "")
-
-            for key in ["Title:", "Description:", "Version:", "Expires:", "Homepage:", "License:", "Updated:"]:
-                if normalized.startswith(f"!{key}") and key not in headers:
-                    headers[key] = line
-
-            brave_lines.append(line)
-            continue
-
-        # 일반 주석
-        if line.startswith('!'):
-            brave_lines.append(line)
-            continue
-
-        # scriptlet 제거
-        if '##+js' in line or '#@#+js' in line or '#$#+js' in line:
-            brave_lines.append(f"! [Brave skipped scriptlet] {line}")
-            skipped_scriptlets += 1
-            continue
-
-        # domain 처리
-        line = convert_domain_option(line)
-
-        # 코스메틱 필터 도메인 처리
-        for sep in ['##', '#@#', '#$#', '#?#']:
-            if sep in line:
-                parts = line.split(sep, 1)
-                if len(parts) == 2:
-                    domain_part = parts[0]
-
-                    if any(x in domain_part for x in ['[0-9]', '\\d', '^', '$', '.*', '/']):
-                        new_domains = []
-                        for d in domain_part.split(','):
-                            d = d.strip()
-                            clean_d = d[1:] if d.startswith('~') else d
-
-                            if (clean_d.startswith('/') and clean_d.endswith('/')) or \
-                               any(c in clean_d for c in ['[0-9]', '^', '$', '\\']):
-                                new_domains.append(to_brave_wildcard(d))
-                            else:
-                                new_domains.append(d)
-
-                        line = ','.join(filter(None, new_domains)) + sep + parts[1]
+    # 2. 코스메틱 필터 (숨김 필터) 도메인 처리
+    for sep in['##', '#@#', '#?#']:
+        if sep in line:
+            parts = line.split(sep, 1)
+            domain_part = parts[0]
+            
+            if '/' not in domain_part:
                 break
 
-        brave_lines.append(line)
+            new_domains =[]
+            for d in domain_part.split(','):
+                d = d.strip()
+                if d.startswith('/') and d.endswith('/'):
+                    conv = safe_wildcard(d)
+                    if conv:
+                        new_domains.append(conv)
+                    else:
+                        # ⭐️ 제안하신 부분 적용: 코스메틱 필터도 변환 불가능하면 규칙 통으로 주석 처리
+                        return f"! [Brave removed domain regex] {line}"
+                else:
+                    new_domains.append(d)
 
-    # ==========================================
-    # 중복 제거
-    # ==========================================
-    clean_lines = []
-    seen = set()
+            if new_domains:
+                line = ','.join(new_domains) + sep + parts[1]
+            break
 
-    for line in brave_lines:
-        if line.startswith('!') or not line:
-            clean_lines.append(line)
-        elif line not in seen:
-            seen.add(line)
-            clean_lines.append(line)
+    return line
 
-    print(f"✔ scriptlet 제거: {skipped_scriptlets}개")
-    return clean_lines, headers
-
-
-# ==========================================
-# 4. 실행
-# ==========================================
 if __name__ == "__main__":
-    print("=== Brave 완성형 필터 생성 시작 ===")
+    print("=== Brave 맞춤형 최적화 필터 생성 시작 ===")
 
-    lines, headers = process_list()
+    raw = fetch(MAIN_URL)
+    raw_lines = raw.splitlines()
 
-    if not lines:
-        print("실패")
-        exit(1)
+    source_version = extract_version(raw_lines)
+    
+    clean =[]
+    seen = set()
+    
+    # 중복 제거 및 필터 처리
+    for raw_line in raw_lines:
+        processed = process_line(raw_line)
+        if processed and processed not in seen:
+            seen.add(processed)
+            clean.append(processed)
 
-    os.makedirs("./dist", exist_ok=True)
-
+    # 시간 기록 (KST 기준)
     kst = timezone(timedelta(hours=9))
     now = datetime.now(kst)
 
-    with open("./dist/brave_ultimate.txt", "w", encoding="utf-8") as f:
+    with open("brave_list_kr.txt", "w", encoding="utf-8") as f:
         f.write("[Adblock Plus 2.0]\n")
-        f.write("! Title: Brave Ultimate Filter\n")
-        f.write("! Description: 안정성 + 차단력 최적화 통합 버전\n")
-        f.write(f"! Updated: {now.strftime('%Y-%m-%d %H:%M KST')}\n")
-        f.write("! Expires: 12 hours\n\n")
+        f.write("! Title: List-KR for Brave (Optimized)\n")
+        f.write("! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터\n")
+        f.write(f"! Version: {source_version}\n")
+        f.write("! Expires: 12 hours\n")
+        f.write("! Updated: " + now.strftime('%Y-%m-%d %H:%M KST') + "\n")
+        f.write("! Homepage: https://github.com/List-KR/List-KR\n")
+        f.write("\n")
+        f.write("\n".join(clean))
 
-        f.write("! ===== Original List Info =====\n")
-        for k in headers:
-            f.write(headers[k] + "\n")
-        f.write("! =============================\n\n")
-
-        f.write("\n".join(lines))
-
-    print("\n✅ 완료 → dist/brave_ultimate.txt 생성됨")
+    print(f"✅ 완료: {len(clean):,} lines (Version: {source_version})")
