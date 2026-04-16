@@ -1,3 +1,3 @@
-이 필터는 List-KR의 데이터를 Brave 브라우저에 맞게 변환한 것입니다
+이 필터는 List-KR의 데이터를 Brave 브라우저에 맞게 변환해 개인적으로 사용하기 위해 만든 것.
 
-https://raw.githubusercontent.com/ichthus0904/Brave-Filter/main/brave_list-kr.txt
+https://raw.githubusercontent.com/ichthus0904/Brave-Filter/main/brave_list_kr.txt
