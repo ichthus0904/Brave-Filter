@@ -3,7 +3,7 @@
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
 ! Version: Version: 2026.20559.2
 ! Expires: 12 hours
-! Updated: 2026-04-21 15:23 KST
+! Updated: 2026-04-22 00:59 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
