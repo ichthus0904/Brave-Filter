@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
-! Version: Version: 2026.20565.1
+! Version: Version: 2026.20565.3
 ! Expires: 12 hours
-! Updated: 2026-04-23 00:57 KST
+! Updated: 2026-04-23 15:27 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
@@ -1399,7 +1399,7 @@ torrentsee*.com##.container > div[style^="z-index:999; "]
 /lover[0-9]\.net\/file\/1bet\/.*\.gif$domain=lover*.net
 /lover[0-9]\.net\/file\/eve\/.*\.png$domain=lover*.net
 ||cokcok.stream/public/vast.php
-/^https:\/\/tvwiki[0-9]+\.net\/data\/banner\//$domain=tvwiki*.net
+/^https:\/\/cdn[a-z0-9]+\.site\/data\/banner\//$domain=tvwiki*.net
 ||wdwd*.com/data/banner/
 ||static.tzstatic.top/z/*.gif
 ||ddal.xyz/project/mc/js/nuevo.min.js
