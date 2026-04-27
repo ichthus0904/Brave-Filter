@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
-! Version: Version: 2026.20568.0
+! Version: Version: 2026.20569.0
 ! Expires: 12 hours
-! Updated: 2026-04-26 23:29 KST
+! Updated: 2026-04-27 16:57 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
@@ -1718,6 +1718,7 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+##.adballoon_icon
 jeongcheogi.edugamja.com##a[rel="noopener noreferrer sponsored"]
 instiz.net##body > div[style^="min-height:"]
 damoang.net##.damoang-banner
@@ -3504,6 +3505,7 @@ banhub.xyz##*[class*="backdrop-blur-lg"]:remove-class(backdrop-blur-lg)
 ! chzzk.naver.com
 ! [Brave Unsupported Syntax] chzzk.naver.com##+js(json-prune-xhr-response, ads.[-].eventTracking.ackImpressions.[].url, ads.[].adInfo.responseSize, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 ! [Brave Unsupported Syntax] chzzk.naver.com##+js(json-prune-xhr-response, adBreaks.[-].adSources.[].withRemindAd, videoAdScheduleId, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
+! [Brave Unsupported Syntax] vod.sooplive.com##+js(json-prune-xhr-response, data.adballoon, , 'station/video/a/view')
 ! [Brave Unsupported Syntax] stock.naver.com##+js(set, MobileDetect, noopFunc)
 ! [Brave Unsupported Syntax] excellesports.com##+js(set-cookie, popup_view, disable)
 ! [Brave Unsupported Syntax] maple.gg##+js(set-cookie, hideFrontPagePopup, true)
