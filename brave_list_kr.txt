@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
-! Version: Version: 2026.20570.0
+! Version: Version: 2026.20572.0
 ! Expires: 12 hours
-! Updated: 2026-04-29 02:57 KST
+! Updated: 2026-04-29 16:50 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
@@ -3744,6 +3744,8 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 ||newspic.kr^$removeparam=cp
 ! [Brave Unsupported Syntax] auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||litt.ly/api/blockevents
+ridibooks.com$removeparam=_rdt_sid
+ridibooks.com$removeparam=_rdt_idx
 damoang.net#$#.mb-6.grid-cols-1.gap-4.sm\:grid-cols-3 { grid-template-columns: auto !important; }
 m.bustago.or.kr#$#.InquiryList { height: 100% !important; }
 dundam.xyz#$#.today-grade { width: 100% !important; }
