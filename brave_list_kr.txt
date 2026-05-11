@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
-! Version: Version: 2026.20581.0
+! Version: Version: 2026.20584.1
 ! Expires: 12 hours
-! Updated: 2026-05-11 10:48 KST
+! Updated: 2026-05-11 23:14 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
@@ -2520,7 +2520,7 @@ m.r114.com##.google_bn
 dpg.danawa.com,game.naver.com,beautynury.com,kwnews.co.kr,kyeonggi.com,jjan.kr,www.naver.com,koreatimes.net,r114.com##div[class*="_banner_"]
 jjalbot.com##ul.masonry-2-col > li[class] ~ li:not([class])
 newspim.com##.inwrap .right > div:not([class])
-www.donga.com,m.tenbizt.com,ruliweb.com,tvreport.co.kr,ddengle.com,xportsnews.com,woman.donga.com,thisisgame.com##.ad
+arca.live,www.donga.com,m.tenbizt.com,ruliweb.com,tvreport.co.kr,ddengle.com,xportsnews.com,woman.donga.com,thisisgame.com##.ad
 m.inven.co.kr###boardPart > div[style]:not([class])
 lecturernews.com##div[style].text-center
 metroseoul.co.kr##div[id^="layerPopup_"]
@@ -3737,6 +3737,7 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
+www.naver.com###whale-banner
 damoang.net#$#.mb-6.grid-cols-1.gap-4.sm\:grid-cols-3 { grid-template-columns: auto !important; }
 m.bustago.or.kr#$#.InquiryList { height: 100% !important; }
 dundam.xyz#$#.today-grade { width: 100% !important; }
