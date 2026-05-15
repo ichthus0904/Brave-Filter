@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
-! Version: Version: 2026.20585.1
+! Version: Version: 2026.20588.1
 ! Expires: 12 hours
-! Updated: 2026-05-15 10:49 KST
+! Updated: 2026-05-15 22:21 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
@@ -577,6 +577,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/steamindiegame(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/f-e\\/cafes\\/27842958(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/clubid(=|%3[Dd])27842958/)
+sbxh*.com##.banner-row[class*="banner-row--"]
 torrentsee*.com##.container > div[style^="z-index:999; "]
 ! ndsoft.co.kr - An internet press hosting service
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/bannerManager\//$match-case
@@ -1552,8 +1553,6 @@ torrentsee*.com##.container > div[style^="z-index:999; "]
 /^https:\/\/sonagitv\.[a-z]+\/images\/banner\/(?!webtoon_)/$domain=sonagitv.*
 ||i.imgur.com^$domain=sonagitv.*
 ||xn--h10b90b998c.*/img/$domain=xn--h10b90b998c.*
-||i.imgur.com^$domain=newtoki.*
-||newtoki.*/banner*/$domain=newtoki.*
 ||i.imgur.com^$domain=torrentqq*.com
 ||cdn.jjun.live/BANNER/*.gif
 ||tvmon.*/img/ba
@@ -1585,7 +1584,6 @@ torrentsee*.com##.container > div[style^="z-index:999; "]
 /^https:\/\/cdn-nl-[0-9]+\.hasha\.in\/[A-z0-9_]+\.gif$/$domain=hasha.in
 ||jusotop.com/b/$domain=yatv.net|yadongtube.net|yadongkorea.red|yadongwang.org|yako.red
 /^https:\/\/jgmoa[0-9]+\.com\/upload_files\/popup\//
-/^https:\/\/newtoki[0-9]+\.com\/tokinbtoki\/[0-9]+/
 /^https:\/\/manatoki[0-9]+\.net\/tokinbtoki\//
 ||imgsuperpower.com^$domain=tkr*.com
 ||blogger.googleusercontent.com/img/$domain=tkr*.com
@@ -2401,7 +2399,6 @@ tailstar.net###wrap_right > #right
 m.yakup.com##.news_view_con ~ div[style]
 yakup.com##a[style*="background-image"][style*="/data/banner/"]
 enjoytaiwan.co.kr##.widget-box > div[style*="min-height:"]
-m.humoruniv.com##div[id*="_"][style*=" "] ~ div[id][class]:not([id*="_"])
 osmanias.com##.taboola
 instiz.net###menufoot > .hot_under
 instiz.net##div[id^="sidead"]
@@ -2671,6 +2668,7 @@ newsis.com##div[id][style~="height:100px;"]
 newsis.com##iframe[src^="/view/ad/"]
 newsis.com##div[class^="w_header_"]:nth-child(1)
 newsis.com##table[class*="Ad"]
+m.etoday.co.kr##section > div[style*="height:250px"]
 jootc.com,funissu.com##aside[id^="ai_widget-"]
 poro.gg##div[class^="flex"][class$="h-[250px]"]
 bada.io##div[id*="amazon_shopping"]
@@ -3054,8 +3052,6 @@ toonkor.wiki##.banner
 yako.gg##.banner_grid
 v119.com##.zone-right > *:has(~ .no-pd):not(:has(> .tabbox))
 v119.com##.at-boxed .zone-center > .widget-box ~ *
-! aglint-disable-next-line
-[$domain=newtoki*.com]##img[title="소울_뉴토끼_이벤트_배너"]
 itrulli.com##div.elementor-widget-shortcode
 avjoa69.com##img[onclick]
 avjoa69.com##.happy-header
@@ -3101,7 +3097,6 @@ av19.gg###page ~ div[style^="min-height:"]#content.row
 [$domain=tvzota*.com]##div[class$="_ban"]
 [$domain=tvzota*.com]##div[class^="popup_"]
 agitwebtoon.*##.advx
-newtoki.*##.banner2
 [$domain=opworlds1*.com]##.basic-banner-gallery
 [$domain=jusoyo1*.net]##.hd_pops
 [$domain=jusoyo1*.net]##.basic-banner-gallery
@@ -3116,7 +3111,6 @@ cokcok.*##.custom_banner_item
 tvhot.*##div[id*="-banner-"]
 tvhot.*###body_wrap > div[class][style^="margin:"]
 sonagitv.*##a[href][target="_blank"] > img[src^="/images/banner/"]:not([src^="/images/banner/webtoon_"])
-newtoki.*##.ba_test
 [$domain=torrentqq*.com]##.row-banner
 sonagitv.*##.popup_warp
 kr.bb-tv.co##.banner
@@ -3177,12 +3171,8 @@ toon123.com##main > section[style]:not([class])
 torrentmode.com##a[href^="https://torrentmode.com/bbs/bannerhit.php"]
 [$domain=newtoon*.com]##.ad-form > .row > div[class^="col-md-"]
 [$domain=blacktoon*.com]##.banner.container > .row > .col-6
-[$domain=newtoki*.com]###hd_pop
 [$domain=manatoki*.net]###hd_pop
 [$domain=booktoki*.com]###hd_pop
-[$domain=newtoki*.com]##div.col-15.col-md-9
-[$domain=newtoki*.com]##.board-tail-banner
-[$domain=newtoki*.com]##.basic-banner
 [$domain=booktoki*.com]##img[src^="/tokinbtoki/"]
 [$domain=manatoki*.net]##[style="margin-bottom: 20px;"].row.row-15
 [$domain=manatoki*.net]##.basic-banner.row.row-10
@@ -3366,9 +3356,9 @@ opworlds18.com,opworlds19.com,opworlds20.com,opworlds21.com,opworlds22.com,opwor
 spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 zzzz.lol#?#.widget-side .widget-title:has(+ div a[href^="/bbs/link.php?bo_table="][target="_blank"])
+! aglint-disable-next-line
 [$domain=booktoki*.com]#?#ul[class] > li:has(> a[href*="tokkiweb.com"])
 [$domain=manatoki*.com]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
-[$domain=newtoki*.com]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
 [$domain=yagong*.com]##div[class*="border"]:has(> a[href][target*="_blank"])
 damoang.net#$?#.gap-4.sm\:grid-cols-3 > .flex.flex-col { remove: true; }
 chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
@@ -3953,7 +3943,6 @@ ppomppu.co.kr#$#.top-keyword { width: 100% !important; }
 orbi.kr#$#.global-top { top: 0px !important; }
 www.erdcloud.com#$#.erd-container { width: 100% !important; }
 [$domain=spotv*.com]##header { top: 0px !important; }
-[$domain=newtoki*.com]#$#body { overflow: auto !important; }
 apycsports.com#$#.copas_btn { display: none !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
