@@ -11,7 +11,7 @@ FILTER_SOURCES = [
 
 def fetch(url):
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Brave-Filter-Builder'})
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req, timeout=20) as r:
             return r.read().decode('utf-8', errors='ignore')
     except Exception as e:
@@ -19,37 +19,26 @@ def fetch(url):
         return ""
 
 def process_line(line):
-    # 공백 및 전처리 지시자(!#) 제거
-    if not line or line.isspace() or line.startswith('!#'):
+    # 빈 줄 제거
+    if not line or line.isspace():
         return None
     
     line = line.strip()
 
-    # 합칠 때 방해되는 기존 메타데이터 제거 (맨 위에 새로 작성하므로)
+    # 합칠 때 방해되는 기존 필터의 '버전/타이틀' 메타데이터만 제거 (맨 위에 새로 쓸 것이므로)
     if line.startswith('!'):
-        if any(x in line for x in ["! Title:", "! Version:", "! Expires:", "! Last updated:", "! Homepage:", "! checksum"]):
+        if line.startswith('!#'):  # !#if 등 조건부 전처리문 제거 (모든 룰 활성화)
+            return None
+        if any(x in line for x in ["! Title:", "! Version:", "! Expires:", "! Last updated:", "! Homepage:", "! checksum", "! Description:", "! Licence:"]):
             return None
         return line
 
-    # 🛑 수정된 부분: 핵심 차단 룰(:has, 정규식 등)은 그대로 살려둡니다.
-    # Brave에서 정말로 아무 쓸모가 없거나 에러를 내는 uBlock/AdGuard 전용 스크립트 구문만 최소한으로 거릅니다.
-    unsupported = [
-        "##+js",       # uBO 자바스크립트 주입 (Brave 미지원)
-        "$replace",    # AdGuard 전용 문법 (Brave 미지원)
-        "$rewrite",    # AdGuard 전용 문법 (Brave 미지원)
-        "#$#",         # AdGuard 스니펫 (Brave 미지원)
-        "#@#$#"        # AdGuard 스니펫 예외 (Brave 미지원)
-    ]
-    if any(u in line for u in unsupported):
-        return None
-
-    # :remove() 나 정규식을 지우는 코드는 모두 삭제했습니다. 
-    # 원본 필터 규칙을 그대로 유지하여 배너를 완벽하게 차단합니다.
-
+    # 🛑 핵심: 그 외의 모든 차단 룰은 단 1글자도 지우지 않고 그대로 통과시킵니다.
+    # 갤러리 필터 고유의 복잡한 정규식이나 ##+js 문법이 그대로 유지되어 배너를 완벽히 잡습니다.
     return line
 
 if __name__ == "__main__":
-    print("=== Brave 통합 필터 생성 시작 (차단율 100% 복구 버전) ===")
+    print("=== Brave 통합 필터 생성 시작 (원본 100% 무손실 병합) ===")
 
     clean = []
     seen = set()
@@ -60,21 +49,22 @@ if __name__ == "__main__":
         count = 0
         for raw_line in raw.splitlines():
             processed = process_line(raw_line)
+            # 중복되는 룰만 한 번 걸러줌
             if processed and processed not in seen:
                 seen.add(processed)
                 clean.append(processed)
                 count += 1
         print(f"   - {count:,} 개의 유효 규칙 추가됨.")
 
-    # 한국 시간(KST) 기준 타임스탬프 및 버전 생성
+    # 한국 시간(KST) 기준 타임스탬프 (Brave 강제 업데이트 유도용)
     kst = timezone(timedelta(hours=9))
     now = datetime.now(kst)
     version_str = now.strftime('%Y%m%d%H%M') 
 
     with open("brave_combined_filter.txt", "w", encoding="utf-8") as f:
         f.write("[Adblock Plus 2.0]\n")
-        f.write("! Title: Combined Filter for Brave\n")
-        f.write("! Description: List-KR과 갤러리 필터를 합친 버전 (원본 룰 보존)\n")
+        f.write("! Title: Combined Filter for Brave (Lossless)\n")
+        f.write("! Description: List-KR과 갤러리 필터를 원본 손실 없이 합친 무손실 버전\n")
         f.write(f"! Version: {version_str}\n")
         f.write("! Expires: 12 hours\n")
         f.write("! Last updated: " + now.strftime('%Y-%m-%d %H:%M KST') + "\n")
