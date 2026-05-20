@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 최적화된 List-KR 자동 업데이트 필터
-! Version: Version: 2026.20588.1
+! Version: Version: 2026.20593.0
 ! Expires: 12 hours
-! Updated: 2026-05-19 23:26 KST
+! Updated: 2026-05-20 10:55 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ! Description: uBlock Origin용 List-KR 통합 필터 리스트입니다. 한국어권 및 국제 웹 페이지 및 앱에 있는 광고, 트래커, 방해 요소와 안티 애드블록을 차단합니다.
@@ -577,7 +577,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/steamindiegame(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/f-e\\/cafes\\/27842958(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/clubid(=|%3[Dd])27842958/)
-sbxh*.com##.banner-row[class*="banner-row--"]
+sbxh*.com##[data-brs][data-br]
 torrentsee*.com##.container > div[style^="z-index:999; "]
 ! ndsoft.co.kr - An internet press hosting service
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/bannerManager\//$match-case
@@ -3718,6 +3718,7 @@ singingdalong.blogspot.com,sajuplus.net##.adsense-alt
 ! [Brave Unsupported Syntax] tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 ! foreign website
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle[data-ad-slot]
+! [Brave Unsupported Syntax] /sbxh[0-9]+\.com/##+js(nostif, /[A-Za-z0-9]+ *\( *\) *, *[A-Za-z0-9]+ *\. *[A-Za-z0-9]+ *= *window\.setInterval *\(/)
 ! [Brave Unsupported Syntax] hasha.in##+js(no-fetch-if, adManager.js)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hasha.in
 @@||js.wpadmngr.com/static/adManager.js$xmlhttprequest,domain=hasha.in
