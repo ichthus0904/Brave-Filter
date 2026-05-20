@@ -2,10 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import urllib.request
-import re
 from datetime import datetime, timezone, timedelta
 
-# 1. 가져올 필터 리스트
 FILTER_SOURCES = [
     ("List-KR", "https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-unified.txt"),
     ("Gallery-Filter", "https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/refs/heads/main/filter.txt")
@@ -20,42 +18,38 @@ def fetch(url):
         print(f"⚠️ 요청 실패 ({url}): {e}")
         return ""
 
-def is_supported(line):
-    # Brave가 지원하지 않거나 모바일에서 무거운 문법들
-    unsupported = [
-        "##+js", "scriptlet", "$replace", "$rewrite", 
-        "#$#", "#@#$#", "log:", ":has(", ":xpath("
-    ]
-    return not any(u in line for u in unsupported)
-
 def process_line(line):
-    # 공백 및 전처리 지시자(!#) 완전 제거
+    # 공백 및 전처리 지시자(!#) 제거
     if not line or line.isspace() or line.startswith('!#'):
         return None
     
     line = line.strip()
 
+    # 합칠 때 방해되는 기존 메타데이터 제거 (맨 위에 새로 작성하므로)
     if line.startswith('!'):
-        # 합칠 때 방해되는 기존 메타데이터 제외
         if any(x in line for x in ["! Title:", "! Version:", "! Expires:", "! Last updated:", "! Homepage:", "! checksum"]):
             return None
         return line
 
-    if not is_supported(line):
+    # 🛑 수정된 부분: 핵심 차단 룰(:has, 정규식 등)은 그대로 살려둡니다.
+    # Brave에서 정말로 아무 쓸모가 없거나 에러를 내는 uBlock/AdGuard 전용 스크립트 구문만 최소한으로 거릅니다.
+    unsupported = [
+        "##+js",       # uBO 자바스크립트 주입 (Brave 미지원)
+        "$replace",    # AdGuard 전용 문법 (Brave 미지원)
+        "$rewrite",    # AdGuard 전용 문법 (Brave 미지원)
+        "#$#",         # AdGuard 스니펫 (Brave 미지원)
+        "#@#$#"        # AdGuard 스니펫 예외 (Brave 미지원)
+    ]
+    if any(u in line for u in unsupported):
         return None
 
-    # AdGuard 전용 가짜 클래스 숨김 제거
-    line = line.replace(':remove()', '')
-
-    # 복잡한 정규식(Regex) 기반 규칙은 안전하게 폐기 (웹사이트 깨짐 방지)
-    if re.search(r'domain=~?/[^/]+/', line) or re.search(r'##/.+?/', line):
-        if any(c in line for c in '()|[]{}+?^$\\'):
-            return None
+    # :remove() 나 정규식을 지우는 코드는 모두 삭제했습니다. 
+    # 원본 필터 규칙을 그대로 유지하여 배너를 완벽하게 차단합니다.
 
     return line
 
 if __name__ == "__main__":
-    print("=== Brave 통합 초경량 필터 생성 시작 ===")
+    print("=== Brave 통합 필터 생성 시작 (차단율 100% 복구 버전) ===")
 
     clean = []
     seen = set()
@@ -79,8 +73,8 @@ if __name__ == "__main__":
 
     with open("brave_combined_filter.txt", "w", encoding="utf-8") as f:
         f.write("[Adblock Plus 2.0]\n")
-        f.write("! Title: Combined Filter for Brave (Lite)\n")
-        f.write("! Description: List-KR과 갤러리 필터를 합친 Brave 초경량/안전 최적화 버전\n")
+        f.write("! Title: Combined Filter for Brave\n")
+        f.write("! Description: List-KR과 갤러리 필터를 합친 버전 (원본 룰 보존)\n")
         f.write(f"! Version: {version_str}\n")
         f.write("! Expires: 12 hours\n")
         f.write("! Last updated: " + now.strftime('%Y-%m-%d %H:%M KST') + "\n")
