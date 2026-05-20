@@ -61,7 +61,7 @@ if __name__ == "__main__":
     now = datetime.now(kst)
     version_str = now.strftime('%Y%m%d%H%M') 
 
-    with open("brave_combined_filter.txt", "w", encoding="utf-8") as f:
+    with open("brave_list_kr.txt", "w", encoding="utf-8") as f:
         f.write("[Adblock Plus 2.0]\n")
         f.write("! Title: Combined Filter for Brave (Lossless)\n")
         f.write("! Description: List-KR과 갤러리 필터를 원본 손실 없이 합친 무손실 버전\n")
