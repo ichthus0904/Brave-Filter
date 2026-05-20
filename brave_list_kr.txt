@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR + Gallery Filter for Brave
 ! Description: 두 필터의 핵심 룰은 살리고 Brave 미지원 문법만 쳐낸 최적화 버전
-! Version: 202605201900
+! Version: 202605202326
 ! Expires: 12 hours
-! Last updated: 2026-05-20 19:00 KST
+! Last updated: 2026-05-20 23:26 KST
 
 ||delivery.pryzmads.com^
 ||barohere.xyz^
