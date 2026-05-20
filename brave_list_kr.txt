@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
-! Title: Combined Filter for Brave (Lossless)
-! Description: List-KR과 갤러리 필터를 원본 손실 없이 합친 무손실 버전
-! Version: 202605201749
+! Title: List-KR + Gallery Filter for Brave
+! Description: 두 필터의 핵심 룰은 살리고 Brave 미지원 문법만 쳐낸 최적화 버전
+! Version: 202605201900
 ! Expires: 12 hours
-! Last updated: 2026-05-20 17:49 KST
+! Last updated: 2026-05-20 19:00 KST
 
 ||delivery.pryzmads.com^
 ||barohere.xyz^
@@ -3387,7 +3387,6 @@ ponh.info#$?#div[data-mesh-id][data-testid] > div[id^="comp-"]:has(form[id][clas
 algumon.com#$?#.nav-mobile:matches-css(display: none) ~ .base > .main { width: calc(100% - 290px) !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
-banhub.xyz#$#html{ overflow: visible !important; }
 zzzz.lol#$?#.ent_wrapper.slide-vertical-effect .ent_news:not(:has(.ent_prefix:contains(ZZAPFLIX))) { remove: true; }
 aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^="beeteam"][class*="-player-sub-element"] { remove: true; }
 ||jeongcheogi.edugamja.com/ads/$redirect=2x2.png
@@ -3461,115 +3460,27 @@ hdhd344.net,hdhd345.net,hdhd346.net,hdhd347.net,hdhd348.net,hdhd349.net,hdhd350.
 blacktoon302.com,blacktoon303.com,blacktoon304.com,blacktoon305.com,blacktoon306.com,blacktoon307.com,blacktoon308.com,blacktoon309.com,blacktoon310.com,blacktoon311.com,blacktoon312.com,blacktoon313.com#?#.alert.alert-danger:has(> a:has-text([AD]))
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 ! Check after 2024 April 1st.
-zum.com##+js(set, _ads_zum_main_initbanner_750_zum_main_br_widget_336, true)
 ! PopMagic
-watchfreejavonline.co##+js(acis, popMagic.init)
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/2130#issuecomment-1621684566
 apycsports.com##*[class*="not_cookie"]:remove-class(not_cookie)
 banhub.xyz##*[class*="backdrop-blur-lg"]:remove-class(backdrop-blur-lg)
 ! m.humoruniv.com
-m.humoruniv.com##+js(rmnt, script, /run[\s\S]*?data[\s\S]*?OnClick[\s\S]*?ad\d_/)
-m.humoruniv.com##+js(set, list_end_run_read_top_boom, noopFunc)
-m.humoruniv.com##+js(set, list_end_run_pds_notice_boom, noopFunc)
-m.humoruniv.com##+js(set, list_end_run_comment_bottom_boom, noopFunc)
-m.humoruniv.com##+js(set, list_end_run_center_boom, noopFunc)
-m.humoruniv.com##+js(set, list_end_run_list_bottom_boom, noopFunc)
-m.humoruniv.com##+js(nostif, height && 1 <= height && height <= 20)
-m.humoruniv.com##+js(set, list_end_run, noopFunc)
-m.humoruniv.com##+js(aost, $.prototype.html, _boom)
-m.humoruniv.com##+js(acis, $.prototype.html, /\/images\/[A-z0-9-_]+\.?(jpg|gif)/)
 ! m.fmkorea.com
-m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
 ! chzzk.naver.com
-chzzk.naver.com##+js(json-prune-xhr-response, ads.[-].eventTracking.ackImpressions.[].url, ads.[].adInfo.responseSize, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
-chzzk.naver.com##+js(json-prune-xhr-response, adBreaks.[-].adSources.[].withRemindAd, videoAdScheduleId, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
-vod.sooplive.com##+js(json-prune-xhr-response, data.adballoon, , 'station/video/a/view')
-stock.naver.com##+js(set, MobileDetect, noopFunc)
-excellesports.com##+js(set-cookie, popup_view, disable)
-maple.gg##+js(set-cookie, hideFrontPagePopup, true)
-enuri.com##+js(set, getPowerLink, noopFunc)
-2798731938.zigcou.com##+js(trusted-replace-node-text, script, '"isClicked":false', '"isClicked":true', 'includes', '{"props":{"pageProps":{"initialState":{')
-heye.kr##+js(nowoif, pandalive.co.kr/evt/)
-newneek.co##+js(no-xhr-if, api-v2.adrop.io/request)
-map.naver.com##+js(json-prune-xhr-response, layers.[-].metadata.name.{=}.POI_Ads, ,propsToMatch, url:/PCWeb_Real.json)
-pcmap.place.naver.com,m.place.naver.com##+js(json-prune, [].data.poiRecommendations.recommendations.[].items.[-].adClickLog.clickUrl)
-platformgreat.kr##+js(set, commonTrailer, undefined)
-kilho.net##+js(acis, jQuery, .adsbygoogle)
-mplay.mk.co.kr##+js(no-xhr-if, ad.smartmediarep.com/NetInsight/video/smr, length:300)
-www.naver.com##+js(rc, type_ad, #shortcutArea)
-enjoyplan.tistory.com##+js(nostif, coupangAd)
-laftel.net##+js(nosiif, [native code], 1000)
-doctornow.co.kr##+js(json-prune, data, data.getBannerAdExchange)
-10000recipe.com##+js(nostif, popup_goods)
-oh-yes.co.kr##+js(set-cookie, ld_ac_timeout, Y)
-search.11st.co.kr##+js(json-prune, powerLink, powerLink.ads)
-ssodam.com##+js(set-cookie, adv, 1)
-www.cultureland.co.kr##+js(aost, String.prototype.substring, /checkCookie.+main\.do/)
-hub.zum.com##+js(set, Math.uuid, '', '', asFunction)
-youtu.co,dfast.kr##+js(aeld, hashchange, #viewus-explore-more)
-mememedia.co.kr##+js(set, jQuery.fn.getUrlParameter, '', asFunction)
-msearch.shopping.naver.com##+js(json-prune, adRecommend.adUnits.[])
-humors.zigcou.com##+js(set, window.__NEXT_DATA__.props.pageProps.initialState.post.adhistory, {})
-moneytoring.co.kr,postincome.co.kr,itinformation.kr,digitstar77.com##+js(nostif, piBlock)
-shopping.interpark.com##+js(set, $is.powerLink.loadPowerLink, noopFunc)
-mlbpark.donga.com##+js(set-attr, #cmtFormTable textarea, cols, 50)
-sbs.co.kr##+js(set, SbsHtml5PlayerContainer.prototype.renderAdSequence, noopFunc)
-search.shopping.naver.com##+js(json-prune, data.BrandAd)
 yes24.com###hdSearchBarText:remove-attr(value)
 yes24.com###hdSearchBarLink:remove-attr(value)
-smartinpress.com,newsn24.com##+js(acis, jQuery.prototype.load, is_coupang)
-whathappen.co.kr,momkim.co.kr##+js(aeld, DOMContentLoaded, link.coupang.com)
 momkim.co.kr,yachuk.com##*[class*="not_cookie"]:remove-class(not_cookie)
-yachuk.com##+js(acis, jQuery, link.coupang.com)
 semoi.kr###bo_v_atc.mheight:remove-class(mheight)
-aannm.cafe24.com,beomil09121.cafe24.com##+js(acis, jQuery, coupang_dont_show_prompty_interval)
-actingbaum.co.kr,picknpicker.com,moneyissues.co.kr,sotrychatter.com,skysky138.com,keela.co.kr,jiwootube.com,news.ssongyi.co.kr,xn--wh1b751afvcpsb.com##+js(acis, jQuery.prototype.on, is_coupang)
-fun-iyagi.co.kr,timecoffee.co.kr,333aaa.site##+js(set, pum_vars, undefined)
-inven.co.kr##+js(ra, placeholder, #webzineHeadmenuF1 input[placeholder][autocomplete="off"])
-hashnews.cafe24.com##+js(aopr, pum_popups)
-enuri.com##+js(json-prune, data.supertopADNos)
-sbs.co.kr##+js(set, player.renderAdSequence, undefined)
-domin.co.kr##+js(set, bannerpop.popup, noopFunc)
-nesin.com##+js(acis, open, /\/popup\//)
-kyobobook.co.kr##+js(ra, placeholder, input#searchMainKeyword)
-kyobobook.co.kr##+js(ra, placeholder, input#searchKeyword)
-mjmedi.com##+js(acis, bannerpop.popup)
-laftel.net##+js(no-xhr-if, api/avods/v1/advertisement)
-tvchosun.com##+js(set, player.advertisement_finished, true)
-cfnews.kr##+js(acis, window.open, /gears/popup/default.aspx)
-sjtoday.kr##+js(acis, window.open, notice_view_html.php)
-filetender.com##+js(nostif, , 15000)
-pping.kr##+js(ra, placeholder, input.search_input, asap stay)
-shoppinghow.kakao.com##+js(json-prune, ads)
-dpg.danawa.com##+js(acis, $, /danawa-dpg-common-sponsorBanner-/)
-dpg.danawa.com##+js(acis, $, myScript[myScript.length - 1 ])
-naver.com##+js(set, getAdcrUrl, '')
-koreapas.com##+js(set, random_imglink, noopFunc)
-imbc.com##+js(set, vrixadsdk, undefined)
-kilho.net##+js(set, hahaha, noopFunc)
-/lover[0-9]\.net/##+js(aeld, click, 'opMagic)
-zzzz.lol##+js(nosiif, animationEffects[settings.animation.effect])
-/lover[0-9]\.net/##+js(nano-stb, closeBtn.innerHTML, , 0.001)
 ! ##+js(acis, document.addEventListener, /adscale_slot_id/)
-asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,untitle.org,seo-marketing.co.kr##+js(acis, document.addEventListener, /adscale_slot_id/)
 ! ##+js(nostif, /\.displayMessage\(/)
-zuzunza.com,iphonedev.co.kr,tistory.com##+js(nostif, /\.displayMessage\(/)
 ! BlockAdBlock
-fafan.kr,blog.dalso.org,tistory.com##+js(nobab)
-tistory.com##+js(nobab2)
 ! FuckAdBlock
-te31.com,tistory.com##+js(nofab)
-x86.co.kr,1004lucifer.blogspot.com,te31.com,tistory.com##+js(aopr, adBlockDetected)
 ! ai_front anti-adblock
-plankim.com##+js(acis, ai_adb.init)
-jootc.com,ehpub.co.kr##+js(acis, ai_run_scripts)
 ! fundingchoicesmessages.google.com
 ||fundingchoicesmessages.google.com^$domain=damoang.net|maplescouter.com|vivatv.cc|svrforum.com|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|windowsforum.kr|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net
 ! Kakao TV
 /^https:\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]+\/vmap/$redirect=noop.txt,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
-tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net##+js(no-xhr-if, /^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1\,2}\/vmap$/)
 /embed/player/image/ads.png$redirect=2x2.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
-tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net##+js(no-fetch-if, /^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1\,2}\/vmap$/)
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adContainer
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
@@ -3577,8 +3488,6 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! meeco.kr
 meeco.kr##body > div[class][style*="box-shadow:"]
 meeco.kr#@#.googleAd
-meeco.kr##+js(set, adsBlocked, noopFunc)
-meeco.kr#$#.xe_content { opacity: 1 !important; }
 meeco.kr#$?#.adsbygoogle { remove: true; }
 ! Umanle S.R.L
 @@||arca.live^$generichide,domain=arca.live
@@ -3587,33 +3496,16 @@ meeco.kr#$?#.adsbygoogle { remove: true; }
 @@||namu.news/$frame,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$frame,script,domain=namu.wiki|~board.namu.wiki
 ! SPOTVNOW
-spotvnow.co.kr##+js(no-xhr-if, imasdk.googleapis.com/js/sdkloader/ima3.js)
-spotvnow.co.kr##+js(no-fetch-if, imasdk.googleapis.com/js/sdkloader/ima3.js)
-spotvnow.co.kr##+js(no-xhr-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
-spotvnow.co.kr##+js(no-fetch-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
 ! aagag.com
 aagag.com#@#ins.adsbygoogle[data-ad-slot]
-aagag.com#$#.la { height: 75px !important; width: 75px !important; visibility: hidden !important; }
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aagag.com,xmlhttprequest,redirect=googlesyndication_adsbygoogle.js
 ! t.hi098123.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2021.js$domain=t.hi098123.com
 t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
-t.hi098123.com#$#.tabad { top: -100px !important; }
 ! dcinside.com
-dcinside.com##+js(remove-cookie, gaejuki_ad)
-m.dcinside.com##+js(remove-cookie, find_ab)
-m.dcinside.com##+js(nostif, addc.dcinside.com)
-m.dcinside.com##+js(set-local-storage-item, /adblock_detected/, $remove$)
-m.dcinside.com##+js(aeld, pageshow, /\.persisted *&& *interval_Ad *&& *clearInterval\( *interval_Ad *\)/)
-m.dcinside.com##+js(no-xhr-if, addc.dcinside.com, emptyStr)
-gall.dcinside.com##+js(set, blockedState, '')
-gall.dcinside.com##+js(remove-node-text, script, /background:[\s\S]+setTimeout\( *\( *\) *=> *[A-Za-z0-9]+\.remove\( *\)[\s\S]+Math\.random\( *\) *< *percent *\/ *100/)
-gall.dcinside.com##+js(remove-node-text, script, /finally *{\n* *document.documentElement.removeChild\( *[A-Za-z0-9]+ *\) *;\n* *}([ \n]|.)+_ad"]\);/)
 ! chzzkban.xyz
-chzzkban.xyz##+js(no-fetch-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js method:HEAD, emptyStr)
-chzzkban.xyz##+js(trusted-suppress-native-method, Node.prototype.contains, '{"className":"adsbygoogle"}', abort)
 ! dicoall.com
 dicoall.com#@##AdHeader
 dicoall.com#@##AD_Top
@@ -3622,63 +3514,39 @@ dicoall.com#@##ad-lead
 dicoall.com#@##rightAd
 ! litomi.in
 ||jads.co^$script,redirect=noop.js,domain=litomi.in
-litomi.in##+js(trusted-create-html, #juicy-ads-banner > div[data-juicy-ads-slot] > div, <iframe></iframe>)
 litomi.in##ins
-windowsforum.kr##+js(aeld, load, 'setTimeout(function() {')
-etoland.co.kr##+js(no-fetch-if, /pagead2.googlesyndication.com|googleads.g.doubleclick.net|googletagservices.com|securepubads.g.doubleclick.net|googleads.g.doubleclick.net|google-analytics.com|googlesyndication.com|doubleclick.net/)
 ||ragmaya.kr/static/rm_adblock_wall.js
 @@_vercel/insights/script.js$domain=bser-koroshi.vercel.app,xmlhttprequest
 algumon.com##div[id^="deal-"].card ~ .bg-base-100:has(> div[style] > div[class^="fallback svelte-"])
-cheatdot.com##+js(nostif, 'window.getComputedStyle(t).display')
-tv.jtbc.co.kr,mvod.jtbc.co.kr,onair.jtbc.co.kr##+js(nostif, 'getComputedStyle(t).getPropertyValue("visibility")')
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
-mylocation.co.kr##+js(nostif, adBlockedMessage)
 ||shana.pe.kr/shana_check/scp*.js$script
-remiz.co.kr##+js(spoof-css, .adsbygoogle, display, block)
 remiz.co.kr#@#.ad-body
-checkwhoiam.tistory.com##+js(set, adblockChecker, noopFunc)
 kilho.net###detect-alert
 vod.jtbc.co.kr#@#.ad-unit:not(.textads)
 vod.jtbc.co.kr#@#.ad-zone:not(.textads)
-news.jtbc.co.kr##+js(spoof-css, .ad-banner.adsbox.ad-unit.ad-zone, display, block)
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=vod.jtbc.co.kr|news.jtbc.co.kr|mvod.jtbc.co.kr|tv.jtbc.co.kr
-minipol.tistory.com##+js(set, checkAdBlock, undefined)
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=start.klauncher.kr,script
 tabriz.kr#@##AdHeader
 tabriz.kr#@##AD_Top
 tabriz.kr#@##ad-lead
 tabriz.kr#@##homead
-namechart.kr,eftlibrary.com##+js(no-fetch-if, www3.doubleclick.net)
-dinfo.3dpchip.com##+js(set, linkPass, true)
-boardlife.co.kr#$##top-sponsor { height: 60px !important; top: -60px !important; position: absolute !important; visibility: hidden !important; }
-klauncher.kr##+js(aeld, load, _0x)
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
-hub.weirdhost.xyz##+js(no-fetch-if, adblockanalytics.com)
-hub.weirdhost.xyz##+js(no-fetch-if, adsbygoogle.js)
 ||www3.doubleclick.net^$script,redirect=noop.js,domain=srank.kr
 @@||doubleclick.net^$xhr,domain=srank.kr
 @@||adservice.google.com^|$xmlhttprequest,domain=klauncher.kr
 chmodi.tistory.com##.floatdiv
 svrforum.com##body > div[class][style*="box-shadow:"]
-luckyquiz3.blogspot.com##+js(no-xhr-if, adsbygoogle)
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=sbs.co.kr
-deokhu.com,3dpchip.com##+js(acis, chp_ads_blocker_detector)
-3dpchip.com##+js(prevent-xhr, /compass.adop.cc|adsbygoogle|taboola/, emptyStr)
 ||compass.adop.cc^$script,redirect=noop.js,domain=3dpchip.com
-3dpchip.com##+js(aopw, HTMLAnchorElement.prototype.onclick)
 @@||advimg.ad-mapps.com/sdk/js/ver/200/ad_script.js$domain=maxmovie.com
 @@||advimg.ad-mapps.com/sdk/M_PLUS/JS/common/jquery-$domain=maxmovie.com
 @@||static.dable.io/dist/plugin.min.js$domain=maxmovie.com
 ||advimg.ad-mapps.com/sdk/M_PLUS/Image/$redirect=2x2.png,domain=maxmovie.com
 ||mtag.mman.kr/get_ad.mezzo/$xmlhttprequest,redirect=noop.txt,domain=maxmovie.com
-sysnet.pe.kr##+js(nostif, banner_book)
 @@||new-in.pmirnc.com/public/fingerprint2.js$script
 @@||cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js$script,domain=typing.works
 ||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.search.naver.com,redirect=noop.js
-avdbs.com##+js(scis, ad_blk)
 avdbs.com#@#.ad-btn
-genshin.gamedot.org##+js(nostif, blockCheck2022)
-errornight.com##+js(aost, alert, chk_adBlock)
 ||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,redirect=noop.js,domain=m.sports.naver.com
 bera.world,sellas.ink,1412.live#@#.ads
 remiz.co.kr#@#ins.adsbygoogle[data-ad-slot]
@@ -3691,261 +3559,33 @@ mnews.jtbc.co.kr#@#.ad_bottom
 @@||kpanews.co.kr^$generichide
 ilsangt.tistory.com##.adblock-on
 ||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js
-ssulwar.com##+js(acis, document.getElementById, adblock)
 ||ad.smartmediarep.com/NetInsight/video/$redirect=noop.txt,domain=mbn.co.kr
-detegice.github.io##+js(aopr, $.prototype.fadeIn)
-ilsangt.tistory.com##+js(acis, $, .adsense-area)
 uda1004.tistory.com#@#ins.adsbygoogle[data-ad-slot]
-sogirl.so##+js(set, DHAntiAdBlocker, true)
 clien.net#@#.ad_banner
 @@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr|allclip.sbs.co.kr|mplay.mk.co.kr|static.cloud.sbs.co.kr
 ||adimg.nate.com/img/*?n=$redirect=2x2.png,domain=tv.nate.com
-noonnu.cc##+js(no-xhr-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=laftel.net
 @@||asset.laftel.net/static/assets/googleads-advertisement.js$domain=laftel.net
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=laftel.net
-focuskr.tistory.com##+js(acis, addEventListener, fuckadblock.min.js)
-singingdalong.blogspot.com##+js(acis, $, #ad_center)
-stockinfo7.com##+js(nostif, ad.innerHTML.replace)
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noop.js,domain=game.hotsharegames.com
-blackkiwi.net##+js(no-fetch-if, www3.doubleclick.net)
 persnacons.tistory.com#@#.topAD
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
 uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle[data-ad-slot]
 singingdalong.blogspot.com,sajuplus.net##.adsense-alt
-tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 ! foreign website
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle[data-ad-slot]
-/sbxh[0-9]+\.com/##+js(nostif, /[A-Za-z0-9]+ *\( *\) *, *[A-Za-z0-9]+ *\. *[A-Za-z0-9]+ *= *window\.setInterval *\(/)
-hasha.in##+js(no-fetch-if, adManager.js)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hasha.in
 @@||js.wpadmngr.com/static/adManager.js$xmlhttprequest,domain=hasha.in
 ||fundingchoicesmessages.google.com^$domain=tv25.co
-lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lover938.net,lover939.net,lover940.net,lover941.net##+js(nostif, document[_0x)
 ||newspic.kr^$removeparam=cp
-auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||litt.ly/api/blockevents
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
 www.naver.com###whale-banner
-damoang.net#$#.mb-6.grid-cols-1.gap-4.sm\:grid-cols-3 { grid-template-columns: auto !important; }
-m.bustago.or.kr#$#.InquiryList { height: 100% !important; }
-dundam.xyz#$#.today-grade { width: 100% !important; }
-start.klauncher.kr#$#.main-content { width: calc(100vw - 220px) !important; }
-m.naver.com#$#.wrap.id_search .comp_container { margin-top: 0px !important; }
-lol.ps#$#div[class*="w-full min-w-[280px] pt-10"] > .p-4.pb-0 div[class*="max-w-[480px]"] { width: 100% !important; max-width: none !important; }
-lol.ps#$##summoner-name-header-container { width: 100% !important; }
-2798731938.zigcou.com#$#.relative > .z-0 { display: none !important; }
-2798731938.zigcou.com#$#.relative .post-contents > div[style] { height: auto !important; }
-lawtimes.co.kr#$#div[class*=" "]:has( + div[class*=" "] > div > a[target="_blank"][href^="https://"]) { width: 100% !important; }
-www.naver.com#$##shortcutArea { height: auto !important; padding-left: 14px !important; }
-search.shopping.naver.com#$#.seller_filter_area ~ div[class*="_list_"] div[class^="adProduct_item"] { visibility: hidden !important; height: 1px !important; padding: 0 !important; }
-academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) { display: none !important; }
-academy.prompie.com#$#body.modal-open:has(> #academyMainModal a[href^="https://academy.prompie.com/banners/"]) { overflow: auto !important; }
-academy.prompie.com#$#body > #academyMainModal:has(a[href^="https://academy.prompie.com/banners/"]) ~ .modal-backdrop { display: none !important; }
-www.naver.com#$##shortcutArea { padding-left: 64px !important; }
-ggulzam.zal.kr#$#.partners-inside { display: none !important; }
-ggulzam.zal.kr#$#.inside-content-background-gradient { display: none !important; }
-ggulzam.zal.kr#$##inner-content-body.hided { max-height: fit-content !important; }
-economist.co.kr#$##content-container { padding-top: 10px !important; }
-tftps.gg#$##top-area > div[class*=" "] > div[class*=" "]:has( div:not([class]) ~ button) { width: 100% !important; }
-fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) { width: 100% !important; }
-fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) .news_top { width: revert-layer !important; }
-fow.kr#$#div[style^="display:"] > div[style^="flex-basis"]:has(~ .fvideo) .news_box { width: revert-layer !important; }
 tvroom5.org##ul.menu:has(> li > a[class^="banner_"])
-bbs.ruliweb.com#$##board_top .best_list { width: 100% !important; }
-3277532532.reviewtoday.net#$#div[class^="Post_continue_coupang__"] { display: none !important; }
-3277532532.reviewtoday.net#$#.post-contents > div[style] { height: 100% !important; }
-maple.gg#$#.container-content > section[class*=" "] ~ main[class*=" "] { margin-top: 50px !important; }
-courtauctionmap.com#$##map_area { height: 100% !important; }
-jovelys.ulog.kr,coolfun.zal.kr#$#.inner-body.hided .inside-content-background-gradient { display: none !important; }
-jovelys.ulog.kr,coolfun.zal.kr#$#.inner-body.hided .partners-inside { display: none !important; }
-jovelys.ulog.kr,coolfun.zal.kr#$#.inner-body.hided { overflow-y: auto !important; max-height: none !important; }
-m.hub.zum.com#$#.banner_slot_top + #container .article_cover { top: 100px !important; }
-mlbpark.donga.com#$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { padding-top: 0px !important; border-bottom: none !important; }
-enterdiary.com,hotplacehunter.co.kr,mystylezip.com,carandmore.co.kr,maxmovieen.com,tenbizt.com,mobilitytv.co.kr,thehousemagazine.kr,tminews.co.kr,capress.kr,youtu.co,dfast.kr,mememedia.co.kr,newautopost.co.kr#$#.news-view-wrap { padding-top: 0px !important; }
-gall.dcinside.com#$##zzbang_img { display: block !important; }
-m.sports.chosun.com,m.sportschosun.com#$##wrap > div[style*="height:"][style^="position:"] + header { margin-top: 0px !important; }
-atlantachosun.com#$#article > div[class^="sc-"] > aside[class*=" "] { display: none !important; }
-atlantachosun.com#$#article > div[class^="sc-"] { grid-template-columns: none !important; }
-atlantachosun.com#$##popup-root { display: none !important; }
-atlantachosun.com#$#body[style] { overflow: auto !important; }
-issueclick.kr#$#html[style] { overflow: auto !important; }
-curiosityblog.co.kr,issueclick.kr#$#.hideBtn { display: none !important; }
-curiosityblog.co.kr,issueclick.kr#$#.bodyHide { height: auto !important; }
-m.shop.interpark.com#$#.topBannerWrapper * { height: 1px !important; }
-shopping.interpark.com#$#.depthContentsWrap .productListWrap .searchList { margin-top: 0px !important; }
-ygosunews.com#$#body { padding-top: 0px !important; }
-www.auction.co.kr#$##allKillItemList > .item_list_wrap { width: 100% !important; }
-yes24.com#$##ySContent .loginCont { margin-left: 200px !important; }
-yes24.com#$#.mContRT .mbnZone { left: 94.5px !important; }
-~m.ytn.co.kr,ytn.co.kr#$#.editor_news.YTN_CSA_editorrecomm { width: initial !important; flex-shrink: initial !important; }
-m.ytn.co.kr#$##entFlick { height: auto !important; }
-yes24.com#$##yHeader .yesSearch .key_latest .lastest_word { width: 100% !important; }
-yes24.com#$##yWelMid .yWelNowBook { width: 100% !important; }
-yes24.com#$##yWelMid .yWelNowBook ul { margin-left: calc(50% - 436px) !important; }
-yes24.com#$##yWelTopMid .yWelTodayBook { width: calc(100% - 240px) !important; }
-yes24.com#$##yWelTopMid .yWelTodayBook .tBCont .tBInfo .tb_readCon { width: calc(100% - 30px) !important; }
-yes24.com#$##mbnRoll_yNow > .mbnRollUnit > .pagen_1 { width: 363px !important; }
-yes24.com#$##mbnRoll_yNow > .mbnRollUnit > .pagen_2 { width: 363px !important; left: 363px !important; }
-yes24.com#$##mbnRoll_yNow > .mbnRollUnit > .pagen_3 { width: 363px !important; left: 726px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_1 { width: 239px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_2 { width: 239px !important; left: 239px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_3 { width: 239px !important; left: 478px !important; }
-yes24.com#$##mbnRoll_001 > .mbnRollUnit > .pagen_4 { width: 240px !important; left: 717px !important; }
-www.naver.com#$#div[class^="Layout-module_"] #newsstand { margin-top: 0px !important; }
-ktestone.com#$#.article-adCover-div { height: 100% !important; }
-semoi.kr#$##bo_ad { display: none !important; }
-chchclub.com#$#.content.partners-wrap { max-height: 100% !important; }
-chchclub.com#$#.partners-wrap #partners { display: none !important; }
-thepumpkin.io#$#.bottomPop { display: none !important; }
-thepumpkin.io#$#.social-after-title { height: auto !important; }
-withcast.co.kr#$##SirenDiv { display: block !important; }
-withcast.co.kr#$##no_pages.bg_w { display: none !important; }
-3.37.104.109#$#.body.mwcphide { height: 100% !important; }
-3.37.104.109#$#.mwcphideBtn { display: none !important; }
-donthellgo.com#$##contentBody.bodyHide { height: 100% !important; }
-marupost.mycafe24.com#$#.content-preview { display: none !important; }
-marupost.mycafe24.com#$#.content-full { height: auto !important; }
-ktestone.com,dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com#$#div[class^="article-adCover-div-"] { display: none !important; }
-dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com#$##adNotice { display: none !important; }
-lottoen.com#$#.content_body > div[class^="lotto_"] { filter: none !important; -webkit-filter: none !important; }
-lottoen.com#$#.content_body > div[class$="_coupang_wrap"] { display: none !important; }
-lottoen.com#$#.content_more_div > .cmd_block_layer { display: none !important; }
-lottoen.com#$#.wrap.blocked .content_more_div { max-height: 100% !important; }
-simcong.com#$#.waiting_coupang_wrap { display: none !important; }
-simcong.com#$#.result_wrap { display: block !important; }
-simcong.com#$#.quiz_list:not([style]) ~  .result_wrap .restart { display: none !important; }
-gorani.kr#$#.column_content { margin-top: 50px !important; }
-www.naver.com#$##topSearchWrap { padding-bottom: 50px !important; }
-dodot.cafe24.com,loapost.cafe24.com,jiavr.xyz,ohohz.cafe24.com#$##content .ad_parent { height: 100% !important; overflow: auto !important; }
-marupost.mycafe24.com#$##welcome-ad { display: none !important; }
-bloter.net#$#.respons-edit > div[style].float-left { width: 100% !important; }
-news.unn.net#$#header > .header-body { width: 100% !important; }
-www.donga.com#$##journalist_card li { width: 100% !important; }
-heraldpop.com#$#.article_area .article_left { width: 100% !important; }
-chaoscube.co.kr#$#.container .contents > .subcontents:nth-child(1) { margin-top: 0px !important; }
-chaoscube.co.kr#$#html:not([data-n-head]) .contents > .headline { margin-top: 0px !important; height: 70px !important; }
-news.heraldcorp.com#$#.article_area > .article_left { width: 100% !important; }
-pushoong.com#$#.ask_hamburger_wrapper { top: 0px !important; }
-pushoong.com#$#.ask_wrapper.not_host { top: 0px !important; }
-pushoong.com#$#.ask_wrapper .ask_title_zone { top: 0px !important; }
-topstarnews.net#$#.expanded > #user-container { padding-top: 0px !important; }
-m.inven.co.kr#$#.mo-new-header .header .show-ads { max-height: 54px !important; }
-blockchainhub.kr#$#.bch-main-wrapper > .right-cont { margin-right: calc(50% - 180px) !important; width: 100% !important; }
-ppss.kr#$#.content { width: 100% !important; }
-wowtv.co.kr#$#.article-ad ~ p[style][class^="title"] { margin-top: 100px !important; }
-kidkids.net#$#div[class^="main"]#middle_area .academy.fleft:not(.iyua) { margin-left: calc(11.5%) !important; }
-kidkids.net#$##id_my_menu_area ~ #main_sky_banner_area { margin-left: 685px !important; }
-m.ruliweb.com#$#.go_top.go_button { width: 100% !important; }
-lotteon.com#$#.productDetailWrap > .contentsWrap { padding-bottom: 0px !important; }
-evape.kr#$##hotPlace.myBox { margin-left: calc(50% - 65px) !important; }
-fomos.kr#$#.board_view .related_area { height: 300px !important; }
-focus.daum.net#$#div[data-tiara-layer]:not([id]) { margin-top: 0px !important; position: relative !important; }
-ygosunews.com,autopostkorea.com#$#.td-pb-span8 { width: 100% !important; }
-autopostkorea.com#$#body .td-header-wrap { margin-top: 0px !important; }
-newdaily.co.kr#$#div[style].clearfix > .nd-by-line { width: 100% !important; }
-mk.co.kr#$#.news_synthesis_sec .col.col_4 { width: 100% !important; }
-memberssl.auction.co.kr#$#.box__login #login_tab { width: 100% !important; }
-memberssl.auction.co.kr#$#.box__login .box__login-member { width: 100% !important; }
-auction.co.kr#$#.mod-top > .main-promo { margin-left: calc(50% - 205px) !important; }
-auction.co.kr#$#.modrow-top > div[class$="_banner"][id$="Banner"] { display: none !important; }
-orbi.kr#$#.layout-main .panel.no-margin { padding-top: 50px !important; }
-orbi.kr#$#.layout-main .main-menu { top: 0px !important; }
-orbi.kr#$#div[class*="-banner-"] { display: none !important; }
-web.humoruniv.com#$##wrap_cnts td[valign="top"] #wrap_ctgr_new { width: 100% !important; }
-web.humoruniv.com#$##wrap_cnts td[valign="top"] #wrap_ctgr_new > div[id] { width: 100% !important; }
-haninvegas.com#$#body[data-elementor-device-mode="desktop"] div[itemprop="mainContentOfPage"] { width: 100% !important; }
-news.jtbc.co.kr#$#.news_doc #footer { position: static !important; }
-sundaynewsusa.com#$#.td-is-sticky > .wpb_wrapper { top: 0px !important; }
-donthellgo.com,instructivehumility.com,news.oasisfeed.com#$#.hideBtn { display: none !important; }
-instructivehumility.com,news.oasisfeed.com#$##newsBody { height: auto !important; }
-ydailynewsis.blogspot.com#$#a[href*="//link.coupang.com/"][type] { display: none !important; }
-ydailynewsis.blogspot.com#$##hidden1 { display: block !important; }
-aladin.co.kr#$##popupBody #nonmember_all .button_login2 { width: 100% !important; }
-aladin.co.kr#$##popupBody #nonmember_all .left1 { width: 100% !important; }
-aladin.co.kr#$##welcomeMainBanner_welcome_tab { left: calc(50% - 186px) !important; }
-kharn.kr#$#div[class*="inner"].column > div { width: 100% !important; }
-v.daum.net#$#.inner-main [data-cloud*="_ad_"] + div { margin-top: 0px !important; }
-lawtalk.co.kr#$#div[class^="premium-lawyer"] ~ a.goto-all-lawyers { margin-top: 40px !important; }
-lawtalk.co.kr#$#div[ng-if] > .lawyers-section.has-border-bottom { height: 250px !important; }
-medipana.com#$#header .artc_ad { height: 130px !important; }
-~m.dailypharm.com,dailypharm.com#$#header { height: 100px !important; }
-drapt.com#$#li.area_guide { width: 96% !important; }
-drapt.com#$#.cs_news_area .cs_area { width: calc(100% - 2px) !important; }
-koreadaily.com#$#.contentBox > .topNews > .con-L { border-top: none !important; }
-koreadaily.com#$#.contentBox > .topNews .icon-list { border-top: none !important; }
-hashcode.co.kr#$#[class][itemtype*="//schema.org/"] > .center { width: 100% !important; flex-basis: 100% !important; }
-hashcode.co.kr#$#[class][itemtype*="//schema.org/"] .markdown { max-width: 100% !important; flex-basis: 100% !important; }
-pinpointnews.co.kr#$#.box-skin .mobile-popular { border-top: none !important; }
-news.nate.com#$#.thisTimeNews > ul { border-right: none !important; width: 100% !important; }
-encar.com#$#.feature_index .box_user { width: 100% !important; }
-shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res .wrap_tab { width: 100% !important; }
-shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res .wrap_sort { width: auto !important; }
-shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res [class*="prod_type2"] { width: 1275px !important; border-left: 1px solid #e4e4e4 !important; background-image: none !important; }
-diningcode.com#$#.MapMain > #map { width: 100% !important; }
-ypbooks.co.kr#$#form[name="loginForm"][action*="login.yp"] > table { margin-left: calc(25% - 27px) !important; }
-pushoong.com#$#html { overflow: auto !important; }
-pushoong.com#$##fullscreen-overlay { display: none !important; }
-serieamania.com#$##index > div[id^="index_box"][class]:not(.index_row_full) { margin-left: calc(50% - 145.5px) !important; }
-jobkorea.co.kr#$##loginFormWrite { margin-left: 25% !important; }
-jobkorea.co.kr#$#.byWd .matchingContWrap { margin-top: 0px !important; }
-~m.joynews24.com,joynews24.com,~m.inews24.com,inews24.com#$#header ~ header { margin-top: 50px !important; }
-newsis.com#$#.articleView + .aside .smallbox + .smallbox { border-top: none !important; }
-unsin.co.kr#$#.content_area .todayBox { width: 100% !important; }
-fnnews.com#$#.inner_contents { margin-bottom: 0px !important; }
-ppomppu.co.kr#$#div[class^="ppom_newSub"] .top_newSub .left_wt { width: 100% !important; }
-all-mice.co.kr#$##main_sec { margin-top: 100px !important; }
-cgv.co.kr#$#.wrap-login > .sect-login { margin-left: calc(50% - 270px) !important; }
-cgv.co.kr#$#.sect-movie-chart > ol:nth-child(2) > li { margin-left: 130px !important; }
-paxnet.co.kr#$#html[class*="pc-size"] .m-contents > .side-area > div:nth-child(-n+4) { top: auto !important; left: auto !important; }
-paxnet.co.kr#$#html[class*="pc-size"] .m-contents > .side-area > .analysis-ranking1 { top: 475px !important; left: auto !important; width: 100% !important; }
-paxnet.co.kr#$#html[class*="pc-size"] .av-area-fot { display: none !important; }
-paxnet.co.kr#$#html[class*="pc-size"] .side-area + .m-guide { margin-bottom: 150px !important; }
-bigkinds.or.kr#$#.news-cate + .news-box { padding-right: 0px !important; }
-modoodoc.com#$#div[class~="hospital-images-box"] ~ .row > .col-8 { max-width: 100% !important; flex: none !important; }
-noteforum.co.kr#$#table[style][width][cellspacing][cellpadding] tr[valign] > td[style] > div[style] { width: 100% !important; }
-miraetv.net#$#.gdl-page-item { width: 100% !important; }
-sports.chosun.com#$#div[style].row.no-gutters > .col-6 { max-width: 75% !important; flex-basis: 75% !important; }
-funnyissue.com,googlewph.com,gyeomipang.co.kr#$##primary { width: 100% !important }
-www.ebs.co.kr#$#.ebs_item .inner > div[class] { width: 50% !important; }
-megabox.co.kr#$#header.main-header { top: 0px !important; }
-quasarzone.com#$#.bot-content-area .mid-util-wrap > div { width: calc(50% - 5px) !important; }
-edit.incruit.com#$#.errorlay .new-login-warp { padding-top: 20px !important; margin-left: calc(50% - 232.5px) !important; }
-m.nocutnews.co.kr#$##pnlContainer .con_b > .reply_b { margin: 0px auto !important; }
-kin.naver.com#$#.wrap_home .section_spot { width: 100% !important; }
-kin.naver.com#$#.wrap_home .section_spot .best_qna_wrap { width: 100% !important; }
-te31.com#$##contentmemo ~ .adsbygoogle > div[style^="font-size:"] { width: 100% !important; }
-news.naver.com#$##section_body { border-top: none !important; }
-sso.pping.kr#$#.content_join { margin-left: calc(50% - 200px) !important; }
-edufindkorea.com#$##body_wrap > #body_main > div[style]:nth-child(1), #body_wrap > #body_main > div[style]:nth-child(3) { width: calc(50% - 5px) !important; }
-bbs.ruliweb.com#$##board_read .board_main_top .member_reward_wrapper { margin-top: 20px !important; float: right !important; margin-right: 20px !important; }
-www.nate.com#$#.area_ranking { top: 400px !important; }
-www.nate.com#$##header { margin-bottom: 0px !important; }
-sign.dcinside.com#$#.login_inputbox { float: none !important; }
-sign.dcinside.com#$#.login_inputbox .inner { width: calc(100% - 115px) !important; }
-compuzone.co.kr#$##searchArea .viewType_L .product_list li .prd_info { width: 700px !important; }
-compuzone.co.kr#$#.wrap_list .standard { width: 100% !important; }
-compuzone.co.kr#$##searchArea .title_wrap { width: calc(100% - 50px) !important; }
-toomics.com#$#.banner-open .contents { padding-top: 68px !important; }
-marupost.mycafe24.com#$#body { overflow-x: auto !important; overflow-y: auto !important; }
-news.unn.net#$#.grid-body.g-body { width: 100% !important; }
-autopostkorea.com#$#.site-footer { padding-bottom: 0px !important; }
-heraldcorp.com#$#.article_area > .article_left { width: 100% !important; }
-windowsforum.kr#$#.content { margin-top: 0px !important; }
-mule.co.kr#$#div.section-leftmiddle-topmiddle.cf { width: 100% !important; }
-berryjam.co.kr#$#.goods_list_tit { padding-top: 0px !important; }
-community.rememberapp.co.kr#$#div.sc-64vosk-0.jIkGEl { margin-bottom: 10px !important; }
-ruliweb.com#$#.user_view { width: 100% !important; }
-ppomppu.co.kr#$#.top-keyword { width: 100% !important; }
-orbi.kr#$#.global-top { top: 0px !important; }
-www.erdcloud.com#$#.erd-container { width: 100% !important; }
 [$domain=/^spotv[0-9]+\.com$/]##header { top: 0px !important; }
-apycsports.com#$#.copas_btn { display: none !important; }
-2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
-sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 heye.kr##^script:has-text(/window\.open\([^)]*\);\s*\w+\.focus/)
 ! Ads
 ##.ad-view
@@ -3975,7 +3615,6 @@ algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.
 arca.live##.vrow.hybrid:has(.category-badge)
 auction.co.kr,gmarket.co.kr##.plcc_banner
 avdbs.com##.ad-btn[class*='tp']
-avsee.ru##+js(acis, decodeURI, split)
 avsee.ru##.at-main > div.main-box > .miso-post-mix .post-wrap
 avsee.ru##.at-side div.main-box:first-child
 avsee.ru##.title div[style^='width:100%']
@@ -3991,7 +3630,6 @@ chimhaha.net##div[style='margin-top: 50px; ']
 chimhaha.net,seoul.co.kr,mule.co.kr##[class*='Ad']
 danawa.com,m.cafe.naver.com##[class^='banner']
 dcinside.com##li[id^='comment_']:has(p[class*='txt']:has-text(/^(https?:\/\/)[A-Za-z0-9]{2,10}(\.[a-z]{2,7}|\.co\.kr)(\/(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_]{5,9})$/):not(:has-text(/git|g2sh|img|tebin|sendanywhe|twitter|rentry|x\.com|youtu|ibb\.co|archive\.md|t\.me|streamable|dev/i))):style(opacity: 0.1 !important;)
-ddaltube.com##+js(remove-attr, data-a, #dtube-player)
 ddaltube.com##.dtube-banner-grid, .vjs-video-ad-click-overlay, .player-banner-overlay.absolute > a.block
 dschool.co.kr###modal-banner
 dschool.co.kr##[id="lean_overlay"]
@@ -4041,7 +3679,6 @@ mlbpark.donga.com##[class^='coupang'], [class*='naver_place']
 mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
 mule.co.kr##[class*='-ad-']
 namu.news##li:has(div[style*="min-height:100px"]):has(> div > div[id*="article-a"])
-namu.wiki#$#div[class][id]:is(:empty, :has(> iframe[id^='google_ads_iframe'])) { display: none !important; }
 naver.com###sb-kh-shortents-wrap
 naver.com##.sa_mw.sa_empty_ad
 news.jtbc.co.kr##.print-hide:has-text(AD)
@@ -4094,7 +3731,6 @@ bamgad7.com,bamgad8.com##ul.row:has(img[src*="/file/advertise/"])
 bampt3.com,bampt4.com##.small-banners-grid, .small-ad-item
 darkgirl8.com,darkgirl9.com###adskip, #posterWrap, #main-banner
 darkgirl8.com,darkgirl9.com##.banner, a[href*="clickadu.net"]
-darkgirl8.com,darkgirl9.com%#%#//scriptlet('trusted-click-element', '#adbtn')
 jusocon1.com,jusocon2.com##.banner_box
 mingky13.net,ydparty06.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
 sbxh1.com,sbxh2.com,sbxh3.com##[aria-label*='배너']
@@ -4132,23 +3768,17 @@ quasarzone.com##.best-official-news, .new-official-news, .best-official-news-con
 search.dcinside.com##.right_content
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper) ~ div:has(.fds-aib-related-question-list)
 ! Annoyances
-cafe.naver.com##+js(remove-class, disable-select, #ct)
-fmkorea.com##+js(set, link_url, '')
 ||arca.live/static/assets/js/adult.min.js
 ! Anti-adblock
 /api/me/layout-settings
 @@||piku.co.kr^$generichide
 @@||sbxh1.com^$generichide
-aagag.com##+js(set-cookie, ab, 0)
-aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
-kissjav.*##+js(rmnt, script, /contextmenu|ghost|localStorage|video\-ad\-overlay|admanager/i)
+@@||sbxh2.com^$generichide
+@@||sbxh3.com^$generichide
 dcinside.com###moveOverlay, #gaejukimg
-m.fmkorea.com##+js(set, _make_power_link_identifier, noopFunc)
 m.fmkorea.com##script ~ div.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 namu.wiki##div:has(img[data-doc]:not([data-doc^="/jump/"]):not([data-doc^="/w/"])):not(:has([id])), div:has(> div[id]:empty:only-child)
-sbxh1.com,sbxh2.com,sbxh3.com##+js(nosiif, , 700)
-sbxh1.com#%#(function(){const o=window.getComputedStyle;window.getComputedStyle=function(e,t){return e&&(e.hasAttribute("data-adblock-bait")||e.hasAttribute("data-adblock-root")||"1"===e.getAttribute("data-br"))?{display:"block",visibility:"visible",opacity:"1"}: o.apply(this,arguments)};const f=window.fetch;window.fetch=function(e,t){const u="string"==typeof e?e:e instanceof URL?e.href:e&&e.url?e.url:"";if(u.includes("/api/me/block-check"))return Promise.resolve(new Response(JSON.stringify({ok:!0,blocked:!1}),{headers:{"content-type":"application/json"}}));if(u.includes("/api/dev-block"))return Promise.resolve(new Response(JSON.stringify({ok:!0}),{headers:{"content-type":"application/json"}}));return f.apply(this,arguments)}})();
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 ! Incorrect blocking
 $@$link[rel="manifest"]
@@ -4238,19 +3868,7 @@ www.google.com##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*=".yachts/"])
 ||ublockdns.com^$doc
 ||ublockorigin.com^$doc
 ! Tweaks
-arca.live#%#const _s=document.documentElement.appendChild(Object.assign(document.createElement("style"),{textContent:'a.notice .vcol.col-ad .badge.badge-success,a.notice .vcol.col-id>b{visibility:hidden}'}));document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelector("div.list-table");if(!t){_s.remove();return;}const s=()=>{const e=t.querySelector('a.notice[href*="/b/"]');if(!e)return;const g=e.pathname.split("/b/")[1]?.split("/")[0];if(!g)return;const b=e.querySelector(".vcol.col-ad .badge.badge-success"),i=e.querySelector(".vcol.col-id>b");if(b)b.textContent=g;if(i)i.textContent=g;if(b||i)_s.remove()};s();let r;new MutationObserver(()=>{clearTimeout(r);r=setTimeout(s,100)}).observe(t,{childList:!0,subtree:!0})});
 arca.live##.vcol.col-title .comment-count:hover:style(background-color: #cccccc !important; color: white !important;)
 arca.live##.vcol.col-title .comment-count:style(display: inline-block !important; padding: 6px 5px 6px 3px !important; margin: -6px -5px -6px -3px !important; position: relative; z-index: 10;)
-dmm.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'ckcy_remedied_check', 'ec_mrnhbtk', '1year', '/', '.dmm.co.jp')
 gall.dcinside.com##.img_area button.btn:style(opacity: 0.4 !important;)
-gall.dcinside.com#$#.btn_imgcmtopen { opacity: 0.4 !important; transform: translate(8px, 7px) !important; }
-gall.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview_head:has(em.icon_write_app) > div.gall_writer > div.fl', 'span', '', 'ㅤAPP')
-gall.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview_head:has(em.icon_write_mbl) > div.gall_writer > div.fl', 'span', '', 'ㅤMOBILE')
-gall.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview_head:not(:has(em.icon_write_mbl)):not(:has(em.icon_write_app)) > div.gall_writer > div.fl', 'span', '', 'ㅤPC')
-m.dcinside.com#$#button.btn-imgcomment { transform: scale(0.7) translate(21.5px, 15.3px) !important; opacity: 0.6 !important; }
-m.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview-tit-box:has(span.sp-app) > div > ul.ginfo2', 'li', '', 'APP')
-m.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview-tit-box:has(span.sp-mweb) > div > ul.ginfo2', 'li', '', 'MOBILE')
-m.dcinside.com#%#//scriptlet('trusted-create-element', 'div.gallview-tit-box:not(:has(span.sp-icon)) > div > ul.ginfo2', 'li', '', 'PC')
-m.dcinside.com#%#//scriptlet('trusted-set-local-storage-item', 'imgSizeSetting', 'ori')
-m.youtube.com#%#setInterval(function(){var ts=document.querySelectorAll(".slim-owner-subscribe-button");for(var i=0;i<ts.length;i++){var t=ts[i];if(t.offsetParent!==null&&!t.parentElement.querySelector(".pip-btn")){var b=document.createElement("div");b.className="pip-btn";b.innerText="PiP";b.tabIndex=0;b.style.cssText="display:flex;align-items:center;justify-content:center;background-color:#f2f2f2;border-radius:18px;height:36px;padding:0 16px;margin-right:8px;font-family:Roboto,Arial,sans-serif;font-size:14px;font-weight:500;color:#0f0f0f;cursor:pointer;outline:none;user-select:none;transition:background-color 0.2s";b.onmouseover=function(){this.style.backgroundColor="#e5e5e5"};b.onmouseout=function(){this.style.backgroundColor="#f2f2f2"};b.onclick=function(e){e.preventDefault();e.stopPropagation();var v=document.querySelector("video");if(v){v.removeAttribute("disablepictureinpicture");document.pictureInPictureElement?document.exitPictureInPicture():v.requestPictureInPicture()}};b.onfocus=b.onmouseenter=function(){if(window._pipT)return;window._pipT=1;var p=document.createElement("div");p.innerText="By Gallery Filter";p.style.cssText="position:fixed;z-index:9999;padding:4px 8px;background:rgba(255,255,255,0.8);border:1px solid rgba(0,0,0,0.2);border-radius:4px;box-shadow:0 2px 5px rgba(0,0,0,0.1);backdrop-filter:blur(3px);font-size:11px;font-family:sans-serif;color:black;pointer-events:none;opacity:1;transition:opacity 0.5s ease-out;";var r=this.getBoundingClientRect();p.style.top=(r.top-30)+"px";p.style.left=(r.left+r.width/2)+"px";p.style.transform="translateX(-50%)";document.body.appendChild(p);setTimeout(function(){p.style.opacity="0";setTimeout(function(){p.remove()},500)},1500)};t.parentElement.insertBefore(b,t)}}},1000);
 !  =============== END (Maginot Line) =============== !
