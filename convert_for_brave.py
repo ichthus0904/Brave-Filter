@@ -4,8 +4,8 @@
 import urllib.request
 from datetime import datetime, timezone, timedelta
 
-# 대상 필터: List-KR (Classic 버전으로 변경됨)
-LIST_KR_CLASSIC_URL = "https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-classic.txt"
+# 대상 필터: 오직 List-KR 통합 버전
+LIST_KR_URL = "https://cdn.jsdelivr.net/npm/@list-kr/filterslists@latest/dist/filterslist-uBlockOrigin-unified.txt"
 
 def fetch(url):
     try:
@@ -23,45 +23,44 @@ def process_line(line):
     
     line = line.strip()
 
-    # 1. 메타데이터 및 불필요한 주석 정리
+    # 메타데이터 정리
     if line.startswith('!'):
-        # uBO 조건부 전처리문 무시 (!#if 등)
+        # uBO 전용 조건부 전처리문 무시 (모든 룰 활성화)
         if line.startswith('!#'):
             return None
-        # 새로 헤더를 덮어씌울 것이므로 기존 메타데이터 제거
+        # 자체적으로 헤더를 새로 작성할 것이므로 기존 헤더 정보 제거
         if any(x in line for x in ["! Title:", "! Version:", "! Expires:", "! Last updated:", "! Homepage:", "! checksum", "! Description:", "! Licence:"]):
             return None
         return line
 
-    # 2. Brave 실드에서 "절대" 지원하지 않는 문법 정밀 타격 (용량 다이어트)
+    # 🛑 Brave에서 "절대" 지원하지 않는 타 엔진 전용 문법 필터링 (용량 최적화)
     unsupported = [
-        "##+js",       # uBlock Origin JS 주입 (Brave 미지원)
-        "#%#",         # AdGuard JS 주입 (Brave 미지원)
-        "#$#",         # AdGuard 특수 CSS 주입
-        "#@#$#",       # AdGuard 특수 CSS 예외
-        "$replace=",   # 응답 본문 변조 (Brave 미지원)
-        "$rewrite="    # 리디렉션 변조 (Brave 미지원)
+        "##+js",       # uBlock Origin 자바스크립트 주입 문법 (Brave 미지원)
+        "#%#",         # AdGuard 자바스크립트 주입 문법 (Brave 미지원)
+        "#$#",         # AdGuard 특수 CSS 주입 문법
+        "#@#$#",       # AdGuard 특수 CSS 예외 문법
+        "$replace=",   # 응답 본문 변조 문법 (Brave 미지원)
+        "$rewrite="    # 리디렉션 변조 문법 (Brave 미지원)
     ]
-    
     if any(u in line for u in unsupported):
         return None
 
-    # 3. 그 외 Brave가 소화할 수 있는 정규식, :has(), 일반 CSS 숨김 규칙 등은 100% 살림
+    # 그 외 정규식, :has() 등 Brave가 소화할 수 있는 핵심 규칙은 100% 보존
     return line
 
 if __name__ == "__main__":
-    print("=== Brave 전용 List-KR (Classic) 최적화 생성 시작 ===")
+    print("=== Brave 전용 List-KR 최적화 생성 시작 ===")
 
     clean = []
     seen = set()
     
-    print("📥 List-KR Classic 원본 가져오는 중...")
-    raw = fetch(LIST_KR_CLASSIC_URL)
+    print("📥 List-KR 원본 가져오는 중...")
+    raw = fetch(LIST_KR_URL)
     
     count = 0
     for raw_line in raw.splitlines():
         processed = process_line(raw_line)
-        # 중복 룰 걸러내기
+        # 중복 룰 방지
         if processed and processed not in seen:
             seen.add(processed)
             clean.append(processed)
@@ -69,16 +68,16 @@ if __name__ == "__main__":
             
     print(f"   - {count:,} 개의 유효 규칙 추가됨.")
 
-    # 12시간 자동 업데이트 강제 유도용 타임스탬프 (KST 기준)
+    # 한국 시간(KST) 기준 타임스탬프 (12시간 강제 업데이트 유도용)
     kst = timezone(timedelta(hours=9))
     now = datetime.now(kst)
     version_str = now.strftime('%Y%m%d%H%M') 
 
-    # GitHub Action(.yml)의 git add 파일명과 동일하게 설정
+    # 기존 GitHub Actions 파일과 일치하도록 파일명 고정
     with open("brave_list_kr.txt", "w", encoding="utf-8") as f:
         f.write("[Adblock Plus 2.0]\n")
-        f.write("! Title: List-KR Classic for Brave\n")
-        f.write("! Description: Brave 실드에 완벽히 최적화된 List-KR Classic 단일 필터\n")
+        f.write("! Title: List-KR for Brave (Optimized)\n")
+        f.write("! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터\n")
         f.write(f"! Version: {version_str}\n")
         f.write("! Expires: 12 hours\n")
         f.write("! Last updated: " + now.strftime('%Y-%m-%d %H:%M KST') + "\n")
