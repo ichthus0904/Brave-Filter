@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202605221055
+! Version: 202605222013
 ! Expires: 12 hours
-! Last updated: 2026-05-22 10:55 KST
+! Last updated: 2026-05-22 20:13 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||adv.imadrep.co.kr^
@@ -3469,27 +3469,115 @@ hdhd344.net,hdhd345.net,hdhd346.net,hdhd347.net,hdhd348.net,hdhd349.net,hdhd350.
 blacktoon302.com,blacktoon303.com,blacktoon304.com,blacktoon305.com,blacktoon306.com,blacktoon307.com,blacktoon308.com,blacktoon309.com,blacktoon310.com,blacktoon311.com,blacktoon312.com,blacktoon313.com#?#.alert.alert-danger:has(> a:has-text([AD]))
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 ! Check after 2024 April 1st.
+zum.com##+js(set, _ads_zum_main_initbanner_750_zum_main_br_widget_336, true)
 ! PopMagic
+watchfreejavonline.co##+js(acis, popMagic.init)
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/2130#issuecomment-1621684566
 apycsports.com##*[class*="not_cookie"]:remove-class(not_cookie)
 banhub.xyz##*[class*="backdrop-blur-lg"]:remove-class(backdrop-blur-lg)
 ! m.humoruniv.com
+m.humoruniv.com##+js(rmnt, script, /run[\s\S]*?data[\s\S]*?OnClick[\s\S]*?ad\d_/)
+m.humoruniv.com##+js(set, list_end_run_read_top_boom, noopFunc)
+m.humoruniv.com##+js(set, list_end_run_pds_notice_boom, noopFunc)
+m.humoruniv.com##+js(set, list_end_run_comment_bottom_boom, noopFunc)
+m.humoruniv.com##+js(set, list_end_run_center_boom, noopFunc)
+m.humoruniv.com##+js(set, list_end_run_list_bottom_boom, noopFunc)
+m.humoruniv.com##+js(nostif, height && 1 <= height && height <= 20)
+m.humoruniv.com##+js(set, list_end_run, noopFunc)
+m.humoruniv.com##+js(aost, $.prototype.html, _boom)
+m.humoruniv.com##+js(acis, $.prototype.html, /\/images\/[A-z0-9-_]+\.?(jpg|gif)/)
 ! m.fmkorea.com
+m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
 ! chzzk.naver.com
+chzzk.naver.com##+js(json-prune-xhr-response, ads.[-].eventTracking.ackImpressions.[].url, ads.[].adInfo.responseSize, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
+chzzk.naver.com##+js(json-prune-xhr-response, adBreaks.[-].adSources.[].withRemindAd, videoAdScheduleId, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
+vod.sooplive.com##+js(json-prune-xhr-response, data.adballoon, , 'station/video/a/view')
+stock.naver.com##+js(set, MobileDetect, noopFunc)
+excellesports.com##+js(set-cookie, popup_view, disable)
+maple.gg##+js(set-cookie, hideFrontPagePopup, true)
+enuri.com##+js(set, getPowerLink, noopFunc)
+2798731938.zigcou.com##+js(trusted-replace-node-text, script, '"isClicked":false', '"isClicked":true', 'includes', '{"props":{"pageProps":{"initialState":{')
+heye.kr##+js(nowoif, pandalive.co.kr/evt/)
+newneek.co##+js(no-xhr-if, api-v2.adrop.io/request)
+map.naver.com##+js(json-prune-xhr-response, layers.[-].metadata.name.{=}.POI_Ads, ,propsToMatch, url:/PCWeb_Real.json)
+pcmap.place.naver.com,m.place.naver.com##+js(json-prune, [].data.poiRecommendations.recommendations.[].items.[-].adClickLog.clickUrl)
+platformgreat.kr##+js(set, commonTrailer, undefined)
+kilho.net##+js(acis, jQuery, .adsbygoogle)
+mplay.mk.co.kr##+js(no-xhr-if, ad.smartmediarep.com/NetInsight/video/smr, length:300)
+www.naver.com##+js(rc, type_ad, #shortcutArea)
+enjoyplan.tistory.com##+js(nostif, coupangAd)
+laftel.net##+js(nosiif, [native code], 1000)
+doctornow.co.kr##+js(json-prune, data, data.getBannerAdExchange)
+10000recipe.com##+js(nostif, popup_goods)
+oh-yes.co.kr##+js(set-cookie, ld_ac_timeout, Y)
+search.11st.co.kr##+js(json-prune, powerLink, powerLink.ads)
+ssodam.com##+js(set-cookie, adv, 1)
+www.cultureland.co.kr##+js(aost, String.prototype.substring, /checkCookie.+main\.do/)
+hub.zum.com##+js(set, Math.uuid, '', '', asFunction)
+youtu.co,dfast.kr##+js(aeld, hashchange, #viewus-explore-more)
+mememedia.co.kr##+js(set, jQuery.fn.getUrlParameter, '', asFunction)
+msearch.shopping.naver.com##+js(json-prune, adRecommend.adUnits.[])
+humors.zigcou.com##+js(set, window.__NEXT_DATA__.props.pageProps.initialState.post.adhistory, {})
+moneytoring.co.kr,postincome.co.kr,itinformation.kr,digitstar77.com##+js(nostif, piBlock)
+shopping.interpark.com##+js(set, $is.powerLink.loadPowerLink, noopFunc)
+mlbpark.donga.com##+js(set-attr, #cmtFormTable textarea, cols, 50)
+sbs.co.kr##+js(set, SbsHtml5PlayerContainer.prototype.renderAdSequence, noopFunc)
+search.shopping.naver.com##+js(json-prune, data.BrandAd)
 yes24.com###hdSearchBarText:remove-attr(value)
 yes24.com###hdSearchBarLink:remove-attr(value)
+smartinpress.com,newsn24.com##+js(acis, jQuery.prototype.load, is_coupang)
+whathappen.co.kr,momkim.co.kr##+js(aeld, DOMContentLoaded, link.coupang.com)
 momkim.co.kr,yachuk.com##*[class*="not_cookie"]:remove-class(not_cookie)
+yachuk.com##+js(acis, jQuery, link.coupang.com)
 semoi.kr###bo_v_atc.mheight:remove-class(mheight)
+aannm.cafe24.com,beomil09121.cafe24.com##+js(acis, jQuery, coupang_dont_show_prompty_interval)
+actingbaum.co.kr,picknpicker.com,moneyissues.co.kr,sotrychatter.com,skysky138.com,keela.co.kr,jiwootube.com,news.ssongyi.co.kr,xn--wh1b751afvcpsb.com##+js(acis, jQuery.prototype.on, is_coupang)
+fun-iyagi.co.kr,timecoffee.co.kr,333aaa.site##+js(set, pum_vars, undefined)
+inven.co.kr##+js(ra, placeholder, #webzineHeadmenuF1 input[placeholder][autocomplete="off"])
+hashnews.cafe24.com##+js(aopr, pum_popups)
+enuri.com##+js(json-prune, data.supertopADNos)
+sbs.co.kr##+js(set, player.renderAdSequence, undefined)
+domin.co.kr##+js(set, bannerpop.popup, noopFunc)
+nesin.com##+js(acis, open, /\/popup\//)
+kyobobook.co.kr##+js(ra, placeholder, input#searchMainKeyword)
+kyobobook.co.kr##+js(ra, placeholder, input#searchKeyword)
+mjmedi.com##+js(acis, bannerpop.popup)
+laftel.net##+js(no-xhr-if, api/avods/v1/advertisement)
+tvchosun.com##+js(set, player.advertisement_finished, true)
+cfnews.kr##+js(acis, window.open, /gears/popup/default.aspx)
+sjtoday.kr##+js(acis, window.open, notice_view_html.php)
+filetender.com##+js(nostif, , 15000)
+pping.kr##+js(ra, placeholder, input.search_input, asap stay)
+shoppinghow.kakao.com##+js(json-prune, ads)
+dpg.danawa.com##+js(acis, $, /danawa-dpg-common-sponsorBanner-/)
+dpg.danawa.com##+js(acis, $, myScript[myScript.length - 1 ])
+naver.com##+js(set, getAdcrUrl, '')
+koreapas.com##+js(set, random_imglink, noopFunc)
+imbc.com##+js(set, vrixadsdk, undefined)
+kilho.net##+js(set, hahaha, noopFunc)
+/lover[0-9]\.net/##+js(aeld, click, 'opMagic)
+zzzz.lol##+js(nosiif, animationEffects[settings.animation.effect])
+/lover[0-9]\.net/##+js(nano-stb, closeBtn.innerHTML, , 0.001)
 ! ##+js(acis, document.addEventListener, /adscale_slot_id/)
+asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,untitle.org,seo-marketing.co.kr##+js(acis, document.addEventListener, /adscale_slot_id/)
 ! ##+js(nostif, /\.displayMessage\(/)
+zuzunza.com,iphonedev.co.kr,tistory.com##+js(nostif, /\.displayMessage\(/)
 ! BlockAdBlock
+fafan.kr,blog.dalso.org,tistory.com##+js(nobab)
+tistory.com##+js(nobab2)
 ! FuckAdBlock
+te31.com,tistory.com##+js(nofab)
+x86.co.kr,1004lucifer.blogspot.com,te31.com,tistory.com##+js(aopr, adBlockDetected)
 ! ai_front anti-adblock
+plankim.com##+js(acis, ai_adb.init)
+jootc.com,ehpub.co.kr##+js(acis, ai_run_scripts)
 ! fundingchoicesmessages.google.com
 ||fundingchoicesmessages.google.com^$domain=damoang.net|maplescouter.com|vivatv.cc|svrforum.com|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net
 ! Kakao TV
 /^https:\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]+\/vmap/$redirect=noop.txt,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
+tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net##+js(no-xhr-if, /^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1\,2}\/vmap$/)
 /embed/player/image/ads.png$redirect=2x2.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
+tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net##+js(no-fetch-if, /^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1\,2}\/vmap$/)
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adContainer
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
@@ -3497,6 +3585,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! meeco.kr
 meeco.kr##body > div[class][style*="box-shadow:"]
 meeco.kr#@#.googleAd
+meeco.kr##+js(set, adsBlocked, noopFunc)
 meeco.kr#$?#.adsbygoogle { remove: true; }
 ! Umanle S.R.L
 @@||arca.live^$generichide,domain=arca.live
@@ -3505,6 +3594,10 @@ meeco.kr#$?#.adsbygoogle { remove: true; }
 @@||namu.news/$frame,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$frame,script,domain=namu.wiki|~board.namu.wiki
 ! SPOTVNOW
+spotvnow.co.kr##+js(no-xhr-if, imasdk.googleapis.com/js/sdkloader/ima3.js)
+spotvnow.co.kr##+js(no-fetch-if, imasdk.googleapis.com/js/sdkloader/ima3.js)
+spotvnow.co.kr##+js(no-xhr-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
+spotvnow.co.kr##+js(no-fetch-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
 ! aagag.com
 aagag.com#@#ins.adsbygoogle[data-ad-slot]
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aagag.com,xmlhttprequest,redirect=googlesyndication_adsbygoogle.js
@@ -3514,7 +3607,18 @@ aagag.com#@#ins.adsbygoogle[data-ad-slot]
 t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 @@||googletagmanager.com/gtag/js$domain=t.hi098123.com,script
 ! dcinside.com
+dcinside.com##+js(remove-cookie, gaejuki_ad)
+m.dcinside.com##+js(remove-cookie, find_ab)
+m.dcinside.com##+js(nostif, addc.dcinside.com)
+m.dcinside.com##+js(set-local-storage-item, /adblock_detected/, $remove$)
+m.dcinside.com##+js(aeld, pageshow, /\.persisted *&& *interval_Ad *&& *clearInterval\( *interval_Ad *\)/)
+m.dcinside.com##+js(no-xhr-if, addc.dcinside.com, emptyStr)
+gall.dcinside.com##+js(set, blockedState, '')
+gall.dcinside.com##+js(remove-node-text, script, /background:[\s\S]+setTimeout\( *\( *\) *=> *[A-Za-z0-9]+\.remove\( *\)[\s\S]+Math\.random\( *\) *< *percent *\/ *100/)
+gall.dcinside.com##+js(remove-node-text, script, /finally *{\n* *document.documentElement.removeChild\( *[A-Za-z0-9]+ *\) *;\n* *}([ \n]|.)+_ad"]\);/)
 ! chzzkban.xyz
+chzzkban.xyz##+js(no-fetch-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js method:HEAD, emptyStr)
+chzzkban.xyz##+js(trusted-suppress-native-method, Node.prototype.contains, '{"className":"adsbygoogle"}', abort)
 ! dicoall.com
 dicoall.com#@##AdHeader
 dicoall.com#@##AD_Top
@@ -3523,39 +3627,62 @@ dicoall.com#@##ad-lead
 dicoall.com#@##rightAd
 ! litomi.in
 ||jads.co^$script,redirect=noop.js,domain=litomi.in
+litomi.in##+js(trusted-create-html, #juicy-ads-banner > div[data-juicy-ads-slot] > div, <iframe></iframe>)
 litomi.in##ins
+windowsforum.kr##+js(set, isAdBlockDisabled, true)
+etoland.co.kr##+js(no-fetch-if, /pagead2.googlesyndication.com|googleads.g.doubleclick.net|googletagservices.com|securepubads.g.doubleclick.net|googleads.g.doubleclick.net|google-analytics.com|googlesyndication.com|doubleclick.net/)
 ||ragmaya.kr/static/rm_adblock_wall.js
 @@_vercel/insights/script.js$domain=bser-koroshi.vercel.app,xmlhttprequest
 algumon.com##div[id^="deal-"].card ~ .bg-base-100:has(> div[style] > div[class^="fallback svelte-"])
+cheatdot.com##+js(nostif, 'window.getComputedStyle(t).display')
+tv.jtbc.co.kr,mvod.jtbc.co.kr,onair.jtbc.co.kr##+js(nostif, 'getComputedStyle(t).getPropertyValue("visibility")')
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
+mylocation.co.kr##+js(nostif, adBlockedMessage)
 ||shana.pe.kr/shana_check/scp*.js$script
+remiz.co.kr##+js(spoof-css, .adsbygoogle, display, block)
 remiz.co.kr#@#.ad-body
+checkwhoiam.tistory.com##+js(set, adblockChecker, noopFunc)
 kilho.net###detect-alert
 vod.jtbc.co.kr#@#.ad-unit:not(.textads)
 vod.jtbc.co.kr#@#.ad-zone:not(.textads)
+news.jtbc.co.kr##+js(spoof-css, .ad-banner.adsbox.ad-unit.ad-zone, display, block)
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=vod.jtbc.co.kr|news.jtbc.co.kr|mvod.jtbc.co.kr|tv.jtbc.co.kr
+minipol.tistory.com##+js(set, checkAdBlock, undefined)
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=start.klauncher.kr,script
 tabriz.kr#@##AdHeader
 tabriz.kr#@##AD_Top
 tabriz.kr#@##ad-lead
 tabriz.kr#@##homead
+namechart.kr,eftlibrary.com##+js(no-fetch-if, www3.doubleclick.net)
+dinfo.3dpchip.com##+js(set, linkPass, true)
+klauncher.kr##+js(aeld, load, _0x)
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
+hub.weirdhost.xyz##+js(no-fetch-if, adblockanalytics.com)
+hub.weirdhost.xyz##+js(no-fetch-if, adsbygoogle.js)
 ||www3.doubleclick.net^$script,redirect=noop.js,domain=srank.kr
 @@||doubleclick.net^$xhr,domain=srank.kr
 @@||adservice.google.com^|$xmlhttprequest,domain=klauncher.kr
 chmodi.tistory.com##.floatdiv
 svrforum.com##body > div[class][style*="box-shadow:"]
+luckyquiz3.blogspot.com##+js(no-xhr-if, adsbygoogle)
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=sbs.co.kr
+deokhu.com,3dpchip.com##+js(acis, chp_ads_blocker_detector)
+3dpchip.com##+js(prevent-xhr, /compass.adop.cc|adsbygoogle|taboola/, emptyStr)
 ||compass.adop.cc^$script,redirect=noop.js,domain=3dpchip.com
+3dpchip.com##+js(aopw, HTMLAnchorElement.prototype.onclick)
 @@||advimg.ad-mapps.com/sdk/js/ver/200/ad_script.js$domain=maxmovie.com
 @@||advimg.ad-mapps.com/sdk/M_PLUS/JS/common/jquery-$domain=maxmovie.com
 @@||static.dable.io/dist/plugin.min.js$domain=maxmovie.com
 ||advimg.ad-mapps.com/sdk/M_PLUS/Image/$redirect=2x2.png,domain=maxmovie.com
 ||mtag.mman.kr/get_ad.mezzo/$xmlhttprequest,redirect=noop.txt,domain=maxmovie.com
+sysnet.pe.kr##+js(nostif, banner_book)
 @@||new-in.pmirnc.com/public/fingerprint2.js$script
 @@||cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js$script,domain=typing.works
 ||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.search.naver.com,redirect=noop.js
+avdbs.com##+js(scis, ad_blk)
 avdbs.com#@#.ad-btn
+genshin.gamedot.org##+js(nostif, blockCheck2022)
+errornight.com##+js(aost, alert, chk_adBlock)
 ||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,redirect=noop.js,domain=m.sports.naver.com
 bera.world,sellas.ink,1412.live#@#.ads
 remiz.co.kr#@#ins.adsbygoogle[data-ad-slot]
@@ -3568,26 +3695,40 @@ mnews.jtbc.co.kr#@#.ad_bottom
 @@||kpanews.co.kr^$generichide
 ilsangt.tistory.com##.adblock-on
 ||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js
+ssulwar.com##+js(acis, document.getElementById, adblock)
 ||ad.smartmediarep.com/NetInsight/video/$redirect=noop.txt,domain=mbn.co.kr
+detegice.github.io##+js(aopr, $.prototype.fadeIn)
+ilsangt.tistory.com##+js(acis, $, .adsense-area)
 uda1004.tistory.com#@#ins.adsbygoogle[data-ad-slot]
+sogirl.so##+js(set, DHAntiAdBlocker, true)
 clien.net#@#.ad_banner
 @@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr|allclip.sbs.co.kr|mplay.mk.co.kr|static.cloud.sbs.co.kr
 ||adimg.nate.com/img/*?n=$redirect=2x2.png,domain=tv.nate.com
+noonnu.cc##+js(no-xhr-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=laftel.net
 @@||asset.laftel.net/static/assets/googleads-advertisement.js$domain=laftel.net
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=laftel.net
+focuskr.tistory.com##+js(acis, addEventListener, fuckadblock.min.js)
+singingdalong.blogspot.com##+js(acis, $, #ad_center)
+stockinfo7.com##+js(nostif, ad.innerHTML.replace)
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noop.js,domain=game.hotsharegames.com
+blackkiwi.net##+js(no-fetch-if, www3.doubleclick.net)
 persnacons.tistory.com#@#.topAD
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
 uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle[data-ad-slot]
 singingdalong.blogspot.com,sajuplus.net##.adsense-alt
+tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 ! foreign website
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle[data-ad-slot]
+/sbxh[0-9]+\.com/##+js(nostif, '/[A-Za-z0-9]+ *\( *\) *, *[A-Za-z0-9]+ *\. *[A-Za-z0-9]+ *= *window\.setInterval *\(/')
+hasha.in##+js(no-fetch-if, adManager.js)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hasha.in
 @@||js.wpadmngr.com/static/adManager.js$xmlhttprequest,domain=hasha.in
 ||fundingchoicesmessages.google.com^$domain=tv25.co
+lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lover938.net,lover939.net,lover940.net,lover941.net##+js(nostif, document[_0x)
 ||newspic.kr^$removeparam=cp
+auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||litt.ly/api/blockevents
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
@@ -3595,4 +3736,3 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 www.naver.com###whale-banner
 tvroom5.org##ul.menu:has(> li > a[class^="banner_"])
 [$domain=/^spotv[0-9]+\.com$/]##header { top: 0px !important; }
-heye.kr##^script:has-text(/window\.open\([^)]*\);\s*\w+\.focus/)
