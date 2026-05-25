@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202605251059
+! Version: 202605252326
 ! Expires: 12 hours
-! Last updated: 2026-05-25 10:59 KST
+! Last updated: 2026-05-25 23:26 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||adv.imadrep.co.kr^
@@ -3721,11 +3721,6 @@ singingdalong.blogspot.com,sajuplus.net##.adsense-alt
 tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 ! foreign website
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle[data-ad-slot]
-/sbxh[0-9]+\.com/##+js(set-local-storage-item, /ntk_blk_/, '$remove$')
-/sbxh[0-9]+\.com/##+js(set-local-storage-item, /ntk_dev_/, '$remove$')
-/sbxh[0-9]+\.com/##+js(spoof-css, '[data-bs], img[width], img[height], [data-bp]', width, 100)
-/sbxh[0-9]+\.com/##+js(spoof-css, '[data-bs], img[width], img[height], [data-bp]', height, 100)
-/^https:\/\/sbxh[0-9]+\.com\/init\/block\.js/$domain=/sbxh[0-9]+\.com/
 hasha.in##+js(no-fetch-if, adManager.js)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=hasha.in
 @@||js.wpadmngr.com/static/adManager.js$xmlhttprequest,domain=hasha.in
