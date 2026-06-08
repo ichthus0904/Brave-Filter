@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202606072212
+! Version: 202606081110
 ! Expires: 12 hours
-! Last updated: 2026-06-07 22:12 KST
+! Last updated: 2026-06-08 11:10 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||adv.imadrep.co.kr^
@@ -591,6 +591,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /studio_backend/adforus.
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
+||muko.kr/files/attach/ads/
 ||static.fmkorea.com/modules/fmad/tpl/*/naver_power_link.
 ||jeongcheogi.edugamja.com/ads/
 ||algumon.com/n/api/ca/list
@@ -1722,6 +1723,8 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+muko.kr###popupAdOverlay
+muko.kr##.muko-ad-impression
 damoang.net##div[data-dm-slot]
 damoang.net##div[style^="--ad-slot-min-height:"]
 damoang.net##.gap-4.flex-col > div:has(> div[data-position="side-image-text-banner"])
@@ -3738,6 +3741,8 @@ auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
+muko.kr##.lp-install-chip
+muko.kr###xt_join_site_addons
 www.naver.com###whale-banner
 tvroom5.org##ul.menu:has(> li > a[class^="banner_"])
 [$domain=/^spotv[0-9]+\.com$/]##header { top: 0px !important; }
