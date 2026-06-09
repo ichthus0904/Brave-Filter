@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202606091048
+! Version: 202606092313
 ! Expires: 12 hours
-! Last updated: 2026-06-09 10:48 KST
+! Last updated: 2026-06-09 23:13 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||adv.imadrep.co.kr^
@@ -1724,6 +1724,14 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+newautopost.co.kr###onesignal-slidedown-container
+newautopost.co.kr##.pc-post-ad-header
+newautopost.co.kr##.pc-post-ad-left-wrap
+newautopost.co.kr##.pc-post-ad-right-wrap
+newautopost.co.kr##.right-ad-event
+newautopost.co.kr##.weekly-best
+newautopost.co.kr##.rside-ad-01
+newautopost.co.kr##.newautopost-adsense-grid
 mlbpark.donga.com##.naver_place.place_view:has(a[href*="ader.naver.com"])
 muko.kr###popupAdOverlay
 muko.kr##.muko-ad-impression
@@ -3198,6 +3206,7 @@ torrentmode.com##a[href^="https://torrentmode.com/bbs/bannerhit.php"]
 [$domain=/^manatoki[0-9]+\.net/]##.board-tail-banner
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
+@@||newautopost.co.kr/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
 @@||d2i2w6ttft7yxi.cloudfront.net/ad_banner/$domain=witchform.com
@@ -3971,7 +3980,7 @@ www.youtube.com##+js(trusted-rpnt, script, (function serverContract(), (()=>{if(
 www.youtube.com##+js(trusted-json-edit-xhr-request, [?..userAgent*="channel"]..client[?.clientName=="WEB"]+={"clientScreen":"CHANNEL"}, propsToMatch, /player?)
 www.youtube.com##+js(trusted-json-edit-xhr-request, [?..userAgent*="lactmilli"]+={"params":"8AUB"}, propsToMatch, /player?)
 www.youtube.com##+js(trusted-json-edit-xhr-request, [?..userAgent*="lactmilli"]..playbackContext.contentPlaybackContext.lactMilliseconds="${now}", propsToMatch, /player?)
-www.youtube.com##+js(trusted-json-edit-xhr-request, [?..userAgent=/adunit|channel|lactmilli|instream|eafg/]..referer=repl({"regex":"$"\,"replacement":"#reloadxhr"}), propsToMatch, /player?)
+www.youtube.com##+js(trusted-json-edit-xhr-request, [?..userAgent=/adunit|channel|lactmilli|instream|eafg/]..referer=repl({"regex":"(?:#reloadxhr)?$"\,"replacement":"#reloadxhr"}), propsToMatch, /player?)
 www.youtube.com##+js(nano-stb, [native code], 17000, 0.001)
 www.youtube.com##+js(json-prune-fetch-response, adPlacements adSlots playerResponse.adPlacements playerResponse.adSlots [].playerResponse.adPlacements [].playerResponse.adSlots, , propsToMatch, /player?)
 www.youtube.com##+js(json-prune-fetch-response, adPlacements adSlots playerResponse.adPlacements playerResponse.adSlots, , propsToMatch, /playlist?)
