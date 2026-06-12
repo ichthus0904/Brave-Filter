@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202606121105
+! Version: 202606122326
 ! Expires: 12 hours
-! Last updated: 2026-06-12 11:05 KST
+! Last updated: 2026-06-12 23:26 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||adv.imadrep.co.kr^
@@ -3656,7 +3656,7 @@ dicoall.com#@##rightAd
 ||jads.co^$script,redirect=noop.js,domain=litomi.in
 litomi.in##+js(trusted-create-html, #juicy-ads-banner > div[data-juicy-ads-slot] > div, <iframe></iframe>)
 litomi.in##ins
-windowsforum.kr##+js(set, isAdBlockDisabled, true)
+windowsforum.kr##+js(aeld, load, 'banner.offsetHeight')
 etoland.co.kr##+js(no-fetch-if, /pagead2.googlesyndication.com|googleads.g.doubleclick.net|googletagservices.com|securepubads.g.doubleclick.net|googleads.g.doubleclick.net|google-analytics.com|googlesyndication.com|doubleclick.net/)
 ||ragmaya.kr/static/rm_adblock_wall.js
 @@_vercel/insights/script.js$domain=bser-koroshi.vercel.app,xmlhttprequest
