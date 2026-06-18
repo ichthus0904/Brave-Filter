@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202606181110
+! Version: 202606182337
 ! Expires: 12 hours
-! Last updated: 2026-06-18 11:10 KST
+! Last updated: 2026-06-18 23:37 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api.adapi.co.kr^
@@ -593,7 +593,6 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
 ||danawa.com/main/ajax/getAdSmartProductList.ajax.php
-||nng-phinf.pstatic.net/*.PNG/PC_$domain=chzzk.naver.com,image
 ||muko.kr/files/attach/ads/
 ||static.fmkorea.com/modules/fmad/tpl/*/naver_power_link.
 ||jeongcheogi.edugamja.com/ads/
@@ -1731,7 +1730,6 @@ eegosa.com##section[id*="_ads_"]
 sports.donga.com##div[id*="_AD"]
 section.blog.naver.com##.area_advertisement
 i-boss.co.kr##div[data-unit]
-chzzk.naver.com##div[class^="skin_container__"]
 m.ilbe.com##.cutin_banner_new
 aniwolf.com##.banner-area
 newautopost.co.kr###onesignal-slidedown-container
@@ -3521,6 +3519,7 @@ m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
 ! chzzk.naver.com
 chzzk.naver.com##+js(json-prune-xhr-response, ads.[-].eventTracking.ackImpressions.[].url, ads.[].adInfo.responseSize, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 chzzk.naver.com##+js(json-prune-xhr-response, adBreaks.[-].adSources.[].withRemindAd, videoAdScheduleId, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
+chzzk.naver.com##+js(trusted-set-local-storage-item, homeSkinCollapsedUntil, 9999999999999)
 vod.sooplive.com##+js(json-prune-xhr-response, data.adballoon, , 'station/video/a/view')
 stock.naver.com##+js(set, MobileDetect, noopFunc)
 excellesports.com##+js(set-cookie, popup_view, disable)
