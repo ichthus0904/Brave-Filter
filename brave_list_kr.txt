@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202606212228
+! Version: 202606221115
 ! Expires: 12 hours
-! Last updated: 2026-06-21 22:28 KST
+! Last updated: 2026-06-22 11:15 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api.adapi.co.kr^
@@ -577,6 +577,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/steamindiegame(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/f-e\\/cafes\\/27842958(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/clubid(=|%3[Dd])27842958/)
+/blacktoon[0-9]+\.com/##.toon-viewer .col-12[style^="padding:"]
 /majorlink[0-9]+\.com/##.major_site_latest
 /newto[0-9]+\.com/##div[class^="basic-banner-"]
 /bookto[0-9]+\.com/##div[class^="basic-banner-"]
@@ -3497,7 +3498,7 @@ m.cafe.naver.com#?#.location_bar:has(.active:has-text(전체공지)) ~ .location
 img.imimggggg87878.com#?#a[target="_blank"][href^="http://"].menu-a:has-text(보증토토)
 frtoon220.com,frtoon221.com,frtoon222.com,frtoon223.com,frtoon224.com,frtoon225.com,frtoon226.com,frtoon227.com,frtoon228.com,frtoon229.com,frtoon230.com,frtoon231.com,frtoon232.com,frtoon233.com#?#.alert-danger.container:has-text([AD])
 hdhd344.net,hdhd345.net,hdhd346.net,hdhd347.net,hdhd348.net,hdhd349.net,hdhd350.net,hdhd351.net,hdhd352.net,hdhd353.net,hdhd354.net,hdhd355.net,hdhd356.net,hdhd357.net,hdhd358.net#?#.menu-ul > .menu-li:has(> a:has-text(보증토토))
-blacktoon302.com,blacktoon303.com,blacktoon304.com,blacktoon305.com,blacktoon306.com,blacktoon307.com,blacktoon308.com,blacktoon309.com,blacktoon310.com,blacktoon311.com,blacktoon312.com,blacktoon313.com#?#.alert.alert-danger:has(> a:has-text([AD]))
+/blacktoon[0-9]+\.com/#?#.alert.alert-danger:has(> a:contains([AD]))
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 ! Check after 2024 April 1st.
 zum.com##+js(set, _ads_zum_main_initbanner_750_zum_main_br_widget_336, true)
