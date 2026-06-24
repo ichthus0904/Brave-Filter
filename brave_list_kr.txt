@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202606232313
+! Version: 202606241053
 ! Expires: 12 hours
-! Last updated: 2026-06-23 23:13 KST
+! Last updated: 2026-06-24 10:53 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api.adapi.co.kr^
