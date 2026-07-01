@@ -1,11 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202607011102
+! Version: 202607012259
 ! Expires: 12 hours
-! Last updated: 2026-07-01 11:02 KST
+! Last updated: 2026-07-01 22:59 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
+||api-external.adsvani.com^
+||cdn.adsvani.com^
 ||awesomeclick.co.kr^
 ||optbeacon.net^
 ||api.adapi.co.kr^
@@ -2120,7 +2122,7 @@ m.sports.naver.com##.main_grid_item> div[class*="_promotion__"]
 prod.danawa.com###powerShoppingContent
 m.richgo.ai##div[class^="DanjiInfomation__"] > div[class^="Divider__SD_Layout-"] + div[class^="Divider__SD_Layout-"]
 m.clien.net##.board_recommended > a.list_item ~ div[class*=" "]
-enterdiary.com,hotplacehunter.co.kr,mystylezip.com,carandmore.co.kr,maxmovieen.com,tenbizt.com,mobilitytv.co.kr,thehousemagazine.kr,tminews.co.kr,capress.kr,youtu.co,dfast.kr,mememedia.co.kr,newautopost.co.kr###main > div[class*="-ad-"]
+mhnse.com,enterdiary.com,hotplacehunter.co.kr,mystylezip.com,carandmore.co.kr,maxmovieen.com,tenbizt.com,mobilitytv.co.kr,thehousemagazine.kr,tminews.co.kr,capress.kr,youtu.co,dfast.kr,mememedia.co.kr,newautopost.co.kr###main > div[class*="-ad-"]
 newautopost.co.kr###coupang-ad-wrapper
 www.dt.co.kr##.main_wrap > center > div[style*=" height:"]
 www.dt.co.kr##.article_view > div[style$="overflow:hidden"].img_center
@@ -3786,9 +3788,19 @@ lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lo
 ||newspic.kr^$removeparam=cp
 auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||litt.ly/api/blockevents
+||ridibooks.com^$removeparam=airbridge_referrer
+||ridibooks.com^$removeparam=client_id
+||ridibooks.com^$removeparam=event_uuid
+||ridibooks.com^$removeparam=short_id
+||ridibooks.com^$removeparam=channel
+||ridibooks.com^$removeparam=campaign
+||ridibooks.com^$removeparam=tracking_template_id
+||ridibooks.com^$removeparam=routing_short_id
+||ridibooks.com^$removeparam=og_tag_id
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
+||ridibooks.com^$removeparam=https_deeplink
 muko.kr##.lp-install-chip
 muko.kr###xt_join_site_addons
 www.naver.com###whale-banner
