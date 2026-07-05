@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202607042152
+! Version: 202607051041
 ! Expires: 12 hours
-! Last updated: 2026-07-04 21:52 KST
+! Last updated: 2026-07-05 10:41 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -3968,7 +3968,7 @@ google.com##[data-profile-url-path^="/localservices"]:has-text(/google screened/
 @@||googleadapis.l.google.com^$xhr,domain=acorta-enlace.com|finanzasdomesticas.com
 ||fundingchoicesmessages.google.com/i/pub$script,redirect=noopjs,domain=doctoraux.com|educationbluesky.com|hotkitchenbag.com|maths.media|maths.news|mathsspot.com|mathsstudio.com|mathstutor.life|now.gg|now.us|nowgg.lol|selfstudybrain.com|skibiditoilet.yourmom.eu.org|thewebsitesbridge.com|universityequality.com|virtualstudybrain.com|websitesball.com|websitesbridge.com|xn--31byd1i.net
 www.google.com##div[aria-label="Why this ad?"]:upward([data-pla="1"])
-www.google.com##div:has(> div > div[data-hb="isv"])
+www.google.com##div[data-snf][data-snm]:has(> div[class] > div[data-hb="isv"])
 *$script,3p,denyallow=bootstrapcdn.com|disqus.com|disquscdn.com|jsdelivr.net|jwpcdn.com|fastly.net|fastlylb.net|jquery.com|hwcdn.net|recaptcha.net|cloudflare.com|cloudflare.net|google.com|googleapis.com|gstatic.com,domain=torrentgalaxy.*
 ||dai.google.com/ondemand/hls/content/*/time-events.json$domain=play.aetv.com|play.mylifetime.com
 *$frame,script,3p,denyallow=google.com|googleapis.com,domain=powstream.*|powlideo.*|povvvideo.*|powvdeo.*
