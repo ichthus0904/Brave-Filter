@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202607212207
+! Version: 202607221014
 ! Expires: 12 hours
-! Last updated: 2026-07-21 22:07 KST
+! Last updated: 2026-07-22 10:14 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -1823,6 +1823,12 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+~m.danawa.com,danawa.com###main-rightbnr
+~m.danawa.com,danawa.com###main-rightbnr-btm
+m.danawa.com###mdnw-main-dimm:has(+ #mdnw-main-bottomSheet-container > .box__banner> a[href^="https://white.contentsfeed.com/RealMedia/ads/click_lx.ads/"])
+m.danawa.com###mdnw-main-bottomSheet-container:has( > .box__banner> a[href^="https://white.contentsfeed.com/RealMedia/ads/click_lx.ads/"])
+search.danawa.com###powerShoppingAreaTop
+search.danawa.com###powerShoppingAreaBottom
 m.humoruniv.com###comment #power_place
 starnewskorea.com##.ad-tag
 naver.com##[aria-label="웨일 브라우저 설치 안내"]
