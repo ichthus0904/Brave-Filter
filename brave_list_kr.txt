@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202607281014
+! Version: 202607282223
 ! Expires: 12 hours
-! Last updated: 2026-07-28 10:14 KST
+! Last updated: 2026-07-28 22:23 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -679,6 +679,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /studio_backend/adforus.
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
+||handsfriend.com/mootoon-affiliate.js
 ||assets.cueknow.co.kr/script/phantomad.min.js
 ||82cook.com/imagedb/headline/nmain_banner
 ||static.viewus.co.kr/image/unse_banner_new
@@ -1895,6 +1896,7 @@ m.bustago.or.kr###safeconnectAddBox
 dundam.xyz##.instv-ad
 algumon.com##.bg-base-100:has(> div.adsense-container > ins.adsbygoogle)
 excellesports.com##.modal_contents .modal_wrap
+search.shopping.naver.com###content > div[class^="section_section__"] > div[class^="brandStoreBlock_brand_store_module__"] ul.flicking-camera > li[class^="brandStoreProductList_item__"]:has(> div > a[href^="https://ader.naver.com/"])
 m.search.naver.com##div[data-block-id^="review/prs_template_"] .sds-comps-header ~ div[data-template-type="vertical"] .sds-comps-vertical-layout.sds-comps-full-layout:has(> .sds-comps-vertical-layout a[href^="https://ader.naver.com/"])
 m.search.naver.com##div[data-block-id^="review/prs_template_"] .sds-comps-header ~ div[data-template-type="vertical"] .sds-comps-vertical-layout.sds-comps-full-layout:has(> .sds-comps-vertical-layout a[href^="https://ader.naver.com/"]) + span
 enjuso.com##.enjuso_exp > a[href^="https://"]
@@ -3804,9 +3806,15 @@ auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
+m.11st.co.kr##div[data-log-actionid-area="brand_floating"]
+m.11st.co.kr##.c-tabbar-lottie:has(> button[aria-label="이벤트 보기"])
+m.11st.co.kr###banner > .c-webtoapp
+m.11st.co.kr###web2appPopup
 muko.kr##.lp-install-chip
 muko.kr###xt_join_site_addons
 www.naver.com###whale-banner
+m.11st.co.kr##+js(trusted-click-element, #arBottomDrawer > .swiper-container:has(> .swiper-wrapper > .swiper-slide > a[href^="https://plan.11st.co.kr/plan"]) + .c-bottom-drawer__tools > button.c-bottom-drawer__close)
+m.11st.co.kr##+js(set-cookie, web2AppPopupDisable, Y)
 chzzk.naver.com##+js(spoof-css, .banner_ad_wrapper, display, block)
 chzzk.naver.com##+js(no-xhr-if, /(veta.naver.com\/vas|veta.naver.com\/gfp|veta.naver.com\/call)/ method:OPTIONS)
 tvroom5.org##ul.menu:has(> li > a[class^="banner_"])
