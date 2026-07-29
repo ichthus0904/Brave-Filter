@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202607291016
+! Version: 202607292229
 ! Expires: 12 hours
-! Last updated: 2026-07-29 10:16 KST
+! Last updated: 2026-07-29 22:29 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -1824,6 +1824,12 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+m.11st.co.kr#@#div[class$="-ad"]
+m.11st.co.kr##.card__item > .product > div[class^="product-thumbnail_"] > button[aria-label="광고 안내"]
+m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .c-headline__text > .c-ad__btn) + div[data-testid="ProductCard_Compact"]
+m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .c-headline__text > .c-ad__btn) + div[data-testid="Tabs_NewRoundBtn_Fill_Sticky"] + div[data-testid="ProductCard_Compact"]
+m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .c-headline__text > .c-ad__btn) + div[data-testid="Tabs_NewRoundBtn_Fill_Sticky"]
+m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .c-headline__text > .c-ad__btn)
 ~m.danawa.com,danawa.com###main-rightbnr
 ~m.danawa.com,danawa.com###main-rightbnr-btm
 m.danawa.com###mdnw-main-dimm:has(+ #mdnw-main-bottomSheet-container > .box__banner> a[href^="https://white.contentsfeed.com/RealMedia/ads/click_lx.ads/"])
