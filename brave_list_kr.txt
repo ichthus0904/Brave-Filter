@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202607311022
+! Version: 202607312222
 ! Expires: 12 hours
-! Last updated: 2026-07-31 10:22 KST
+! Last updated: 2026-07-31 22:22 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -491,6 +491,7 @@
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
 ##iframe[src*="clickon.kr"]
+naver.com##[aria-label="웨일 브라우저 설치 안내"]
 namu.wiki,~board.namu.wiki##div[class] > div[class*=" "] > div[class*=" "] ~ div[class*=" "] > div[id][class]:not([class*=" "]):empty
 namu.wiki,~board.namu.wiki##div[class*=" "]:not([class^="_"]) > div[class]:not([class*=" "]) > div[class*=" "]:has(> div[id][class] > div[id][class])
 ~m.cafe.naver.com,cafe.naver.com##.ArticleFormBanner:matches-path(/\\/malzero(\\/|$)/)
@@ -679,6 +680,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /studio_backend/adforus.
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
+||coucounews.com/coupas/
 ||handsfriend.com/mootoon-affiliate.js
 ||assets.cueknow.co.kr/script/phantomad.min.js
 ||82cook.com/imagedb/headline/nmain_banner
@@ -1824,6 +1826,11 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+coucounews.com##div[class$="continue_coupang"] div.mb-4.text-center:has(> img.inline-block[loading="lazy"][alt^="_"][src^="https://cdn.zigcou.com/"])
+coucounews.com##div[class$="continue_coupang"] div.mb-4.text-center:has(> img.inline-block[loading="lazy"][alt^="_"][src^="https://cdn.zigcou.com/"]) + div.cursor-pointer
+coucounews.com##main > div.px-2 > div:not([class]):not([style]) > div.text-left > div.grid > div:has(a[href^="https://blog.naver.com/byolla/"])
+coucounews.com##.post-contents > div.text-left > p > div[style="display: flex; justify-content: center; overflow: hidden;"]
+coucounews.com##.aceplanet-coupang-banner
 m.11st.co.kr#@#div[class$="-ad"]
 m.11st.co.kr##.card__item > .product > div[class^="product-thumbnail_"] > button[aria-label="광고 안내"]
 m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .c-headline__text > .c-ad__btn) + div[data-testid="ProductCard_Compact"]
@@ -1838,7 +1845,6 @@ search.danawa.com###powerShoppingAreaTop
 search.danawa.com###powerShoppingAreaBottom
 m.humoruniv.com###comment #power_place
 starnewskorea.com##.ad-tag
-naver.com##[aria-label="웨일 브라우저 설치 안내"]
 etoland.co.kr##[data-inouts-click="true"]
 etoland.co.kr##[data-pl-type]
 etoland.co.kr##body > .bg-black\/75.px-4.py-6
