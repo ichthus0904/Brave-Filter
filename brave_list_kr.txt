@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608012146
+! Version: 202608021021
 ! Expires: 12 hours
-! Last updated: 2026-08-01 21:46 KST
+! Last updated: 2026-08-02 10:21 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -3925,7 +3925,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##[id^=
 *$script,3p,denyallow=cloudflare.com|crisp.chat|doodcdn.io|google.com|gstatic.com,domain=all3do.com|d0000d.com|d000d.com|d0o0d.com|do0od.com|do7go.com|dood.*|doods.*|dooodster.com|dooood.*|doply.net|ds2play.com|ds2video.com|dsvplay.com|vidply.com|vide0.net|vvide0.com|playmogo.com
 *$script,3p,denyallow=google.com|gstatic.com|hwcdn.net|jquery.com,domain=m1xdrop.com|m1xdrop.net|mixdrop23.net|mixdrop.*|mixdrp.*|~mixdrop.one|mixdroop.*|m1xdrop.bz
 *$script,3p,denyallow=google.com|gstatic.com,domain=advertape.net|streamtape.*|tpead.net|watchadsontape.com
-sites.google.com##+js(prevent-clipboard-write, /^mshta |^(bash <<<|curl -kfsSL) \$\(echo.+?base64 -d|^cmd \/c.+?curl .+?(\.exe|\.bat)|^powershell.+?-w(indowStyle)? h(idden)?|^powershell.+?-W H(idden)?|^powershell.+?-NoP|^powershell.+?-ep bypass|^powershell.+?-ExecutionPolicy (Bypass|Unrestricted)|\\PowerShell\.exe.+?-ep bypass|powershell.+?iex\(irm|powershell.+?Invoke-Expression|powershell.+?Invoke-WebRequest|powershell.+?-UseBasicParsing|iwr.+?-OutFile.+?\$env:(TEMP|TMP)|\$env:(TEMP|TMP)[\/\\].+?\.(exe|bat|ps1|cmd|vbs)|start \$env:(TEMP|TMP)|Add-Type -As System\.Windows\.Forms|Windows\.Forms\.MessageBox|cmd.+?\/c.+?-nop.+?iex\(irm|(cmd|powershell).+?recaptcha|(cmd|powershell).+?#(Verification| )|(cmd|powershell).+? #|^osascript |^curl -s.+?\| (bash|sh|zsh)|^\/bin\/(bash|sh|zsh) -c.+?curl|^bash -c.+?\$\(curl|^python3? -c.+?(exec|urllib|subprocess)|^echo.+?base64 (--decode|-D|-d).+?\| (bash|sh)|chmod \+x.+?&&|(bash|sh|osascript).+?recaptcha|(bash|sh|osascript).+?#(Verification| )|(bash|sh|osascript).+? #|^wget .+?\| (bash|sh)|^curl.+?-o.+?\/tmp\/.+?&&|^nc .+?-e \/bin\/(bash|sh)|\/tmp\/.+?chmod \+x.+?&&|(apt(-get)?|dpkg) .+?http|^wget -q.+?\.(sh|py|bin|elf)|C:\\W(INDOWS|indows)\\system32\\cmd\.exe.+?powershell/msi, domAlert, Copy-paste blocked - 📋🛇❗ - ${text})
+sites.google.com##+js(prevent-clipboard-write, /^mshta |^(bash <<<|curl -kfsSL) \$\(echo.+?base64 -d|^cmd \/c.+?curl .+?(\.exe|\.bat)|^powershell.+?-w(indowStyle)? h(idden)?|^powershell.+?-W H(idden)?|^powershell.+?-NoP|^powershell.+?-ep bypass|^powershell.+?-ExecutionPolicy (Bypass|Unrestricted)|\\PowerShell\.exe.+?-ep bypass|powershell.+?iex\(irm|powershell.+?Invoke-Expression|powershell.+?Invoke-WebRequest|powershell.+?-UseBasicParsing|iwr.+?-OutFile.+?\$env:(TEMP|TMP)|\$env:(TEMP|TMP)[\/\\].+?\.(exe|bat|ps1|cmd|vbs)|start \$env:(TEMP|TMP)|Add-Type -As System\.Windows\.Forms|Windows\.Forms\.MessageBox|cmd.+?\/c.+?-nop.+?iex\(irm|(cmd|powershell).+?recaptcha|(cmd|powershell).+?#(Verification| )|(cmd|powershell).+? #|^osascript |^curl -s.+?\| (bash|sh|zsh)|^\/bin\/(bash|sh|zsh) -c.+?curl|^bash -c.+?\$\(curl|^python3? -c.+?(exec|urllib|subprocess)|^echo.+?base64 (--decode|-D|-d).+?\| (bash|sh)|chmod \+x.+?&&|(bash|sh|osascript).+?recaptcha|(bash|sh|osascript).+?#(Verification| )|(bash|sh|osascript).+? #|^wget .+?\| (bash|sh)|^curl.+?-o.+?\/tmp\/.+?&&|^nc .+?-e \/bin\/(bash|sh)|\/tmp\/.+?chmod \+x.+?&&|(apt(-get)?|dpkg) .+?http|^wget -q.+?\.(sh|py|bin|elf)|C:\\W(INDOWS|indows)\\system32\\cmd\.exe.+?powershell/msi, , domAlert, Copy-paste blocked - 📋🛇❗ - ${text})
 ||dai.google.com/ondemand/dash/content/*/time-events.json$domain=goplay.be|play.tv
 @@||fundingchoicesmessages.google.com^$script,domain=arcai.com
 *$script,3p,denyallow=google.com|gstatic.com,domain=skidrowcodex.net
