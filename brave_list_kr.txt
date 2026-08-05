@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608051015
+! Version: 202608052227
 ! Expires: 12 hours
-! Last updated: 2026-08-05 10:15 KST
+! Last updated: 2026-08-05 22:27 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -1826,6 +1826,20 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+! lottecinema.co.kr desktop
+lottecinema.co.kr##.login_ad
+lottecinema.co.kr###main_top_of_top_banner
+lottecinema.co.kr###banner_section
+lottecinema.co.kr##.group_banner
+lottecinema.co.kr##.bx_banner
+! lottecinema.co.kr mobile
+lottecinema.co.kr##.swiper-wrapper > .swiper-slide:has(> a > .tit__ad)
+lottecinema.co.kr##.bx_list_scroll li:has(> .bx_thm > a > .thm > .tit__ad)
+lottecinema.co.kr###mainBottom
+lottecinema.co.kr##.section__mainbanner__mid
+lottecinema.co.kr##.movie_detail_btm_banner
+lottecinema.co.kr###quick_outline > .inner_top
+m.danawa.com###bottomTabBar-item-internetJoin
 coucounews.com##div[class$="continue_coupang"] div.mb-4.text-center:has(> img.inline-block[loading="lazy"][alt^="_"][src^="https://cdn.zigcou.com/"])
 coucounews.com##div[class$="continue_coupang"] div.mb-4.text-center:has(> img.inline-block[loading="lazy"][alt^="_"][src^="https://cdn.zigcou.com/"]) + div.cursor-pointer
 coucounews.com##main > div.px-2 > div:not([class]):not([style]) > div.text-left > div.grid > div:has(a[href^="https://blog.naver.com/byolla/"])
@@ -1841,8 +1855,7 @@ m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .
 m.11st.co.kr##div[data-testid="Cap_Box_Ad"]:has(> .l-grid__col > .c-headline > .c-headline__text > .c-ad__btn)
 ~m.danawa.com,danawa.com###main-rightbnr
 ~m.danawa.com,danawa.com###main-rightbnr-btm
-m.danawa.com###mdnw-main-dimm:has(+ #mdnw-main-bottomSheet-container > .box__banner> a[href^="https://white.contentsfeed.com/RealMedia/ads/click_lx.ads/"])
-m.danawa.com###mdnw-main-bottomSheet-container:has( > .box__banner> a[href^="https://white.contentsfeed.com/RealMedia/ads/click_lx.ads/"])
+m.danawa.com###productBlog-contents-summary > .banner-type-h > a[href^="https://white.contentsfeed.com/RealMedia/ads/"]
 search.danawa.com###powerShoppingAreaTop
 search.danawa.com###powerShoppingAreaBottom
 m.humoruniv.com###comment #power_place
@@ -3494,6 +3507,7 @@ aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^=
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon_apstag.js
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
+lottecinema.co.kr##.main_movie_list .owl-carousel .owl-item:has(> .item > .top_info > .poster_info > .num_info:has-text(AD))
 m.ytn.co.kr#?#div:has(> h2:has-text(실시간 정보))
 vortexgaming.io#?#div[class^="PostAsideCardList_card_list_inner__"]  > div[class^="PostAsideCardList_card__"]:has(div[class^="PostAsideCardList_close__"]:has-text(AD))
 pedia.watcha.com#?#div[class] > section[class*=" "]:has(> section > a h3 > p:has-text( · AD))
@@ -3820,10 +3834,13 @@ auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
+lottecinema.co.kr##.appbannermain_wrap
+lottecinema.co.kr##.banner_appinstall
 m.11st.co.kr###banner > .c-webtoapp
 muko.kr##.lp-install-chip
 muko.kr###xt_join_site_addons
 www.naver.com###whale-banner
+lottecinema.co.kr##+js('set-cookie', 'MainPopup', 'true')
 m.11st.co.kr##+js(set-cookie, web2AppPopupDisable, Y)
 chzzk.naver.com##+js(spoof-css, .banner_ad_wrapper, display, block)
 chzzk.naver.com##+js(no-xhr-if, /(veta.naver.com\/vas|veta.naver.com\/gfp|veta.naver.com\/call)/ method:OPTIONS)
@@ -3924,7 +3941,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##[id^=
 *$script,3p,denyallow=cloudflare.com|crisp.chat|doodcdn.io|google.com|gstatic.com,domain=all3do.com|d0000d.com|d000d.com|d0o0d.com|do0od.com|do7go.com|dood.*|doods.*|dooodster.com|dooood.*|doply.net|ds2play.com|ds2video.com|dsvplay.com|vidply.com|vide0.net|vvide0.com|playmogo.com
 *$script,3p,denyallow=google.com|gstatic.com|hwcdn.net|jquery.com,domain=m1xdrop.com|m1xdrop.net|mixdrop23.net|mixdrop.*|mixdrp.*|~mixdrop.one|mixdroop.*|m1xdrop.bz
 *$script,3p,denyallow=google.com|gstatic.com,domain=advertape.net|streamtape.*|tpead.net|watchadsontape.com
-sites.google.com##+js(prevent-clipboard-write, /^mshta |^(bash <<<|curl -kfsSL) \$\(echo\b.+?base64 -d\b|^cmd \/c\b.+?\bcurl .+?(\.exe|\.bat)\b|^powershell.+?-w(indowStyle)? h(idden)?\b|^powershell.+?-W H(idden)?\b|^powershell.+?-NoP\b|^powershell.+?-ep bypass\b|^powershell.+?-ExecutionPolicy (Bypass|Unrestricted)|\\PowerShell\.exe.+?-ep bypass\b|powershell.+?\biex\(irm|powershell.+?Invoke-Expression|powershell.+?Invoke-WebRequest|powershell.+?-UseBasicParsing|\biwr\b.+?-OutFile\b.+?\$env:(TEMP|TMP)\b|\$env:(TEMP|TMP)\b[\/\\].+?\.(exe|bat|ps1|cmd|vbs)\b|\bstart \$env:(TEMP|TMP)\b|Add-Type -As System\.Windows\.Forms|Windows\.Forms\.MessageBox|\bcmd.+?\/c.+?-nop\b.+?\biex\(irm|\b(cmd|powershell)\b.+?recaptcha|\b(cmd|powershell)\b.+?#(Verification|   )|\b(cmd|powershell)\b.+?   #|^osascript |^curl -s.+?\| (bash|sh|zsh)\b|^\/bin\/(bash|sh|zsh) -c.+?\bcurl|^bash -c.+?\$\(curl|^python3? -c.+?\b(exec|urllib|subprocess)|^echo.+?base64 (--decode|-D|-d)\b.+?\| (bash|sh)\b|chmod \+x.+?&&|\b(bash|sh|osascript)\b.+?recaptcha|\b(bash|sh|osascript)\b.+?#(Verification|   )|\b(bash|sh|osascript)\b.+?   #|^wget .+?\| (bash|sh)\b|^curl\b.+?-o\b.+?\/tmp\/.+?&&|^nc .+?-e \/bin\/(bash|sh)\b|\/tmp\/.+?chmod \+x.+?&&|\b(apt(-get)?|dpkg)\b .+?http|^wget -q.+?\.(sh|py|bin|elf)\b|C:\\Windows\\system32\\cmd\.exe.+?powershell/msi, , domAlert, Copy-paste blocked - 📋🛇❗ - ${text})
+sites.google.com##+js(prevent-clipboard-write, /^mshta |^(bash <<<|curl -kfsSL) \$\(echo\b.+?base64 -d\b|^cmd \/c\b.+?\bcurl .+?(\.exe|\.bat)\b|^powershell.+?-w(indowStyle)? h(idden)?\b|^powershell.+?-W H(idden)?\b|^powershell.+?-NoP\b|^powershell.+?-ep bypass\b|^powershell.+?-ExecutionPolicy (Bypass|Unrestricted)|\\PowerShell\.exe.+?-ep bypass\b|powershell.+?\biex\(irm|powershell.+?Invoke-Expression|powershell.+?Invoke-WebRequest|powershell.+?-UseBasicParsing|\biwr\b.+?-OutFile\b.+?\$env:(TEMP|TMP)\b|\$env:(TEMP|TMP)\b[\/\\].+?\.(exe|bat|ps1|cmd|vbs)\b|\bstart \$env:(TEMP|TMP)\b|Add-Type -As System\.Windows\.Forms|Windows\.Forms\.MessageBox|\bcmd.+?\/c.+?-nop\b.+?\biex\(irm|\b(cmd|powershell)\b.+?recaptcha|\b(cmd|powershell)\b.+?#(Verification|   )|\b(cmd|powershell)\b.+?   #|^osascript |^curl -s.+?\| (bash|sh|zsh)\b|^\/bin\/(bash|sh|zsh) -c.+?\bcurl|^bash -c.+?\$\(curl|^python3? -c.+?\b(exec|urllib|subprocess)|^echo.+?base64 (--decode|-D|-d)\b.+?\| (bash|sh)\b|chmod \+x.+?&&|\b(bash|sh|osascript)\b.+?recaptcha|\b(bash|sh|osascript)\b.+?#(Verification|   )|\b(bash|sh|osascript)\b.+?   #|^wget .+?\| (bash|sh)\b|^curl\b.+?-o\b.+?\/tmp\/.+?&&|^nc .+?-e \/bin\/(bash|sh)\b|\/tmp\/.+?chmod \+x.+?&&|\b(apt(-get)?|dpkg)\b .+?http|^wget -q.+?\.(sh|py|bin|elf)\b|C:\\Windows\\system32\\cmd\.exe.+?powershell/msi, domAlert, Copy-paste blocked - 📋🛇❗ - ${text})
 ||dai.google.com/ondemand/dash/content/*/time-events.json$domain=goplay.be|play.tv
 @@||fundingchoicesmessages.google.com^$script,domain=arcai.com
 *$script,3p,denyallow=google.com|gstatic.com,domain=skidrowcodex.net
