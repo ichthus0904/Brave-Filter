@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608061012
+! Version: 202608062226
 ! Expires: 12 hours
-! Last updated: 2026-08-06 10:12 KST
+! Last updated: 2026-08-06 22:26 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -1826,6 +1826,9 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+m.bunjang.co.kr##main > div[class^="_container_"] + section:has(> span[class*="_adTitle_"])
+m.bunjang.co.kr##main > div > section[style="max-width: var(--layout-width-large);"] > section[style="max-width: var(--layout-width-large);"]:has(div[data-grid-size="large"] > div > a[href^="https://ader.naver.com/"])
+m.bunjang.co.kr##main > section[style="max-width: var(--layout-width-small);"]:has(> div > div[class^="_product-list-carousel-container_"] > div[class^="_carousel-element-container_"] > div[class*="_product-list-container_"] > div > a[href*="&ref_code=%22%7B%5C%22cntr%5C%22%3A%5C%22SIM3%5C%22%2C%5C%22pos%5C%22%3A%5C%223%5C%22%7D%22&"])
 ! lottecinema.co.kr desktop
 lottecinema.co.kr##.login_ad
 lottecinema.co.kr###main_top_of_top_banner
@@ -3507,6 +3510,7 @@ aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^=
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon_apstag.js
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
+m.bunjang.co.kr##main > section:has(> div[class^="_titleContainer_"] > span:has-text(AD))
 lottecinema.co.kr##.main_movie_list .owl-carousel .owl-item:has(> .item > .top_info > .poster_info > .num_info:has-text(AD))
 m.ytn.co.kr#?#div:has(> h2:has-text(실시간 정보))
 vortexgaming.io#?#div[class^="PostAsideCardList_card_list_inner__"]  > div[class^="PostAsideCardList_card__"]:has(div[class^="PostAsideCardList_close__"]:has-text(AD))
@@ -3834,12 +3838,16 @@ auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
+m.bunjang.co.kr##header > div[class^="_top-banner-large_"]:has(> button[class^="_top-banner-large-content_"] > img[src="https://static.bunjang.co.kr/web/ui/logo-icon.svg"])
+m.bunjang.co.kr##footer > a[href="https://go.bgzt.link/app"]
+m.bunjang.co.kr##header > section[class*="_top-banner_"]:has( > section >  a[href="https://go.bgzt.link/app"])
 lottecinema.co.kr##.appbannermain_wrap
 lottecinema.co.kr##.banner_appinstall
 m.11st.co.kr###banner > .c-webtoapp
 muko.kr##.lp-install-chip
 muko.kr###xt_join_site_addons
 www.naver.com###whale-banner
+m.bunjang.co.kr##+js('trusted-click-element', '.bun-ui-bottom-sheet-portal:has(.bun-ui-bottom-sheet > section[class^="BottomSheet_bodyRecipe__"] > img[src^="/static/media/app-nudge."]) .bun-ui-bottom-sheet-dim')
 lottecinema.co.kr##+js('set-cookie', 'MainPopup', 'true')
 m.11st.co.kr##+js(set-cookie, web2AppPopupDisable, Y)
 chzzk.naver.com##+js(spoof-css, .banner_ad_wrapper, display, block)
