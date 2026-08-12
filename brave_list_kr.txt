@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608120948
+! Version: 202608122137
 ! Expires: 12 hours
-! Last updated: 2026-08-12 09:48 KST
+! Last updated: 2026-08-12 21:37 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -582,6 +582,7 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/steamindiegame(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/\\/f-e\\/cafes\\/27842958(\\/|$)/)
 ~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]:matches-path(/clubid(=|%3[Dd])27842958/)
+/cokcok[0-9]+\.com/###cpb-popup-banners
 /xtoon[0-9]+\.com/##.container > div.row > div > a[target="_blank"] > picture
 /funbe[0-9]+\.com/##.mobile-banner > div[class^="main_top_bann"]
 /funbe[0-9]+\.com/##.mobile-banner div.banner_m
@@ -599,9 +600,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^tkor[0-9]+\.com/##*[class*="top_bann"]
 /^jusokorea[0-9]+\.com/##div[class*="-ad-banner"]
 /^torrentnx[0-9]+\.com/##a[href*="/bbs/link.php"]
-/^cokcoktv[0-9]+\.com/###cpb-popup-banners
-/^cokcoktv[0-9]+\.com/###custom_banner_wrap
-/^cokcoktv[0-9]+\.com/##.custom_banner_wrap
 /^tvwiki[0-9]+\.com/##ul[class^="banner"]
 /^sptv[0-9]+\.com/##.modal_contents
 /^torrentpi[0-9]+\.com/##style ~ .basic-post-gallery
@@ -1544,6 +1542,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||ssl.pstatic.net/tveta/libs/
 ||vclock.kr/inf0/hot.php^
 ||aproxy-vast.wavve.com/*/v/*_AD_*/req/$xmlhttprequest
+/^https:\/\/cdn[0-9]+\.cokcok\.[a-z0-9]+\/assets\/images\//$domain=/cokcok[0-9]+\.com/
 /^https:\/\/tkor[0-9]+\.com\/bann\//
 /^https:\/\/tkor[0-9]+\.com\/images\//
 *$image,denyallow=tvchak.live|smartnote.blog|wiselife.blog,domain=tvchak.live
@@ -1562,7 +1561,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /lover[0-9]\.net\/file\/tohotv\/.*\.gif$domain=/lover[0-9]\.net/
 /lover[0-9]\.net\/file\/1bet\/.*\.gif$domain=/lover[0-9]\.net/
 /lover[0-9]\.net\/file\/eve\/.*\.png$domain=/lover[0-9]\.net/
-||cokcok.stream/public/vast.php
 /^https:\/\/cdn[a-z0-9]+\.site\/data\/banner\//$domain=/tvwiki[0-9]+\.net/
 ||wdwd*.com/data/banner/
 ||static.tzstatic.top/z/*.gif
@@ -1587,7 +1585,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||mzgtoon.com/_next/image?url=https%*.mzgtoon.com%2Fbanner%2F%
 ||cdn.ksportscdn.com/data/popup/
 ||tvwiki*.com/AD
-||media.cokcok.vip/assets/images/
 /https:\/\/tvwiki[0-9]+\.com\/AD\//$domain=/tvwiki[0-9]+\.com/
 ||rj.filesbest.xyz/r/
 /^https:\/\/torrentrj[0-9]+\.com\/uploadfile\/up[0-9a-z]+\.gif/$domain=/^torrentrj[0-9]+\.com/
@@ -1649,9 +1646,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z]+[0-9]+x[0-9]+\//
 /^https:\/\/mkmk[0-9]+\.com\/img\/[a-z0-9_-]+\.gif$/
 ||agitnovel.*/data/file/novel/banner/$domain=agitnovel.*
-||cokcok.*/wp-json/jt-bad-ux-popup/list/
-||cokcok.*/wp-admin/admin-ajax.php?action=jt_bad_ux_popup
-||cokcok.*/wp-admin/admin-ajax.php?action=load_random_banners
 ||jmana.*/resouce/img/adimg/
 /^https:\/\/ww[0-9]+\.torrentdin[0-9]+\.com\/data\/editor\/[0-9]+\/[a-z0-9]+_[a-z0-9]+_[a-z0-9]+\./
 /^https:\/\/ww[0-9]+\.torrentdin[0-9]+\.com\/data\/file\/ad\//
@@ -3254,7 +3248,6 @@ av19.gg###page ~ div[style^="min-height:"]#content.row
 agitwebtoon.*##.advx
 agitnovel.*##.banner
 spochak.com##.list-webzine .list-item
-cokcok.*##.custom_banner_item
 tvhot.*##div[id*="-banner-"]
 tvhot.*###body_wrap > div[class][style^="margin:"]
 sonagitv.*##a[href][target="_blank"] > img[src^="/images/banner/"]:not([src^="/images/banner/webtoon_"])
@@ -3662,6 +3655,7 @@ naver.com##+js(set, getAdcrUrl, '')
 koreapas.com##+js(set, random_imglink, noopFunc)
 imbc.com##+js(set, vrixadsdk, undefined)
 kilho.net##+js(set, hahaha, noopFunc)
+cokcok.stream##+js(trusted-replace-node-text, script, '/const *_[a-z0-9]+ *= *{ *"media_file" *: *" *https:\\\/\\\/cdn[0-9]+\.cokcok\.[a-z0-9]+\\\/assets\\\/videos\\\/.+"click_through" *:.+};/', media_file, '')
 /lover[0-9]\.net/##+js(aeld, click, 'opMagic)
 zzzz.lol##+js(nosiif, animationEffects[settings.animation.effect])
 /lover[0-9]\.net/##+js(nano-stb, closeBtn.innerHTML, , 0.001)
@@ -3736,6 +3730,15 @@ dicoall.com#@##rightAd
 ||jads.co^$script,redirect=noop.js,domain=litomi.in
 litomi.in##+js(trusted-create-html, #juicy-ads-banner > div[data-juicy-ads-slot] > div, <iframe></iframe>)
 litomi.in##ins
+! cpsp.kr
+cpsp.kr#@#.adsbox
+cpsp.kr#@#.ad-banner
+cpsp.kr#@#.ad-unit:not(.textads)
+cpsp.kr#@#.pub_300x250
+cpsp.kr#@#.pub_728x90
+cpsp.kr#@#.text-ad
+cpsp.kr#@#.text_ads
+cpsp.kr##+js(no-fetch-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js)
 thelabyrinth.co.kr##+js(no-fetch-if, pagead2.googlesyndication.com method:HEAD)
 windowsforum.kr##+js(aeld, load, 'banner.offsetHeight')
 etoland.co.kr##+js(no-fetch-if, /pagead2.googlesyndication.com|googleads.g.doubleclick.net|googletagservices.com|securepubads.g.doubleclick.net|googleads.g.doubleclick.net|google-analytics.com|googlesyndication.com|doubleclick.net/)
