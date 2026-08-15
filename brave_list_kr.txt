@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608142133
+! Version: 202608150927
 ! Expires: 12 hours
-! Last updated: 2026-08-14 21:33 KST
+! Last updated: 2026-08-15 09:27 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
 ||api-external.adsvani.com^
@@ -677,6 +677,9 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /studio_backend/adforus.
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
 /data/banner.json?$domain=~nintendo.*
+||photo.newsen.com/images/adba/
+||apiapi199.com/data/banner/
+||viewus.co.kr/image/unse_banner_
 ||img.danawa.com/img/m/prod/ajungdang_banner/
 ||coucounews.com/coupas/
 ||handsfriend.com/mootoon-affiliate.js
@@ -1939,7 +1942,6 @@ app.pizzaalvolo.co.kr##div[class^="css-"][style^="gap: "] > div[tabindex="0"]:ha
 enuri.com###coupangCpcSection
 enuri.com##.lp-ad--naver
 gall.dcinside.com,m.dcinside.com##ul[class$="_ad"]
-start.klauncher.kr##.auxiliary-section
 asked.kr##div[class*="ad_"][style*=":"]
 asked.kr##div[class^="inner_"] > div[class^="banner_"]
 chzzkban.xyz##div[class*=" "]:is([style^="height:"], [style^="pointer-events:"], [style^="width:"]):has(div[id^="adv-"])
@@ -2745,7 +2747,7 @@ eroun.net##body > div[style]:not([class]):not([id])
 digitalasset.works,khgames.co.kr,digitaltoday.co.kr,ilemonde.com,mjmedi.com,eroun.net###layer-popups
 hogaeng.co.kr##div[id^="container_"] .slide_box
 zdnet.co.kr##div[class*="_bn_"][style]
-dprime.kr.dvdprime.com##div[style~="height:"][style~="border-top:"].relative
+dprime.kr,dvdprime.com##div[style~="height:"][style~="border-top:"].relative
 m.ppomppu.co.kr,comic.naver.com,health.chosun.com,dprime.kr##[class*="_ad_"]
 ypbooks.co.kr##td[id^="divBn_"]
 m.megabox.co.kr,m.mimint.co.kr,m.dailian.co.kr,ypbooks.co.kr##div[id$="Banner"]
@@ -3514,7 +3516,6 @@ aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^=
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon_apstag.js
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices_gpt.js
-! namu.wiki#?#table:has(> tbody > tr > td table a[href^="#s-"]:contains(/^(?:www\.)?(?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/\S*)?$/i)):upward(2):remove()
 namu.wiki#?##_gad_article_top:upward(2):remove()
 m.bunjang.co.kr##main > section:has(> div[class^="_titleContainer_"] > span:has-text(AD))
 lottecinema.co.kr##.main_movie_list .owl-carousel .owl-item:has(> .item > .top_info > .poster_info > .num_info:has-text(AD))
@@ -3755,7 +3756,6 @@ thelabyrinth.co.kr##+js(no-fetch-if, pagead2.googlesyndication.com method:HEAD)
 windowsforum.kr##+js(aeld, load, 'banner.offsetHeight')
 etoland.co.kr##+js(no-fetch-if, /pagead2.googlesyndication.com|googleads.g.doubleclick.net|googletagservices.com|securepubads.g.doubleclick.net|googleads.g.doubleclick.net|google-analytics.com|googlesyndication.com|doubleclick.net/)
 ||ragmaya.kr/static/rm_adblock_wall.js
-@@_vercel/insights/script.js$domain=bser-koroshi.vercel.app,xmlhttprequest
 algumon.com##div[id^="deal-"].card ~ .bg-base-100:has(> div[style] > div[class^="fallback svelte-"])
 cheatdot.com##+js(nostif, 'window.getComputedStyle(t).display')
 tv.jtbc.co.kr,mvod.jtbc.co.kr,onair.jtbc.co.kr##+js(nostif, 'getComputedStyle(t).getPropertyValue("visibility")')
@@ -3771,20 +3771,15 @@ vod.jtbc.co.kr#@#.ad-zone:not(.textads)
 onair.jtbc.co.kr,news.jtbc.co.kr##+js(spoof-css, .ad-banner.adsbox.ad-unit.ad-zone, display, block)
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima.js,domain=vod.jtbc.co.kr|news.jtbc.co.kr|mvod.jtbc.co.kr|tv.jtbc.co.kr|onair.jtbc.co.kr
 minipol.tistory.com##+js(set, checkAdBlock, undefined)
-@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=start.klauncher.kr,script
 tabriz.kr#@##AdHeader
 tabriz.kr#@##AD_Top
 tabriz.kr#@##ad-lead
 tabriz.kr#@##homead
 namechart.kr,eftlibrary.com##+js(no-fetch-if, www3.doubleclick.net)
 dinfo.3dpchip.com##+js(set, linkPass, true)
-klauncher.kr##+js(aeld, load, _0x)
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
 hub.weirdhost.xyz##+js(no-fetch-if, adblockanalytics.com)
 hub.weirdhost.xyz##+js(no-fetch-if, adsbygoogle.js)
-||www3.doubleclick.net^$script,redirect=noop.js,domain=srank.kr
-@@||doubleclick.net^$xhr,domain=srank.kr
-@@||adservice.google.com^|$xmlhttprequest,domain=klauncher.kr
 chmodi.tistory.com##.floatdiv
 svrforum.com##body > div[class][style*="box-shadow:"]
 luckyquiz3.blogspot.com##+js(no-xhr-if, adsbygoogle)
@@ -3966,7 +3961,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##[id^=
 *$script,3p,denyallow=cloudflare.com|crisp.chat|doodcdn.io|google.com|gstatic.com,domain=all3do.com|d0000d.com|d000d.com|d0o0d.com|do0od.com|do7go.com|dood.*|doods.*|dooodster.com|dooood.*|doply.net|ds2play.com|ds2video.com|dsvplay.com|vidply.com|vide0.net|vvide0.com|playmogo.com
 *$script,3p,denyallow=google.com|gstatic.com|hwcdn.net|jquery.com,domain=m1xdrop.com|m1xdrop.net|mixdrop23.net|mixdrop.*|mixdrp.*|~mixdrop.one|mixdroop.*|m1xdrop.bz
 *$script,3p,denyallow=google.com|gstatic.com,domain=advertape.net|streamtape.*|tpead.net|watchadsontape.com
-sites.google.com##+js(prevent-clipboard-write, /^mshta |^msiexec |^(bash <<<|curl -kfsSL) \$\(echo\b.+?base64 -d\b|^cmd \/c\b.+?\bcurl .+?(\.exe|\.bat)\b|^cmd\b.+?\bfor \/f\b.+?\bdelims\b.+?\bpow\b|^powershell.+?-w(indowStyle)? h(idden)?\b|^powershell.+?-W H(idden)?\b|^powershell.+?-NoP\b|^powershell.+?-ep bypass\b|^powershell.+?-EP (B|U)\b|^powershell.+?-ExecutionPolicy (Bypass|Unrestricted)|\\PowerShell\.exe.+?-ep bypass\b|powershell.+?\biex\(|powershell.+?Invoke-Expression|powershell.+?Invoke-WebRequest|powershell.+?-UseBasicParsing|\biwr\b.+?-OutFile\b.+?\$env:(TEMP|TMP)\b|\$env:(TEMP|TMP)\b[\/\\].+?\.(exe|bat|ps1|cmd|vbs)\b|\bstart \$env:(TEMP|TMP)\b|%LOCALAPPDATA%\\.+?\.(exe|bat|ps1|cmd|vbs)\b|%APPDATA%\\.+?\.(exe|bat|ps1|cmd|vbs)\b|\[Convert\]::FromBase64String|\[Text\.Encoding\]::UTF8\.GetString|\btry\b\s*\{\s*\birm\b.+?\}\s*\bcatch\b.+?\{\s*\biex\b|Add-Type -As System\.Windows\.Forms|Windows\.Forms\.MessageBox|\bcmd.+?\/c.+?-nop\b.+?\biex\(|\b(cmd|powershell)\b.+?recaptcha|\b(cmd|powershell)\b.+?#(Verification|   )|\b(cmd|powershell)\b.+?   #|^osascript .+?\bcurl http|^curl -s\b.+?\| (bash|sh|zsh)\b|^\/bin\/(bash|sh|zsh) -c\b.+?\bcurl|^bash -c\b.+?\$\(curl|^python3? -c\b.+?\b(exec|urllib|subprocess)\b|^echo\b.+?base64 (--decode|-D|-d)\b.+?\| (bash|sh)\b|openssl base64 -d|chmod \+x.+?&&|\b(bash|sh|osascript)\b.+?recaptcha|\b(bash|sh|osascript)\b.+?#(Verification|   )|\b(bash|sh|osascript)\b.+?   #|^wget .+?\| (bash|sh)\b|^curl\b.+?-o\b.+?\/tmp\/.+?&&|^nc .+?-e \/bin\/(bash|sh)\b|\/tmp\/.+?chmod \+x.+?&&|\b(apt(-get)?|dpkg)\b .+?http|^wget -q.+?\.(sh|py|bin|elf)\b|C:\\Windows\\system32\\cmd\.exe.+?powershell/msi, domAlert, "Beware, uBlock Origin blocked a potential ClickFix attack: ${text}.")
+sites.google.com##+js(prevent-clipboard-write, /^mshta |^msiexec |^(bash <<<|curl -kfsSL) \$\(echo\b.+?base64 -d\b|^cmd \/c\b.+?\bcurl .+?(\.exe|\.bat)\b|^cmd\b.+?\bfor \/f\b.+?\bdelims\b.+?\bpow\b|^powershell.+?-w(indowStyle)? h(idden)?\b|^powershell.+?-W H(idden)?\b|^powershell.+?-NoP\b|^powershell.+?-ep bypass\b|^powershell.+?-EP (B|U)\b|^powershell.+?-ExecutionPolicy (Bypass|Unrestricted)|\\PowerShell\.exe.+?-ep bypass\b|^powershell.+?\biex\(|^powershell.+?Invoke-Expression|^powershell.+?Invoke-WebRequest|^powershell.+?-UseBasicParsing|^cmd.+?\/c.+?-nop\b.+?\biex\(|^(cmd|powershell)\b.+?recaptcha|^(cmd|powershell)\b.+?#(Verification|     )|^(cmd|powershell)\b.+?     #|^osascript .+?\bcurl http|^curl -s\b.+?\| (bash|sh|zsh)\b|^\/bin\/(bash|sh|zsh) -c\b.+?\bcurl|^bash -c\b.+?\$\(curl|^python3? -c\b.+?\b(exec|urllib|subprocess)\b|^echo\b.+?base64 (--decode|-D|-d)\b.+?\| (bash|sh)\b|openssl base64 -d|^curl\b .+?chmod \+x.+?&&|^(bash|sh|osascript)\b.+?recaptcha|^(bash|sh|osascript)\b.+?#(Verification|     )|^(bash|sh|osascript)\b.+?     #|^wget .+?\| (bash|sh)\b|^curl\b.+?-o\b.+?\/tmp\/.+?&&|^nc .+?-e \/bin\/(bash|sh)\b|^\/tmp\/.+?chmod \+x.+?&&|^wget -q.+?\.(sh|py|bin|elf)\b/msi, domAlert, 'Beware, uBlock Origin blocked a potential ClickFix attack: ${text}.', excludeMatches, /Maintainer|Contributor/i)
 ||dai.google.com/ondemand/dash/content/*/time-events.json$domain=goplay.be|play.tv
 @@||fundingchoicesmessages.google.com^$script,domain=arcai.com
 *$script,3p,denyallow=google.com|gstatic.com,domain=skidrowcodex.net
