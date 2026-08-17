@@ -1,11 +1,13 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608162112
+! Version: 202608170927
 ! Expires: 12 hours
-! Last updated: 2026-08-16 21:12 KST
+! Last updated: 2026-08-17 09:27 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
+! Last modified: 2026-08-16T16:19:10.301Z
+! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
 ||awesomeclick.co.kr^
@@ -246,13 +248,10 @@
 ||adservice.google.com^
 ||partner.googleadservices.com^
 ||ad.qanda.ai^
-!
-! DOMAIN-REFRESHER: START
 ||ntkimg.cloud^
 ||ttse.b-cdn.net^
 ||i.keezip.com^
 ||awd.spochak.com^
-! DOMAIN-REFRESHER: END
 ||cafe-ads-api.daum.net^
 ||worker.gsr-ads.co.kr^
 ||ad.mojisead.co.kr^
@@ -491,6 +490,7 @@
 ##div[id^="targetpushAd_"]
 ##iframe[src*="clickon.kr"]
 naver.com##[aria-label="웨일 브라우저 설치 안내"]
+!
 namu.wiki,~board.namu.wiki##div[class] > div[class*=" "] > div[class*=" "] ~ div[class*=" "] > div[id][class]:not([class*=" "]):empty
 namu.wiki,~board.namu.wiki##div[class*=" "]:not([class^="_"]) > div[class]:not([class*=" "]) > div[class*=" "]:has(> div[id][class] > div[id][class])
 ~m.cafe.naver.com,cafe.naver.com##.ArticleFormBanner:matches-path(/\\/malzero(\\/|$)/)
@@ -3765,6 +3765,7 @@ hasha.in##+js(no-fetch-if, adManager.js)
 lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lover938.net,lover939.net,lover940.net,lover941.net##+js(nostif, document[_0x)
 ||newspic.kr^$removeparam=cp
 auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
+||whoas.xyz^
 ||litt.ly/api/blockevents
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
