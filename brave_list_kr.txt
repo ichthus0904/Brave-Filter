@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608200927
+! Version: 202608202118
 ! Expires: 12 hours
-! Last updated: 2026-08-20 09:27 KST
+! Last updated: 2026-08-20 21:18 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-19T15:22:11.999Z
+! Last modified: 2026-08-20T09:21:32.789Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1716,6 +1716,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||goodmorningcc.com/bannerpop/$popup
 ||autopostkorea.com/wp-content/themes/fastviewPressTwo/local/ad.css^
 ||wimg.kyeongin.com/svc/banner/
+/mt/banner^$image,to=menu.mt.co.kr
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,dprime.kr,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -1900,7 +1901,6 @@ issuefeed.dcinside.com##div[class*="sticky"]:has(> button)
 gall.dcinside.com,m.dcinside.com##ul[class$="_ad"]
 asked.kr##div[class*="ad_"][style*=":"]
 asked.kr##div[class^="inner_"] > div[class^="banner_"]
-chzzkban.xyz##div[class*=" "]:is([style^="height:"], [style^="pointer-events:"], [style^="width:"]):has(div[id^="adv-"])
 cgv.co.kr##button[class^="mems01010_phoneLogin__"]
 asked.kr##div[class^="qnaBanner_"]
 asked.kr##div[class^="realclickInner_"]
@@ -2477,6 +2477,7 @@ topstarnews.net##div[class^="Ad"]
 news.mt.co.kr##.aside_bundle > div[style*="height:"]
 mt.co.kr##div:has(> div[class$="ad"])
 mt.co.kr##div.wing_ads_area
+mt.co.kr##div.cms_banner
 search.11st.co.kr,m.munhwa.com##section[class$="_ad"]
 topstarnews.net##header .dis-table > div[style^="padding-top:"].dis-table-cell
 thebook.io##section[id$="_banner"]
@@ -2895,7 +2896,6 @@ dpg.danawa.com###danawa-gnb-banner
 joynews24.com,inews24.com##aside > hr[class]
 m.joynews24.com,inews24.com##article > div[style]:not([class])
 arca.live##div#newsRank
-arca.live##a.vrow.column.notice:not([href*="/b/"]):not(.notice-unfilter)
 m.happymoney.co.kr##.topBannerUse
 happymoney.co.kr###topBnrWrap
 happymoney.co.kr###content  > .mainBanner
@@ -3040,7 +3040,7 @@ bodnara.co.kr##iframe[src^="/advert/advert.php"]
 m.naver.com###MM_aside_smartad_container
 windowsforum.kr##a[href^="https://www.dothome.co.kr/ad/"][target="new"]
 pann.nate.com##.sidearea.talktalk > .sideiframe
-chzzkban.xyz,dundam.xyz,ddengle.com,thisisgame.com##div[id^="ad-"]
+dundam.xyz,ddengle.com,thisisgame.com##div[id^="ad-"]
 thisisgame.com###divMsnAD
 thisisgame.com##iframe[src^="//ad"][src*=".thisisgame.com/ad"]
 dschool.co.kr##a[href^="/ws/include/banner_link.asp?"][target="_blank"]
@@ -3649,12 +3649,10 @@ m.dcinside.com##+js(no-xhr-if, addc.dcinside.com, emptyStr)
 gall.dcinside.com##+js(set, blockedState, '')
 gall.dcinside.com##+js(remove-node-text, script, /background:[\s\S]+setTimeout\( *\( *\) *=> *[A-Za-z0-9]+\.remove\( *\)[\s\S]+Math\.random\( *\) *< *percent *\/ *100/)
 gall.dcinside.com##+js(remove-node-text, script, /finally *{\n* *document.documentElement.removeChild\( *[A-Za-z0-9]+ *\) *;\n* *}([ \n]|.)+_ad"]\);/)
-! chzzkban.xyz
-chzzkban.xyz##+js(no-fetch-if, pagead2.googlesyndication.com/pagead/js/adsbygoogle.js method:HEAD, emptyStr)
-! litomi.in
-||jads.co^$script,redirect=noop.js,domain=litomi.in
-litomi.in##+js(trusted-create-html, #juicy-ads-banner > div[data-juicy-ads-slot] > div, <iframe></iframe>)
-litomi.in##ins
+! litomi.cc
+||jads.co^$script,redirect=noop.js,domain=litomi.cc
+litomi.cc##+js(trusted-create-html, #juicy-ads-banner > div[data-juicy-ads-slot] > div, <iframe></iframe>)
+litomi.cc##ins
 ! cpsp.kr
 cpsp.kr#@#.adsbox
 cpsp.kr#@#.ad-banner
