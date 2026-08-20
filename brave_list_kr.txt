@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608192117
+! Version: 202608200927
 ! Expires: 12 hours
-! Last updated: 2026-08-19 21:17 KST
+! Last updated: 2026-08-20 09:27 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-19T10:41:21.722Z
+! Last modified: 2026-08-19T15:22:11.999Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -625,7 +625,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^tvbox[0-9]+\.xyz/##div[class*="-banner"] div[class*=" "][style=" "]
 /^ydbox[0-9]+\.com/##div[class*="-banner"] div[class*=" "][style=" "]
 /^linkeye[0-9]+\.com/##div[class*="banner-"]
-/^booktoki[0-9]+\.com/##div[id*="-banner-"] > div[class*=" "] > div[class*=" "][style*=" "]
 /^spotv[0-9]+\.com/##div[id$="-banner"]
 /^lover[0-9]+\.net/##.xe_content span ~ div[style]
 /^yagong[0-9]+\.com/##div[x-data="popups()"]
@@ -646,12 +645,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^manaboza[0-9]+\.com/##.comic_bot_bnr
 /^newtoon[0-9]+\.com/##.ad-form > .row > div[class^="col-md-"]
 /^blacktoon[0-9]+\.com/##.banner.container > .row > .col-6
-/^manatoki[0-9]+\.net/###hd_pop
-/^booktoki[0-9]+\.com/###hd_pop
-/^booktoki[0-9]+\.com/##img[src^="/tokinbtoki/"]
-/^manatoki[0-9]+\.net/##[style="margin-bottom: 20px;"].row.row-15
-/^manatoki[0-9]+\.net/##.basic-banner.row.row-10
-/^manatoki[0-9]+\.net/##.board-tail-banner
 /blacktoon[0-9]+\.com/##.toon-viewer .col-12[style^="padding:"]
 /majorlink[0-9]+\.com/##.major_site_latest
 /newto[0-9]+\.com/##div[class^="basic-banner-"]
@@ -1655,7 +1648,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^https:\/\/img\.cdnfor\.me\/images\/[0-9]+\/[0-9]+\/[0-9]+\/[a-z0-9_-]+\./$domain=save-1.net
 ||jusotop.com/b/$domain=yadongtube.net|yadongkorea.red|yako.red
 /^https:\/\/jgmoa[0-9]+\.com\/upload_files\/popup\//
-/^https:\/\/manatoki[0-9]+\.net\/tokinbtoki\//
 ||imgsuperpower.com^$domain=/^tkr[0-9]+\.com/|/^hdhd[0-9]+\.net/
 ||static.springbuilder.site/fs/userFiles-v2/$domain=/^tkr[0-9]+\.com/
 /^https:\/\/static\.tzstatic\.top\/t\/[a-z0-9]+\.gif$/
@@ -3413,8 +3405,6 @@ opworlds18.com,opworlds19.com,opworlds20.com,opworlds21.com,opworlds22.com,opwor
 spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 ! aglint-disable-next-line
-[$domain=/booktoki[0-9]+\.com/]#?#ul[class] > li:has(> a[href*="tokkiweb.com"])
-[$domain=/manatoki[0-9]+\.com/]#?#ul[class] > li:has(> a[href^="/guarantee.php"])
 [$domain=/^yagong[0-9]+\.com$/]##div[class*="border"]:has(> a[href][target*="_blank"])
 damoang.net#$?#.gap-4.sm\:grid-cols-3 > .flex.flex-col { remove: true; }
 chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
