@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608220926
+! Version: 202608222112
 ! Expires: 12 hours
-! Last updated: 2026-08-22 09:26 KST
+! Last updated: 2026-08-22 21:12 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-21T07:12:08.882Z
+! Last modified: 2026-08-22T08:03:09.589Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -905,6 +905,10 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||melon-pan.com/plugin/adcover/
 /wp-content/plugins/brave-popup-builder/assets/frontend/brave.js$domain=smartinpress.com|hotissuepoint.com|keela.co.kr
 ||resources.chimhaha.net/banner/
+||resources.chimhaha.net/app/*/js/googleTagManager.min.js
+||resources.chimhaha.net/app/*/js/adsSlotChange.min.js
+||resources.chimhaha.net/app/*/css/naverPowerLink.css^
+||resources.chimhaha.net/app/*/js/naverPowerLink.min.js^
 ||ilbe.com/img/banner/
 ||i0.wp.com/atlantak.com/wp-content/uploads/*.gif?resize=*&ssl=1
 ||i0.wp.com/atlantak.com/wp-content/uploads/*?w=*&ssl=1
@@ -2168,6 +2172,10 @@ news.tvchosun.com##iframe[src*="//img.tvchosun.com/upload_img/"][src*="/ad/"]
 news.tvchosun.com###banner_header
 game.naver.com##img[src^="https://nng-phinf.pstatic.net/"][src*="_naverads."]
 chimhaha.net###adsense
+chimhaha.net##div[id^="slot"][name]
+chimhaha.net##div[style="margin-top: 50px;"]
+chimhaha.net##div[style="margin-bottom: 20px;"]
+chimhaha.net##div.powerLinkAdsCenter
 hani.co.kr###content div[class^="ArticleDetail_section_"] > div[class^="MainNativeLab_wrap"]
 humorpick.com##.list-body > .list-item-ad
 betanews.net##iframe[src*="/banner.html"]
@@ -2654,7 +2662,7 @@ nzkoreapost.com##div[id^="agnb-"][class^="agnb-"][style]
 nzkoreapost.com##li[class$="-ad"]
 nzkoreapost.com##div[id^="article"].miso-post-gallery
 orbi.kr##.oxad
-orbi.kr##div[style]:has(ins[data-revive-zoneid])
+orbi.kr##div:has(> ins[data-revive-zoneid])
 okky.kr##main div[class*="space-"].hidden.flex-none
 pinpointnews.co.kr###article-view div[style].float-center .clearfix > div[class^="box-margin"]
 pinpointnews.co.kr###article-view div[style].float-center .clearfix > center[style]
@@ -3204,6 +3212,7 @@ fpn119.co.kr##div.bn
 pennmike.com##div[id^="popup"]:has(img[src*="banner"])
 kyeongin.com##div[id^="svcad"]
 weather.com##div[data-block-id]:has(> div :is(section.adContainer, div[id^="taboola"]))
+wikidocs.net##div.blog-adsense-block
 @@||newautopost.co.kr/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
