@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608250927
+! Version: 202608252120
 ! Expires: 12 hours
-! Last updated: 2026-08-25 09:27 KST
+! Last updated: 2026-08-25 21:20 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-24T08:41:34.911Z
+! Last modified: 2026-08-25T05:06:42.190Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -812,6 +812,10 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||whosaeng.com/data/m.whosaeng.com/mo_
 ||m.enter.etoday.co.kr/images/ad/
 /^https:\/\/nng-phinf\.pstatic\.net\/[A-z]+\/[A-z0-9._-]+\/Banner_[A-z0-9_-]+\.[A-z]+$/$domain=chzzk.naver.com
+||ssl.pstatic.net/static/nng/glive/resource/p/static/js/vendor-*.js$script,domain=chzzk.naver.com,replace=/async function iuag\(\{cs:[\s\S]*?\}function isXhrTampered/async function iuag(){return!1}function isXhrTampered/
+||api.chzzk.naver.com/service/v1/ad/display-status^$xhr,domain=chzzk.naver.com
+||siape.veta.naver.com/openrtb/$domain=chzzk.naver.com
+||ssl.pstatic.net/static/nng/sdk/refresh-detector-obfuscated.js$script,domain=chzzk.naver.com
 ||tvdaily.co.kr/banner/
 ||tvdaily.co.kr/ad/
 ||dentalnews.or.kr/data/banner/
@@ -857,7 +861,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||recipe1.ezmember.co.kr/ad/img/
 ||slrclub.com/bbs/*.php*slrclub.ch*keyword*&callback=
 ||static.coupangcdn.com/image/$domain=eanews.kr
-||ehom.kr/banner/$domain=eanews.kr
+||ehom.kr/banner/$domain=eanews.kr|nbiznews.net
 ||catnews.net/data/mtopbanner/
 ||catnews.net/img/banner/banner
 ||catnews.net/bbs/img/banner
@@ -1725,6 +1729,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||beautiwiki.net/banners/
 ||ae01.alicdn.com^$image,domain=infosto.tistory.com
 ||breaknews.com/data/breaknews_com/banner/
+||mediawatch.kr/data/banner/
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -1748,13 +1753,13 @@ mt.co.kr,sports.chosun.com,dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
 m.megabox.co.kr,signin.gmarket.co.kr,eanews.kr,economist.co.kr,philgo.com,ondisk.co.kr,cineaste.co.kr,paxnet.co.kr,bigkinds.or.kr,toomics.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
-newdaily.co.kr,bgchang.co.kr,edit.incruit.com,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr,bntnews.co.kr##div[class^="banner"]
+nbiznews.net,newdaily.co.kr,bgchang.co.kr,edit.incruit.com,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr,bntnews.co.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
 m.yonhapnewstv.co.kr,kyeongin.com,youtu.co,dfast.kr,mememedia.co.kr,tvreport.co.kr,m.tenbizt.com,acmicpc.net,www.auction.co.kr,m.11st.co.kr,todaysppc.com,gmarket.co.kr,kpenews.com,m.diningcode.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 mydaily.co.kr,app.dcinside.com,m.tf.co.kr,search.daum.net,search.zum.com,newdaily.co.kr,nzkoreapost.com,moneys.co.kr,fmkorea.com,newstomato.com,gamemeca.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
-mediatoday.co.kr,newsworker.co.kr##div[id^="AD"]
+healthlifeherald.com,futurekorea.co.kr,mediatoday.co.kr,newsworker.co.kr##div[id^="AD"]
 ! ##div[class^="Banner"]
 moyoplan.com##div[class^="Banner"]
 ! ##div[class*="_ad"]
@@ -1951,6 +1956,7 @@ ilbe.com###g123_game_ad_container_wrapper
 m.ruliweb.com##.main_center .line_deco_bottom:has(div[class^="ad_"]:only-child)
 news.jtbc.co.kr##.set_contents_video_ad
 coupang.com###product-list > li:has(div[class^="AdMark_adMark__"][data-adsplatform])
+dogdrip.net##div[style="float: left; width: 100%; height: 20px; border: 0px solid rgb(85, 91, 97); margin: 0px; background-image: none; background-position: 0% 0%; background-repeat: repeat;;;;;"]
 dogdrip.net##.ed.list > .webzine:not(.popular-item):has(.baseThumb ~  .overlay-text):has(.list-header a[target="_blank"].text-summary)
 m-sooriya.tistory.com##div[id^="fix_scroll_sidebar_DIV_"]
 m-sooriya.tistory.com##a[href^="https://soz.kr/"]
@@ -3006,6 +3012,7 @@ etnews.com##div.clearfix:has(> div[class^="ad"])
 etnews.com##iframe[src*="//www.etnews.com/tools/refresh_script.html?"]
 imaeil.com##.wcms_banner
 fnnews.com##div[id^="add_view_"][style]
+mediapen.com##div[style]:has(> a > img[src*="banner"])
 mediapen.com##iframe[src^="/banners/load/"]
 mediapen.com##img[src*="//img.mediapen.com/banners/"]
 insight.co.kr##div.aside-popular > ul.aside-popular-wrap > li > div[style~="300px;height:"][style~="block;width:"]
@@ -3228,6 +3235,9 @@ infosto.tistory.com##aside#aside
 vop.co.kr##div.arcad
 breaknews.com##div.bn
 sisafocus.co.kr##div.clearfix:has(> script[id^="ban"])
+news.hada.io##div.gn-ad-slot
+mediawatch.kr##div.com_ban
+redaily.co.kr##div.index-grid-container:has(> div div[id*="banner"])
 @@||newautopost.co.kr/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
@@ -3460,7 +3470,14 @@ aniya24.com#$?#div[class*="-player-wrapper"] > .play-media-control ~ div[class^=
 khan.co.kr#$?#aside.list-wrap { margin-top: 0 !important; }
 mlbpark.donga.com#$?#div.left_cont { float: none !important; margin-left: auto !important; margin-right: auto !important; }
 ||jeongcheogi.edugamja.com/ads/$redirect=2x2.png
-||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com|m.search.naver.com,redirect=noop.js
+||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=chzzk.naver.com|m.cafe.naver.com|m.search.naver.com,redirect=noop.js
+||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-display-sdk.js$script,domain=chzzk.naver.com,redirect=noop.js
+||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-display-nda.js$script,domain=chzzk.naver.com,redirect=noop.js
+||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$script,domain=chzzk.naver.com,redirect=noop.js
+||ssl.pstatic.net/tveta/libs/gfp-instream/prod/$script,domain=chzzk.naver.com,redirect=noop.js
+||ssl.pstatic.net/melona/libs/glad_admute/$script,domain=chzzk.naver.com,redirect=noop.js
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=chzzk.naver.com,redirect=google-ima.js
+||s0.2mdn.net/instream/video/client.js$script,domain=chzzk.naver.com,redirect=noop.js
 ||video.veilduck.app^$redirect=noop-1s.mp4
 ||advod.sbs.co.kr/sbsad/$media,redirect=noop-1s.mp4
 ||smrmembers-smr.smartmediarep.com/smc/smrmembers/$redirect=noop-1s.mp4
@@ -3739,7 +3756,12 @@ tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 lover932.net,lover933.net,lover934.net,lover935.net,lover936.net,lover937.net,lover938.net,lover939.net,lover940.net,lover941.net##+js(nostif, document[_0x)
 chzzk.naver.com##+js(spoof-css, .banner_ad_wrapper, display, block)
 chzzk.naver.com##+js(no-xhr-if, /(veta.naver.com\/vas|veta.naver.com\/gfp|veta.naver.com\/call)/ method:OPTIONS)
-chzzk.naver.com##+js(trusted-suppress-native-method, atob, c2V0UmVxdWVzdEhlYWRlcg==, prevent, isXhrTampered)
+chzzk.naver.com##+js(trusted-suppress-native-method, atob, c2V0UmVxdWVzdEhlYWRlcg==, abort, isXhrTampered)
+chzzk.naver.com##+js(trusted-suppress-native-method, atob, Y3J5cHRv, abort, isCryptoTampered)
+||nam.veta.naver.com/vas$xhr,domain=chzzk.naver.com,redirect=noop.txt
+||nam.veta.naver.com/gfp$xhr,domain=chzzk.naver.com,redirect=noop.txt
+||nam.veta.naver.com/call$xhr,domain=chzzk.naver.com,redirect=noop.txt
+||nam.veta.naver.com/nac/$xhr,domain=chzzk.naver.com,redirect=noop.txt
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noop.js,domain=kio.ac,important
 ||lib.wtg-ads.com/publisher/kio.ac/sb_interstitial_wtg.js$script,redirect=noop.js,domain=kio.ac,important
 ! dicoall.com
@@ -3748,6 +3770,13 @@ dicoall.com##+js(no-fetch-if, fundingchoicesmessages.google.com/b/pub-1437333416
 auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
 ||whoas.xyz^
 ||litt.ly/api/blockevents
+||nlog.naver.com/event$domain=chzzk.naver.com
+||nlog.naver.com/n$domain=chzzk.naver.com
+||kr-col-ext.nelo.navercorp.com/_store$domain=chzzk.naver.com
+||nelo2-col.navercorp.com/_store$domain=chzzk.naver.com
+||dev-col-tcp.nelo.navercorp.com/_store$domain=chzzk.naver.com
+||chzzk.naver.com/scripts/ntm_*.js$script,redirect=noop.js
+||ntm.pstatic.net/ex/nlog*.js$script,domain=chzzk.naver.com,redirect=noop.js
 ||ridibooks.com^$removeparam=_rdt_sid
 ||ridibooks.com^$removeparam=_rdt_idx
 ||ridibooks.com^$removeparam=_rdt_arg
