@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608260929
+! Version: 202608262121
 ! Expires: 12 hours
-! Last updated: 2026-08-26 09:29 KST
+! Last updated: 2026-08-26 21:21 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-26T00:01:00.274Z
+! Last modified: 2026-08-26T01:20:36.054Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1730,6 +1730,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||ae01.alicdn.com^$image,domain=infosto.tistory.com
 ||breaknews.com/data/breaknews_com/banner/
 ||mediawatch.kr/data/banner/
+||infoloop.co.kr/*/ad.css
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -3238,6 +3239,10 @@ sisafocus.co.kr##div.clearfix:has(> script[id^="ban"])
 news.hada.io##div.gn-ad-slot
 mediawatch.kr##div.com_ban
 redaily.co.kr##div.index-grid-container:has(> div div[id*="banner"])
+msn.com##csm-native-ad-card
+msn.com##.core-column:has(> csm-native-ad-card):style(grid-template-areas:"slot1"!important;grid-template-rows:auto!important;height:auto!important;)
+infoloop.co.kr##div[class*="adsense-content"]
+infoloop.co.kr##div[class^="pc-post-ad"]
 @@||newautopost.co.kr/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
