@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608280620
+! Version: 202608281613
 ! Expires: 12 hours
-! Last updated: 2026-08-28 06:20 KST
+! Last updated: 2026-08-28 16:13 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-27T01:40:07.727Z
+! Last modified: 2026-08-27T15:32:47.500Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -808,8 +808,14 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||whosaeng.com/data/m.whosaeng.com/mo_
 ||m.enter.etoday.co.kr/images/ad/
 /^https:\/\/nng-phinf\.pstatic\.net\/[A-z]+\/[A-z0-9._-]+\/Banner_[A-z0-9_-]+\.[A-z]+$/$domain=chzzk.naver.com
-||ssl.pstatic.net/static/nng/glive/resource/p/static/js/vendor-*.js$script,domain=chzzk.naver.com,replace=/async function iuag\(\{cs:[\s\S]*?\}function isXhrTampered/async function iuag(){return!1}function isXhrTampered/
-||api.chzzk.naver.com/service/v1/ad/display-status^$xhr,domain=chzzk.naver.com
+||ssl.pstatic.net/static/nng/glive/resource/p/static/js/vendor-*.js$script,domain=chzzk.naver.com,replace=/async function iuag\(([^)]*)\)\{/async function iuag(\$1){return!1;/
+||ssl.pstatic.net/static/nng/glive/resource/p/static/js/index-*.js$script,domain=chzzk.naver.com,replace=/([A-Za-z_\$][\w\$]*)=async\([^)]*\)=>\{let [^;]*\.defaults\.baseURL[^;]*;return\(await [A-Za-z_\$][\w\$]*\.xhr\([\s\S]*?\)\)\.content\}/\$1=async(...e)=>(await e[0].get(e[1])).data.content/
+||ssl.pstatic.net/static/nng/glive/resource/p/static/js/index-*.js$script,domain=chzzk.naver.com,replace=/\.AD_NOT_DISPLAYED\b/.AD_NOT_DISPLAYED_DISABLED/g
+||api.chzzk.naver.com/service/v1/seoraksan^$xhr,domain=chzzk.naver.com
+||api.chzzk.naver.com/service/v1/lives/*/ads/current^$xhr,domain=chzzk.naver.com
+||api.chzzk.naver.com/ad-polling/v1/lives/*/ad^$xhr,domain=chzzk.naver.com
+||api.chzzk.naver.com/service/*/channels/*/live-detail^$removeparam=dt,domain=chzzk.naver.com
+||api.chzzk.naver.com/service/*/videos/*^$removeparam=dt,domain=chzzk.naver.com
 ||siape.veta.naver.com/openrtb/$domain=chzzk.naver.com
 ||ssl.pstatic.net/static/nng/sdk/refresh-detector-obfuscated.js$script,domain=chzzk.naver.com
 ||tvdaily.co.kr/banner/
@@ -1724,7 +1730,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||infoloop.co.kr/*/ad.css
 ||srtb.msn.com^
 ||sam.msn.com^
-||api.chzzk.naver.com/service/*/channels/*/live-detail^$removeparam=dt,domain=chzzk.naver.com
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -1830,6 +1835,8 @@ etoland.co.kr##[data-pl-type]
 etoland.co.kr##body > .bg-black\/75.px-4.py-6
 m.search.naver.com##ul > li[data-slog-content][data-slog-visible]:has(> div[class] > div[id^="view_type_"] a[href="https://m.help.pay.naver.com/faq/list.help?rootCategoryId=10503&faqId=10891"])
 search.naver.com##ul > li[data-slog-content][data-slog-visible]:has(svg path[d^="M13.596 10.988c0 1.133-1.265"])
+search.naver.com##div.ban_whale_wrap
+search.naver.com##div.api_common_banner
 coupang.com###product-list > li[class^="ProductUnit"]:has(.fw-opacity-50.fw-text-\[12px\].fw-text-bluegray-900)
 82cook.com###mainHeadline
 tvreport.co.kr###unse-banner
@@ -2229,6 +2236,8 @@ www.dt.co.kr##.article_view > div[style$="overflow:hidden"].img_center
 digitaltoday.co.kr,gukjenews.com,mnews.imaeil.com##body > #bottom-sticky
 bizhankook.com##footer ~ div[style^="position:"]
 m.ohmynews.com##iframe[src^="https://ojsfile.ohmynews.com/AD_FILE/"]
+m.ohmynews.com##div:has(> div[data-widget_id])
+m.ohmynews.com##div[id^="mobitree"]
 extrememanual.net##.post_content > div[data-dest="placeholder"][style^="min-height:"]
 dtoday.co.kr##body > div[style*="position: fixed;"][style*="z-index:99999"][style*="bottom:"]
 quiz.avatye.com###__next > div:not([class]):not([id]) > div[style^="position:"]
@@ -2515,6 +2524,7 @@ www.seoul.co.kr###viewWrapDiv > div[style*=" "]:not([class]):not([id])
 bozayo.net##.widget-side div[style*=" "]
 wowtv.co.kr##div[class^="adv-"]
 koreanbots.dev##.container div[style^="height:"].mx-auto
+koreanbots.dev##div.py-5:has(> div > ins.adsbygoogle)
 m.compuzone.co.kr##.right_btn
 eomisae.co.kr##main#main .eq.section > div[class$=" "][style^="background-position"] ~ div[style^="float: "]
 kidkids.net##td[width]:not([valign]) ~ td[align="left"] ul.banner
@@ -3244,6 +3254,7 @@ economist.co.kr##div.txt_park:has(> .pick_ad)
 @@||newautopost.co.kr/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
+@@||nam.veta.naver.com^$xmlhttprequest,domain=chzzk.naver.com,method=options
 @@||d2i2w6ttft7yxi.cloudfront.net/ad_banner/$domain=witchform.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$domain=weather.naver.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-sdk.js$domain=weather.naver.com
@@ -3441,7 +3452,6 @@ avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 ! aglint-disable-next-line
 [$domain=/^yagong[0-9]+\.com$/]##div[class*="border"]:has(> a[href][target*="_blank"])
 damoang.net#$?#.gap-4.sm\:grid-cols-3 > .flex.flex-col { remove: true; }
-chzzk.naver.com#$?#.webplayer-internal-core-shadow > .wpc-pos-abs { remove: true; }
 m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 search.daum.net#$?#body.nate aside#mAside > div[disp-attr]:has(> .wing_nate) + div[disp-attr] { margin-top: 0px !important; }
@@ -3544,6 +3554,8 @@ m.cafe.naver.com#?#.location_bar:has(.active:has-text(전체공지)) ~ .location
 hdhd344.net,hdhd345.net,hdhd346.net,hdhd347.net,hdhd348.net,hdhd349.net,hdhd350.net,hdhd351.net,hdhd352.net,hdhd353.net,hdhd354.net,hdhd355.net,hdhd356.net,hdhd357.net,hdhd358.net#?#.menu-ul > .menu-li:has(> a:has-text(보증토토))
 /blacktoon[0-9]+\.com/#?#.alert.alert-danger:has(> a:contains([AD]))
 m-emart.ssg.com#$?##content div[style*="contents"]:has(.chakra-stack + div[class] span:has-text(AD)) { remove: true; }
+chzzk.naver.com##.webplayer-internal-core-dimmed:style(display: none !important)
+chzzk.naver.com##.webplayer-internal-core-ad-ui:style(clip-path: inset(50%) !important; pointer-events: none !important)
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 ! Check after 2024 April 1st.
 zum.com##+js(set, _ads_zum_main_initbanner_750_zum_main_br_widget_336, true)
@@ -3566,8 +3578,6 @@ m.humoruniv.com##+js(acis, $.prototype.html, /\/images\/[A-z0-9-_]+\.?(jpg|gif)/
 ! m.fmkorea.com
 m.fmkorea.com##+js(json-prune, tpl apply, tpl.[].c)
 ! chzzk.naver.com
-chzzk.naver.com##+js(json-prune-xhr-response, ads.[-].eventTracking.ackImpressions.[].url, ads.[].adInfo.responseSize, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
-chzzk.naver.com##+js(json-prune-xhr-response, adBreaks.[-].adSources.[].withRemindAd, videoAdScheduleId, propsToMatch, 'url:api.chzzk.naver.com/service/t/')
 chzzk.naver.com##+js(trusted-set-local-storage-item, homeSkinCollapsedUntil, 9999999999999)
 m.danawa.com##+js(set-cookie, hideMainBottomSheet, Y)
 www.naver.com##+js(set, EAGER-DATA.CAS-MINICONTENT-PC-WHALE-BANNER-BOTTOM, null)
@@ -3756,11 +3766,12 @@ tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 ! foreign website
 lover938.net,lover939.net##+js(nostif, document[_0x)
 chzzk.naver.com##+js(spoof-css, .banner_ad_wrapper, display, block)
-chzzk.naver.com##+js(no-xhr-if, /(veta.naver.com\/vas|veta.naver.com\/gfp|veta.naver.com\/call)/ method:OPTIONS)
-chzzk.naver.com##+js(trusted-suppress-native-method, atob, c2V0UmVxdWVzdEhlYWRlcg==, abort, isXhrTampered)
-chzzk.naver.com##+js(trusted-suppress-native-method, atob, Y3J5cHRv, abort, isCryptoTampered)
-chzzk.naver.com##+js(trusted-replace-xhr-response, /"tr"\s*:\s*\d+/, '"tr":"off"', client-config)
+chzzk.naver.com##+js(trusted-suppress-native-method, atob, c2V0UmVxdWVzdEhlYWRlcg==, abort)
+chzzk.naver.com##+js(trusted-suppress-native-method, atob, Y3J5cHRv, abort)
 chzzk.naver.com##+js(json-prune-xhr-response, content.dab, , propsToMatch, url:/live-detail)
+chzzk.naver.com##+js(json-prune-xhr-response, content.dab, , propsToMatch, url:/videos/)
+chzzk.naver.com##+js(json-prune-fetch-response, content.dab, , propsToMatch, url:/live-detail)
+chzzk.naver.com##+js(json-prune-fetch-response, content.dab, , propsToMatch, url:/videos/)
 ||nam.veta.naver.com/vas$xhr,domain=chzzk.naver.com,redirect=noop.txt
 ||nam.veta.naver.com/gfp$xhr,domain=chzzk.naver.com,redirect=noop.txt
 ||nam.veta.naver.com/call$xhr,domain=chzzk.naver.com,redirect=noop.txt
