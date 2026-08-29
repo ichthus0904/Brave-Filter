@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608290632
+! Version: 202608291324
 ! Expires: 12 hours
-! Last updated: 2026-08-29 06:32 KST
+! Last updated: 2026-08-29 13:24 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-27T15:32:47.500Z
+! Last modified: 2026-08-29T00:31:34.555Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -3765,7 +3765,9 @@ singingdalong.blogspot.com,sajuplus.net##.adsense-alt
 tistory.com,sajuplus.net##+js(set, checkAds, noopFunc)
 ! foreign website
 lover938.net,lover939.net##+js(nostif, document[_0x)
-chzzk.naver.com##+js(spoof-css, .banner_ad_wrapper, display, block)
+chzzk.naver.com##+js(spoof-css, ':is(.banner_ad_wrapper,.TopAdBox,.ad--dart,.ad-container-side,.ad-tag__wrapper,.ad_regular1,.ad_slot_inread,.adguru-modal-popup,.ads_box_headline,.adsmedrect,.advert-loader,.advertisementContainer,.advertising-top-box,.artnet-ads-ad,.dianomi_context,.divAdright,.footer__ads--content,.header-article-ads,.header-bannerad,.incontentAd,.js-anchor-ad,.module-box-ads,.moduletable_advertisement,.news-ad-square-a,.nfy-ad-wrapper,.rekl_left,.sidebar-advert,.slideshow-ad-wrapper,.widget--local-ads,.zaf-adhesion-container,.zerg-widget)', display, block)
+chzzk.naver.com##+js(trusted-json-edit, .meta.p2p=false)
+chzzk.naver.com##+js(json-prune, media.[].p2pPath media.[].p2pPathUrlEncoding media.[].encodingTrack.[].p2pPath media.[].encodingTrack.[].p2pPathUrlEncoding)
 chzzk.naver.com##+js(trusted-suppress-native-method, atob, c2V0UmVxdWVzdEhlYWRlcg==, abort)
 chzzk.naver.com##+js(trusted-suppress-native-method, atob, Y3J5cHRv, abort)
 chzzk.naver.com##+js(json-prune-xhr-response, content.dab, , propsToMatch, url:/live-detail)
