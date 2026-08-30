@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202608301052
+! Version: 202608310031
 ! Expires: 12 hours
-! Last updated: 2026-08-30 10:52 KST
+! Last updated: 2026-08-31 00:31 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-29T00:31:34.555Z
+! Last modified: 2026-08-30T09:02:21.673Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -3770,10 +3770,6 @@ chzzk.naver.com##+js(trusted-json-edit, .meta.p2p=false)
 chzzk.naver.com##+js(json-prune, media.[].p2pPath media.[].p2pPathUrlEncoding media.[].encodingTrack.[].p2pPath media.[].encodingTrack.[].p2pPathUrlEncoding)
 chzzk.naver.com##+js(trusted-suppress-native-method, atob, c2V0UmVxdWVzdEhlYWRlcg==, abort)
 chzzk.naver.com##+js(trusted-suppress-native-method, atob, Y3J5cHRv, abort)
-chzzk.naver.com##+js(json-prune-xhr-response, content.dab, , propsToMatch, url:/live-detail)
-chzzk.naver.com##+js(json-prune-xhr-response, content.dab, , propsToMatch, url:/videos/)
-chzzk.naver.com##+js(json-prune-fetch-response, content.dab, , propsToMatch, url:/live-detail)
-chzzk.naver.com##+js(json-prune-fetch-response, content.dab, , propsToMatch, url:/videos/)
 ||nam.veta.naver.com/vas$xhr,domain=chzzk.naver.com,redirect=noop.txt
 ||nam.veta.naver.com/gfp$xhr,domain=chzzk.naver.com,redirect=noop.txt
 ||nam.veta.naver.com/call$xhr,domain=chzzk.naver.com,redirect=noop.txt
