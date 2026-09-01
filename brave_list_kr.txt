@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609011111
+! Version: 202609020037
 ! Expires: 12 hours
-! Last updated: 2026-09-01 11:11 KST
+! Last updated: 2026-09-02 00:37 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-08-31T22:54:23.979Z
+! Last modified: 2026-09-01T03:47:49.548Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1718,7 +1718,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||shana.pe.kr/shana_check/scp*.js$script
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
-||fundingchoicesmessages.google.com^$domain=damoang.net|maplescouter.com|vivatv.cc|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net
+||fundingchoicesmessages.google.com^$domain=damoang.net|maplescouter.com|vivatv.cc|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net|zeta-ai.io
 ||goodmorningcc.com/bannerpop/$popup
 ||autopostkorea.com/wp-content/themes/fastviewPressTwo/local/ad.css^
 ||wimg.kyeongin.com/svc/banner/
@@ -1730,6 +1730,8 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||infoloop.co.kr/*/ad.css
 ||srtb.msn.com^
 ||sam.msn.com^
+||files.maplescouter.com/next/ads/
+||web-cdn.zeta-ai.io/_next/static/media/ad-nudge-$image
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -1903,8 +1905,10 @@ enjuso.com##.enjuso_exp > a[href^="https://"]
 m.cafe.daum.net##.nativead-placeholder
 w.nicesongtoyou.com##.post-content p ~ div:has(.chatgin-a)
 mapleland.gg##main.relative > .md\:px-0.z-\[999\]
+product.kyobobook.co.kr##div.relative > a[href*="adsno"]
 kyobobook.co.kr##main.min-h-\[calc\(100vh-80px\)\] > .h-\[180px\]
 kyobobook.co.kr##main.min-h-\[calc\(100vh-80px\)\] > .h-\[150px\]
+kyobobook.co.kr##div.z-banner
 kyobobook.co.kr##.wpromo-banner
 kyobobook.co.kr##.fly_menu_banner
 mvod.jtbc.co.kr##div[class^="iframe_"][class$="_ad"]
@@ -1929,6 +1933,7 @@ bada.us##.ad-thumb
 bada.us##div:has(> div[id^="div-gpt-ad"]:only-child)
 web.humoruniv.com###naver_adpost_wrap
 maplescouter.com##div.items-center:empty
+maplescouter.com##div.flex:has(> a img[src*="/ads/"])
 yozm.wishket.com##.grid-in-advertisement > a[href]
 yozm.wishket.com##div.box-border:has(> a[href] > img[alt="advertisement"])
 search.naver.com##div[id^="fdr-"].sc_new .sds-comps-vertical-layout:has(> div[data-power-content-url])
@@ -1981,6 +1986,7 @@ issuetory.co.kr##.entry-content.read-details > .code-block
 qquing.net##.ad-actual
 pedia.watcha.com##a[href*="//cgv.kr/"][href*="?browser_open_type=external"]
 search.naver.com##div[data-slog-container*="_ad"]
+m-jp.yna.co.kr##div.wrap-source
 yna.co.kr##aside:has(> div > amp-ad)
 yna.co.kr##aside[class^="aside-box"]:has(yna-ad-script)
 coupang.com##.ads-line-banner-container
@@ -2214,6 +2220,7 @@ app.dcinside.com,m.dcinside.com##li.adv-inner
 url.kr##form[method="post"] > #maskLayer
 m.tinnews.co.kr##.bn
 dnn.ne.kr##div:has(> ins.adsbygoogle)
+fmkorea.com##div[style]:has(> div :is(script[src*="adsbygoogle"], iframe[title="광고"]))
 m.fmkorea.com##div[id^="fmad_"] + div[style^="height:"][class]
 fmkorea.com##div.fmad_wrapper
 biz.newdaily.co.kr##div[itemprop="articleBody"] > div[style^="margin:"].clearfix
@@ -3451,6 +3458,7 @@ spochak.com#?#table .basic-info-alert:has(a[href="/marble/"])
 avsee.*#?#.widget-side-box > .main-box:has(img[src^="/imgs/"])
 ! aglint-disable-next-line
 [$domain=/^yagong[0-9]+\.com$/]##div[class*="border"]:has(> a[href][target*="_blank"])
+zeta-ai.io#?#[class*="z-[70]"]:has(img[alt="ad-nudge"]):remove()
 damoang.net#$?#.gap-4.sm\:grid-cols-3 > .flex.flex-col { remove: true; }
 m.fmkorea.com#$?#.bd.bd_mobile:not(:has(*)):has(~ #spot form[action][method].search) { remove: true; }
 m.fmkorea.com#$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
@@ -3650,6 +3658,8 @@ cokcok.stream##+js(trusted-replace-node-text, script, media_file, , includes, /c
 kio.ac##+js(nostif, , 200)
 map.naver.com##+js(json-prune, items.[-].adId)
 goodmorningcc.com##+js(set-constant, ___popup, undefined)
+www.kyobobook.co.kr##+js(set-cookie, wpromo-banner, true)
+maplescouter.com##+js(set-cookie, ad_hide_ads2, 1)
 ! ##+js(acis, document.addEventListener, /adscale_slot_id/)
 asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,untitle.org,seo-marketing.co.kr##+js(acis, document.addEventListener, /adscale_slot_id/)
 ! ##+js(nostif, /\.displayMessage\(/)
@@ -3718,7 +3728,7 @@ algumon.com##div[id^="deal-"].card ~ .bg-base-100:has(> div[style] > div[class^=
 cheatdot.com##+js(nostif, 'window.getComputedStyle(t).display')
 tv.jtbc.co.kr,mvod.jtbc.co.kr,onair.jtbc.co.kr##+js(nostif, 'getComputedStyle(t).getPropertyValue("visibility")')
 erdcloud.com#$?#.ads-block-warning-overlay { remove: true; }
-mylocation.co.kr##+js(nostif, adBlockedMessage)
+mylocation.co.kr##+js(nostif, detectAdBlockByStructure)
 remiz.co.kr##+js(spoof-css, .adsbygoogle, display, block)
 remiz.co.kr#@#.ad-body
 checkwhoiam.tistory.com##+js(set, adblockChecker, noopFunc)
