@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609021034
+! Version: 202609030024
 ! Expires: 12 hours
-! Last updated: 2026-09-02 10:34 KST
+! Last updated: 2026-09-03 00:24 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-01T03:47:49.548Z
+! Last modified: 2026-09-02T08:22:24.091Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -631,8 +631,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^torrentgram[0-9]+\.com/##.npia-board-gallery
 /^torrentgram[0-9]+\.com/###body_text > .at-main.at-col[style]
 /^torrentbam[0-9]+\.com/##a[href*="/ad/"][target="_blank"]
-/^torrentbot[0-9]+\.[a-z]+/##a[href^="/go/"][target="_blank"]
-/^torrentbot[0-9]+\.[a-z]+/##div[id^="ad_"]
 /^ktxtorrent[0-9]+\.com/##img[src*=".imgbox.com/"]
 /^torrentsome[0-9]+\.com/##a[href^="/go/"][target="_blank"]
 /^torrentrj[0-9]+\.com/##a[href^="/go/"][target="_blank"]
@@ -1695,7 +1693,6 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 /^https:\/\/(www\.)?race[0-9]+\.xyz\/images\/spon\//
 /^https:\/\/dc\.filesbest\.xyz\/uploadfile\/images\/[a-z0-9]+\.gif$/
 /^https:\/\/torrentwiz[0-9]+\.com\/data\/editor\/\d{4}\//
-/^https:\/\/torrentbot[0-9]+\.[a-z]+\/uploadfile\/up[a-z0-9]+\.gif$/
 ||static.filesbest.xyz^$domain=/^ktxtorrent[0-9]+\.com/
 ||filetender.com/mobon.html|
 /^https:\/\/(www\.)?filetender\.com\/images\/\d{3,}(X|x)\d{3,}-\d{4}/
@@ -1732,6 +1729,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||sam.msn.com^
 ||files.maplescouter.com/next/ads/
 ||web-cdn.zeta-ai.io/_next/static/media/ad-nudge-$image
+||file.chuchu.gg/v1/pop_up_ad/
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -2757,7 +2755,7 @@ m.joynews24.com##hr[style].blank
 joynews24.com,inews24.com##ad
 playcraft.tistory.com##.module.module_plugin a[href*="//coinone.co.kr/user/signup?ref="]
 playcraft.tistory.com##.module.module_plugin a[href*="//link.coupang.com/"]
-youthassembly.kr,wowtv.co.kr,mobiinside.co.kr,phdkim.net,quasarzone.com##div[class*="-banner-"]
+youthassembly.kr,wowtv.co.kr,mobiinside.co.kr,phdkim.net##div[class*="-banner-"]
 minimap.net,memberssl.auction.co.kr,hankyung.com,megabox.co.kr##div[class*="-ad"]:not(.container):not([style])
 minimap.net##.feed-list-wrap .feed-item-wrap-SPONSORED
 m.tf.co.kr###artContent > div[style]:not([class])
@@ -2825,10 +2823,11 @@ newsis.com##table[class*="Ad"]
 newsis.com##div#shuffle:has(> ul iframe[src*="ad"])
 m.etoday.co.kr##section > div[style*="height:250px"]
 jootc.com,funissu.com##aside[id^="ai_widget-"]
-poro.gg##div[class^="flex"][class$="h-[250px]"]
 bada.io##div[id*="amazon_shopping"]
 quasarzone.com##.mid-content-area .left-util-wrap .bot-util-area
 quasarzone.com##.bot-content-area .mid-util-wrap .right-util-area
+quasarzone.com##div[style^="min-height"]:has(> div[class$="banner:30000"])
+quasarzone.com##div.login-banner
 m.inven.co.kr##section.mo-top-nav ~ div[style]:not([id])
 m.inven.co.kr##div[id^="mobileTailAd"]
 www.inven.co.kr###commonpart_invenpc
@@ -2914,11 +2913,10 @@ compuzone.co.kr##body > #container > .cpz_inner
 compuzone.co.kr###container > div[class][style*="/GNBBottomLineBanner_"][style^="background-image:url("]
 compuzone.co.kr##.cpz_inner .sta_rolling_banner
 compuzone.co.kr##.cpz_inner .recommend_wrap > .recommend_list
-poro.gg###__layout > div:not([class]) > [class]:not(footer) > div[class]:not([sm]):not(.page-container)
 mathbang.net##.sidebar_book
 thecall.co.kr##[class^="adsense"]
 m.bobaedream.co.kr##.wrap > div[style$="height:100px;"]:not([class])
-m.inven.co.kr,quasarzone.com##[class^="banner-"]
+m.inven.co.kr##[class^="banner-"]
 m.edaily.co.kr##div[class$="_banners"]
 m.edaily.co.kr##.article_body > div[class]
 toomics.com##body.home #contents > .floating
@@ -3328,6 +3326,7 @@ mnews.jtbc.co.kr#@#.ad_bottom
 @@||kpanews.co.kr^$generichide
 clien.net#@#.ad_banner
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
+poro.gg#@#main > div[class]:has(div.ad-wrapper)
 zod.kr#?#div[class] > div[id]:not([class]):has(a[href*="/go/"]:matches-attr("/^data-[a-z0-9]+/"="/\+[0-9]+P/"))
 search.naver.com##li:matches-attr("/-[a-z]+-[a-z]+$/"="*nad-*")
 namu.wiki#?##app div[class*=" "] > div[class*=" "]:is(:has(div[id][class]:empty), :has(iframe[id^="google_ads_iframe_"])):matches-css(margin-bottom: /[0-9]{2,}/)
@@ -3559,11 +3558,11 @@ m.cafe.naver.com#?#.location_bar:has(.active:has-text(전체공지)) ~ .location
 m.cafe.naver.com#?#.location_bar:has(.active:has-text(전체공지)) ~ .location_fix li.board_box:has(a[href].txt_area span.nick:has-text(삼성스마트폰카페운영)):matches-path(/ca-fe\\/(web\\/cafes\\/|)(anycallusershow|13764661)($|\\/|\\?)/)
 ~m.cafe.naver.com,cafe.naver.com#?##upperArticleList ._noticeArticle:has(a[href][class][onclick]):has(.td_name a[onclick][href][class]:has-text(삼성스마트폰카페운영)):matches-path(/(&|\\.|\\?)clubid=13764661($|&)/)
 ~m.cafe.naver.com,cafe.naver.com#?##editorMainContent div[title][style^="color"]:not(:has(a[target="_blank"])) ~ *:has(a[target="_blank"]):matches-path(/(&|\\.|\\?)clubid=13764661($|&)/)
-hdhd344.net,hdhd345.net,hdhd346.net,hdhd347.net,hdhd348.net,hdhd349.net,hdhd350.net,hdhd351.net,hdhd352.net,hdhd353.net,hdhd354.net,hdhd355.net,hdhd356.net,hdhd357.net,hdhd358.net#?#.menu-ul > .menu-li:has(> a:has-text(보증토토))
 /blacktoon[0-9]+\.com/#?#.alert.alert-danger:has(> a:contains([AD]))
 m-emart.ssg.com#$?##content div[style*="contents"]:has(.chakra-stack + div[class] span:has-text(AD)) { remove: true; }
 chzzk.naver.com##.webplayer-internal-core-dimmed:style(display: none !important)
 chzzk.naver.com##.webplayer-internal-core-ad-ui:style(clip-path: inset(50%) !important; pointer-events: none !important)
+quasarzone.com##.sub-content-wrap:style(display: flow-root !important;)
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 ! Check after 2024 April 1st.
 zum.com##+js(set, _ads_zum_main_initbanner_750_zum_main_br_widget_336, true)
@@ -3660,6 +3659,7 @@ map.naver.com##+js(json-prune, items.[-].adId)
 goodmorningcc.com##+js(set-constant, ___popup, undefined)
 www.kyobobook.co.kr##+js(set-cookie, wpromo-banner, true)
 maplescouter.com##+js(set-cookie, ad_hide_ads2, 1)
+chuchu.gg##+js(set-cookie, daily_ad_closed, true)
 ! ##+js(acis, document.addEventListener, /adscale_slot_id/)
 asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,untitle.org,seo-marketing.co.kr##+js(acis, document.addEventListener, /adscale_slot_id/)
 ! ##+js(nostif, /\.displayMessage\(/)
