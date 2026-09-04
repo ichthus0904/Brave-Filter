@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609040017
+! Version: 202609041031
 ! Expires: 12 hours
-! Last updated: 2026-09-04 00:17 KST
+! Last updated: 2026-09-04 10:31 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-02T21:06:50.356Z
+! Last modified: 2026-09-03T21:05:21.056Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -127,11 +127,9 @@
 ||adservice.sbs.co.kr^
 ||cpa.greenp.kr^
 ||api.valista.io^
-||api.linkmine.co.kr^$document
 ||api.greenp.kr^
 ||ad-img.ebaykorea.com^
 ||api.ezadsystem.com^
-||ad.planbplus.co.kr^$document
 ||poweredby.jads.co^
 ||ad.a-ads.com^
 ||acceptable.a-ads.com^
@@ -258,7 +256,6 @@
 ||veta.naver.com^
 ||planad.net^
 ||aedi.ai^$third-party
-||mobon.net^$third-party
 ||nhnace.com^$third-party
 ||splash-ad.classting.com^
 ||ad-files.classting.com^
@@ -583,7 +580,6 @@ m.cafe.naver.com##.banner_add.bottom:matches-path(/ca-fe\\/web\\/cafes\\/(steami
 nightofpeace.com,ilovebees.io##.e-con-full.e-flex.e-con:has(a[target="_blank"] img)
 nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_blank"] img)
 /lover[0-9]\.net/##.div-over
-/^torrentqq[0-9]+.com/##.at-banner
 /torrentzota[0-9]+\.com/##a[href^="/adver-"]
 /^tv[0-9]+\.wiki/###cpb-popup-banners
 /^tv[0-9]+\.wiki/##.custom_banner_wra
