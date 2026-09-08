@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609080142
+! Version: 202609081035
 ! Expires: 12 hours
-! Last updated: 2026-09-08 01:42 KST
+! Last updated: 2026-09-08 10:35 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-06T03:23:38.992Z
+! Last modified: 2026-09-07T08:57:59.705Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1711,7 +1711,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||shana.pe.kr/shana_check/scp*.js$script
 ||tistory1.daumcdn.net/tistory/3827361/skin/images/script3.js$domain=devjit.tistory.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
-||fundingchoicesmessages.google.com^$domain=damoang.net|maplescouter.com|vivatv.cc|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net|zeta-ai.io
+||fundingchoicesmessages.google.com^$domain=damoang.net|maplescouter.com|vivatv.cc|singingdalong.blogspot.com|goodgag.net|bera.world|sellas.ink|hunigo.com|iteastory.com|snskeyboard.com|rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.live|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net|zeta-ai.io|damoang.net
 ||goodmorningcc.com/bannerpop/$popup
 ||autopostkorea.com/wp-content/themes/fastviewPressTwo/local/ad.css^
 ||wimg.kyeongin.com/svc/banner/
@@ -1865,6 +1865,7 @@ mlbpark.donga.com##.contents .naver_place:has(a[href*="ader.naver.com"])
 muko.kr###popupAdOverlay
 muko.kr##.muko-ad-impression
 damoang.net##div[data-dm-slot]
+damoang.net##div.dm-ad-row
 damoang.net##div:has(> div[class^="adsense"])
 damoang.net##div[style^="--ad-slot-min-height:"]
 damoang.net##.gap-4.flex-col > div:has(> div[data-position="side-image-text-banner"])
@@ -1920,6 +1921,7 @@ cgv.co.kr##button[class^="mems01010_phoneLogin__"]
 asked.kr##div[class^="qnaBanner_"]
 asked.kr##div[class^="realclickInner_"]
 news.jtbc.co.kr##.videoPlayerContainer > .print-hide:has(> .e1ecreks0 > .MuiBox-root)
+news.jtbc.co.kr##div.MuiBox-root:has(> div[id$="_AD"], > iframe[src*="//ad.reople.co.kr/"], > div[id^="taboola"], > div.print-hide > div[id^="taboola"], > div.print-hide > div.MuiBox-root a[rel~="sponsored"], > p.MuiTypography-root + div.MuiBox-root > div[id$="_AD"], > div > div > div[id$="_AD"] > script[name*="@article_news_commentbottom?"])
 viewership.softc.one##.container.px-4 > .box-border.gap-8 > .rounded-md.min-h-\[140px\]:has(ins.adsbygoogle)
 m.inven.co.kr##div[class^="ad-bbs-view-"]
 inven.co.kr##div[style]:has(> section[class^="ad"])
@@ -3025,6 +3027,7 @@ fnnews.com##div[id^="add_view_"][style]
 mediapen.com##div[style]:has(> a > img[src*="banner"])
 mediapen.com##iframe[src^="/banners/load/"]
 mediapen.com##img[src*="//img.mediapen.com/banners/"]
+mediapen.com##div[id^="mundan_banner"]
 insight.co.kr##div.aside-popular > ul.aside-popular-wrap > li > div[style~="300px;height:"][style~="block;width:"]
 edaily.co.kr##section[id^="aside_"] > div[id$="-sticky-wrap"] > div[id$="-sticky"] > div[id^="w_read_"][class^="boxshow_"]
 mediapen.com,edaily.co.kr##div[data-ad][class][style]
