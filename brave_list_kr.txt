@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609191048
+! Version: 202609192352
 ! Expires: 12 hours
-! Last updated: 2026-09-19 10:48 KST
+! Last updated: 2026-09-19 23:52 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-17T21:25:23.976Z
+! Last modified: 2026-09-18T14:24:40.485Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1728,6 +1728,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||file.chuchu.gg/v1/pop_up_ad/
 ||graynews.co.kr/api/v2/ads/
 ||chosundaily.com/data/file/banner/
+||metro.nuua.travel/image/banner/
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -3263,6 +3264,8 @@ graynews.co.kr##[data-component="AdBanner"]
 chosundaily.com##a.banner
 beebs.hada.io##div.beebs-ad
 lec.co.kr##div[style]:has(> div[data-widget_id])
+metro.nuua.travel##a.main-scroll-area-banner
+metro.nuua.travel##div[class^="map-banner"]
 @@||newautopost.co.kr/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js
 @@||ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js$domain=smartstore.naver.com
 @@||nam.veta.naver.com/nac/$xmlhttprequest,domain=smartstore.naver.com
