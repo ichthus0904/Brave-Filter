@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609201050
+! Version: 202609202357
 ! Expires: 12 hours
-! Last updated: 2026-09-20 10:50 KST
+! Last updated: 2026-09-20 23:57 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-18T14:24:40.485Z
+! Last modified: 2026-09-19T20:43:59.128Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1729,6 +1729,7 @@ nightofpeace.com,ilovebees.io##.e-grid.e-con-full.e-con.e-child:has(a[target="_b
 ||graynews.co.kr/api/v2/ads/
 ||chosundaily.com/data/file/banner/
 ||metro.nuua.travel/image/banner/
+||api.chzzk.naver.com/service/t/$media,domain=chzzk.naver.com,redirect=noopmp4-1s
 ! ##div[id^="ad_"]
 m.stock.naver.com,donga.com,ildaro.com,pann.nate.com,sportsseoul.com,seoulwire.com,r114.com,zdnet.co.kr,fpn119.co.kr,serieamania.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,mobile.newsis.com,fnnews.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -1870,6 +1871,7 @@ muko.kr##.muko-ad-impression
 damoang.net##div[data-dm-slot]
 damoang.net##div.dm-ad-row
 damoang.net##div:has(> div[class^="adsense"])
+damoang.net##div.hidden:has(> div > ins.adsbygoogle)
 damoang.net##div[style^="--ad-slot-min-height:"]
 damoang.net##.gap-4.flex-col > div:has(> div[data-position="side-image-text-banner"])
 ruliweb.com##.ti_reserved_slot[style^="min-height:"]
@@ -3572,7 +3574,6 @@ m.cafe.naver.com#?#.location_bar:has(.active:has-text(전체공지)) ~ .location
 /blacktoon[0-9]+\.com/#?#.alert.alert-danger:has(> a:contains([AD]))
 m-emart.ssg.com#$?##content div[style*="contents"]:has(.chakra-stack + div[class] span:has-text(AD)) { remove: true; }
 chzzk.naver.com##.webplayer-internal-core-dimmed:style(display: none !important)
-chzzk.naver.com##.webplayer-internal-core-ad-ui:style(clip-path: inset(50%) !important; pointer-events: none !important)
 quasarzone.com##.sub-content-wrap:style(display: flow-root !important;)
 ! This file includes a filter using action operators of uBlock Origin that can be converted to AdGuard scriptlet.
 ! Check after 2024 April 1st.
