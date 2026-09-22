@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609221059
+! Version: 202609230047
 ! Expires: 12 hours
-! Last updated: 2026-09-22 10:59 KST
+! Last updated: 2026-09-23 00:47 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-21T22:00:44.858Z
+! Last modified: 2026-09-22T07:56:41.063Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -3244,6 +3244,10 @@ kyeongin.com##div[id^="svcad"]
 weather.com##div[data-block-id]:has(> div :is(section.adContainer, div[id^="taboola"]))
 wikidocs.net##div.blog-adsense-block
 itssa.co.kr##div[style]:has(> div[style] > ins[id*="ad"])
+itssa.co.kr##div.sally-article-comment-ad
+itssa.co.kr##div.sally-sidebar-ad
+itssa.co.kr##div.sally-layout-ad
+itssa.co.kr##div.sally-board-ad
 redflame.co.kr##section:has(> ins.adsbygoogle)
 beautywiki.net##div.container > div.fixed:has(button[aria-label$="배너"])
 bbs2.tunaground.net##div[class^="CustomHtml"]:has(ins.adsbygoogle)
