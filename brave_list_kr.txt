@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202609291152
+! Version: 202609300205
 ! Expires: 12 hours
-! Last updated: 2026-09-29 11:52 KST
+! Last updated: 2026-09-30 02:05 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-09-28T01:29:19.222Z
+! Last modified: 2026-09-29T03:16:16.323Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -3344,6 +3344,7 @@ clien.net#@#.ad_banner
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
 poro.gg#@#main > div[class]:has(div.ad-wrapper)
 arca.live#@#b#textad
+@@||iconwiki.aoo.kr/data/clarity-icons.json
 zod.kr#?#div[class] > div[id]:not([class]):has(a[href*="/go/"]:matches-attr("/^data-[a-z0-9]+/"="/\+[0-9]+P/"))
 search.naver.com##li:matches-attr("/-[a-z]+-[a-z]+$/"="*nad-*")
 namu.wiki#?##app div[class*=" "] > div[class*=" "]:is(:has(div[id][class]:empty), :has(iframe[id^="google_ads_iframe_"])):matches-css(margin-bottom: /[0-9]{2,}/)
