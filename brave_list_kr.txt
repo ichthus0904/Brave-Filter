@@ -1,12 +1,12 @@
 [Adblock Plus 2.0]
 ! Title: List-KR for Brave (Optimized)
 ! Description: Brave 실드에 완벽히 최적화된 List-KR 단일 필터
-! Version: 202610071150
+! Version: 202610080300
 ! Expires: 12 hours
-! Last updated: 2026-10-07 11:50 KST
+! Last updated: 2026-10-08 03:00 KST
 ! Homepage: https://github.com/List-KR/List-KR
 
-! Last modified: 2026-10-05T17:02:30.950Z
+! Last modified: 2026-10-07T05:51:07.098Z
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ||api-external.adsvani.com^
 ||cdn.adsvani.com^
@@ -1756,6 +1756,7 @@ m.bunjang.co.kr##div[data-grid-size] > div:has(> a[href^="https://link.coupang.c
 m.bunjang.co.kr##div[data-grid-size] > div:has(> a[href^="https://ader.naver.com/"])
 m.bunjang.co.kr##div[data-grid-size] > div:has(> a[href^="/products/"][href*="&ref_source=sa&"])
 m.bunjang.co.kr##div[data-grid-size] > div:has(> a[href*="&ref_code=%22%7B%5C%22cntr%5C%22%3A%5C%22SIM3"])
+m.bunjang.co.kr##main > section > div[class^="_titleContainer_"]:xpath(.. | ../following-sibling::*[position() <= 3])
 ! lottecinema.co.kr desktop
 lottecinema.co.kr##.login_ad
 lottecinema.co.kr###main_top_of_top_banner
@@ -2182,7 +2183,7 @@ app.dcinside.com,m.dcinside.com##li.adv-inner
 url.kr##form[method="post"] > #maskLayer
 m.tinnews.co.kr##.bn
 dnn.ne.kr##div:has(> ins.adsbygoogle)
-fmkorea.com##div[style]:has(> div :is(script[src*="adsbygoogle"], iframe[title="광고"]))
+fmkorea.com##div[id^="fm_read_vote_sq_"]
 m.fmkorea.com##div[id^="fmad_"] + div[style^="height:"][class]
 fmkorea.com##div.fmad_wrapper
 biz.newdaily.co.kr##div[itemprop="articleBody"] > div[style^="margin:"].clearfix
@@ -3753,6 +3754,10 @@ chzzk.naver.com##+js(trusted-suppress-native-method, atob, Y3J5cHRv, abort)
 dicoall.com##+js(no-fetch-if, fundingchoicesmessages.google.com/b/pub-1437333416759682 method:HEAD)
 ||newspic.kr^$removeparam=cp
 auto.danawa.com##+js(set, NAVER_ADPOST_V2, noopFunc)
+! AGLint does not support uBO $uritransform syntax yet.
+! aglint-disable-next-line no-invalid-modifiers
+||m.bunjang.co.kr/products/$document,uritransform=/^https:\/\/(?!.*[?&]appNudge=)([^?]+)(?:\?(.*))?\$/https:\/\/\$1?appNudge=false&\$2/
+||m.bunjang.co.kr/products/$document,uritransform=/^https:\/\/([^?]+\?(?:[^&]*&)*appNudge=)[^&]*/https:\/\/\$1false/
 ||whoas.xyz^
 ||litt.ly/api/blockevents
 ||nlog.naver.com/event$domain=chzzk.naver.com
